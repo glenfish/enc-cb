@@ -1184,6 +1184,111 @@
       </div>
     </section>
 
+    <section>
+      <div class="container py-5 px-3">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+            <h2 id="faqs" class="fw-bold display-5">Frequently Asked Questions</h2>
+          </div>
+        </div>
+      
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="accordion" id="faqAccordion">
+      
+              <!-- FAQ Item -->
+              <div class="mb-4">
+                <p class="fw-bold h5">
+                  <svg viewBox="0 0 24 24" class="me-2" width="24" height="24" fill="none" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 7 10 10M17 8v9H8"></path></svg>
+                  How do I know if I can create a hardened backup of my wallet?
+                </p>
+                <p class="text-secondary">
+                  Almost every single wallet out there, whether its on a phone or a desktop, software or hardware - can be backed up using this system. Any wallet that uses the BIP39 standard is going to work for you. This includes wallets like Ledger, Trezor, Ellipal, NGRAVE, SecuX, Tangem, Safepal, Keepkey, Bitbox, D'Cent and many, many others. All the software wallets are supported. Any wallet that gives you a list of words to back up your wallet is compliant. If you aren't sure, do a search for your wallet name + "BIP39" to see if it uses this standard.
+                </p>
+              </div>
+      
+              <div class="mb-4">
+                <p class="fw-bold h5">
+                  <svg viewBox="0 0 24 24" class="me-2" width="24" height="24" fill="none" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 7 10 10M17 8v9H8"></path></svg>
+                  Which wallets are not supported?
+                </p>
+                <p class="text-secondary">
+                  SLIP39 (otherwise known as Shamir backup) is not supported. Trezor offers this on their Model T. It is not compatible with this backup system. Also if you're looking to back up a paper wallet, you can't use this system. However we will be releasing a hardened cold storage paper wallet backup system in the very near future.
+                </p>
+              </div>
+      
+              <div class="mb-4">
+                <p class="fw-bold h5">
+                  <svg viewBox="0 0 24 24" class="me-2" width="24" height="24" fill="none" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 7 10 10M17 8v9H8"></path></svg>
+                  How do I know I can trust you?
+                </p>
+                <p class="text-secondary">
+                  That's the best part! In the true spirit of the original Bitcoin protocol, NO TRUST IS REQUIRED. The process does not endanger your security, it does the opposite. At no time do you enter your seed words into your computer or share them with anyone. The steps are clearly explained and you are the one carrying them out, on your own computer - offline. In fact, we deliberately designed this system to be trust-less.
+                </p>
+              </div>
+      
+              <div class="mb-4">
+                <p class="fw-bold h5">
+                  <svg viewBox="0 0 24 24" class="me-2" width="24" height="24" fill="none" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 7 10 10M17 8v9H8"></path></svg>
+                  Is this totally an offline cold storage backup solution?
+                </p>
+                <p class="text-secondary">
+                  Yes, if you choose to follow the directions as given, you can create a backup of your wallet that never touches the internet. The system is designed to be used offline. There is however an optional method which allows you to store your seedcodes across multiple encrypted cloud storage locations. This is helpful if you want to be able to update the backup in the future without having to retrieve all the USB drives first. It is just as secure as the offline method, and more convenient. It's up to you which method you choose.
+                </p>
+              </div>
+      
+              
+      
+              <div class="mb-4">
+                <p class="fw-bold h5">
+                  <svg viewBox="0 0 24 24" class="me-2" width="24" height="24" fill="none" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 7 10 10M17 8v9H8"></path></svg>
+                  Why did you create this system &amp; do I really need it?
+                </p>
+                <p class="text-secondary">
+                  Many people don't obfuscate their seed words, or encrypt them. They simply hide them and hope nobody finds them. This is a huge security risk. As you know, should someone get hold of your seed words, they can steal your assets. We designed a simple solution that allows you to create a hardened backup of your seed words for cold storage. Importantly it had to be simple to use. Our backup system works with any wallet that uses BIP39 seed words. You can also use this method in addition to a cryptosteel or billfodl.
+                </p>
+              </div>
+
+              <div class="mb-4">
+                <p class="fw-bold h5">
+                  <svg viewBox="0 0 24 24" class="me-2" width="24" height="24" fill="none" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 7 10 10M17 8v9H8"></path></svg>
+                  I already use Cryptosteel or Billfodl - why do I need this?
+                </p>
+                <p class="text-secondary">
+                  This system was made to be a distributed, redundant offline backup. It works with all these physical backup solutions. You ideally want to have a few different locations where your crypto backup is stored in case of natural disasters or home invasion. We recommend using this system in addition to your existing backup methods. And if you are interested in setting up an automated Deadman Switch to pass on your cryptos to friends or family after you're gone, we will show you how to do that too.
+                </p>
+              </div>
+
+              <div class="mb-4">
+                <p class="fw-bold h5">
+                  <svg viewBox="0 0 24 24" class="me-2" width="24" height="24" fill="none" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 7 10 10M17 8v9H8"></path></svg>
+                  OK, whats the bottom line?
+                </p>
+                <p class="text-secondary">
+                  After you back up using this system, you don't have to worry about your seed words being stolen. You can store your backup in multiple locations, and even in the cloud if you choose. You can update your backup in the future without having to retrieve all the USB drives first. You can also set up a Deadman Switch to pass on your cryptos to friends or family after you're gone. And you can do all this for free. Finally, peace of mind. And... your future wealth is secure.
+                </p>
+              </div>
+
+              <div class="mb-4">
+                <p class="fw-bold h5">
+                  <svg viewBox="0 0 24 24" class="me-2" width="24" height="24" fill="none" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 7 10 10M17 8v9H8"></path></svg>
+                  I'm still not sure. What if I mess up and someone hacks me?
+                </p>
+                <p class="text-secondary">
+                  The system is designed to be simple to use, and secure. Everything happens offline so as long as you're on a clean computer you have nothing to worry about. If you want to be ultra paranoid you can store your seedcodes by engraving them on a metal sheet or plate. If found, they reveal nothing without the corresponding seedmap, which is encrypted and not stored together with your seedcodes. If you are still unsure, you can always reach out to us for help. We are here to help you. Please note that we will never ask you for your seed words, or any other sensitive information. If someone does, it is a scam.
+                </p>
+              </div>
+
+              
+      
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <!-- horizontal rule  -->
+<hr>
  <section>
   
   <div class="container py-5">
