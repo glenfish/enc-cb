@@ -240,7 +240,7 @@
         margin: 0px;
       }
       .smallscreen {
-        font-size: 130%!important;
+        font-size: 90%!important;
         margin-bottom: 0px!important;
         display:block;
         line-height: 1.5!important;
@@ -407,6 +407,10 @@
   #mobile-video-layout {
     display: block;
   }
+}
+
+.normal-line-height {
+  line-height:1.0!important;          
 }
 
 
