@@ -7,7 +7,7 @@
   
     if (!isValidReferrer) {
       document.addEventListener("DOMContentLoaded", function() {
-        window.location.href = "https://yourdomain.com/access-denied.html";
+        window.location.href = "https://encryptfire.com/access-denied.html";
       });
     }
   })();
