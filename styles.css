@@ -200,6 +200,7 @@ html {
       }
       .footer {
         flex-shrink: 0!important;
+        margin-top: auto;
       }
       .left {
         text-align: left;
@@ -560,6 +561,8 @@ audio {
 #mobile-video-layout {
   display: none;
 }
+
+/* clickbank css */
 
 
 
