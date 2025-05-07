@@ -328,6 +328,10 @@
       .hero {
         padding:0px;
       }
+      .heroimg img {
+        position:relative!important;
+        top: 24px!important;
+      }
       .hero-headline {
         font-size: 2.9em;
         line-height: 1.2!important;

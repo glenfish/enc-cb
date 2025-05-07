@@ -564,7 +564,10 @@ audio {
 #mobile-video-layout {
   display: none;
 }
-
+.heroimg {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 
 /* clickbank css */
 
