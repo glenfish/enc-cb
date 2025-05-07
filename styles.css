@@ -95,18 +95,18 @@ html {
         /* background: linear-gradient(to bottom, #dfdfdf, #f4f7fa); */
         background-color: #fff;
         color: #fff;
-        padding: 30px; /* Reduced height */
+        padding-top: 30px; /* Reduced height */
         text-align: center;
         
       }
       .hero .logo {
         max-width: 700px;
-        min-width: 200px;
+        min-width: 220px;
         width: 100%;
         margin: 0 auto 20px auto;
-        border: 2px solid #bdbdbd;
+        border: 0px solid #bdbdbd;
         border-radius: 16px;
-        padding: 10px;
+        padding: 0px;
         background-color: rgb(255, 255, 255);
       }
       .logo-container {
