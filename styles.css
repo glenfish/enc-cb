@@ -34,6 +34,7 @@ body {
     display: flex!important;
     flex-direction: column!important;
     padding-top: 56px;
+    background-color: white;
 }
 .body-content {
     flex: 1 0 auto!important;
