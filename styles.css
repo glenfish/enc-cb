@@ -82,7 +82,7 @@ html {
         max-width: 1000px;
         
       }
-      #pricing, #features, #inside, #video {
+      #pricing, #company, #inside, #video {
         visibility: hidden;
         position: relative;
         top: -80px;

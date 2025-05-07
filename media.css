@@ -149,7 +149,7 @@
         width: 90%!important;
         margin: auto;
       }
-      #features, #inside, #video {
+      #company, #inside, #video {
         visibility: hidden;
         position: relative;
         top: 100px;
@@ -261,7 +261,7 @@
       .footer {
         line-height:2.5em;
       }
-      #features, #video {
+      #company, #video {
         visibility: hidden;
         position: relative;
         top: -90px;
