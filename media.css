@@ -254,9 +254,7 @@
         font-size: 1.55rem!important;
         color: #6b6b6b;
       }
-      .offer-section {
-        /* background: linear-gradient(to bottom, #f4f7fa, #333) !important; */
-      }
+      
       .hide-on-phones {
         display: none;
       }
@@ -278,12 +276,7 @@
         position: relative;
         top: -20px;
       }
-      .note {
-        /* background-color:#333;
-        color: rgb(172, 172, 172);
-        border: solid 3px rgb(67, 67, 67); */
-        
-      }
+      
       .highlight {
         /* width: 100vw!important; */
         /* margin: 0px!important; */
