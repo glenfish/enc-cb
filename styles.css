@@ -67,7 +67,8 @@ html {
       /* Global Styles */
       
       body {
-        background-color: #f4f7fa;
+        /* background-color: #f4f7fa; */
+        background-color: #fff;
         color: #333;
         line-height: 1.8; /* Increased line-height for readability */
         font-family: "Roboto", "Arial", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
@@ -91,7 +92,8 @@ html {
       }
       /* Hero/Header Section */
       .hero {
-        background: linear-gradient(to bottom, #dfdfdf, #f4f7fa);
+        /* background: linear-gradient(to bottom, #dfdfdf, #f4f7fa); */
+        background-color: #fff;
         color: #fff;
         padding: 30px; /* Reduced height */
         text-align: center;
