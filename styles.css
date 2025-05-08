@@ -569,7 +569,37 @@ audio {
   margin-bottom: 0px;
 }
 
-/* clickbank css */
+.overlay-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 10px;
+  z-index: 10;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.overlay-arrow:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.image-gallery-modal {
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+
 
 
 
