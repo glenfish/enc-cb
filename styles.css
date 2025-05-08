@@ -600,6 +600,10 @@ audio {
 
 }
 
+#image-gallery img {
+  cursor: pointer;
+}
+
 
 
 
