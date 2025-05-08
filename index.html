@@ -42,8 +42,12 @@
           <figure>
             
             <img src="./encryptfire-icon.png" height="30px" width="30px" alt="EncryptFire Icon" class=" navbar-icon" />
-            
-            <audio controls preload="none" data-src="./ef-explainer.mp3"></audio>
+            <img
+            src="./ef-logo.png"
+            alt="EncryptFire Logo"
+            class="img-fluid navbar-logo"
+        />
+            <!-- <audio controls preload="none" data-src="ef-explainer.mp3"></audio> -->
           </figure>
         
        
@@ -1530,10 +1534,10 @@
                     }
                 });
             });
-            const audios = document.querySelectorAll('audio[data-src]');
-              audios.forEach(audio => {
-                audio.src = audio.getAttribute('data-src');
-            });
+            // const audios = document.querySelectorAll('audio[data-src]');
+            //   audios.forEach(audio => {
+            //     audio.src = audio.getAttribute('data-src');
+            // });
             
             const images = Array.from(document.querySelectorAll('.gallery-thumb'));
             const modalImage = document.getElementById('galleryModalImage');
