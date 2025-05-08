@@ -104,15 +104,15 @@
       
       <div class="container">
         <h2 class="section-title text-left mt-4">Your Order Was Successful!</h2>
-        <p>
-          Congratulations on taking important steps to secure your cold storage crypto backups.<br>Your order has been
-          successfully processed. You will receive a confirmation email shortly
-          with your order details.
-        </p>
+        <p id="greeting"></p><br>
+        <p id="email-display"></p>
+        <p id="cbreceipt"></p>
+        
+
         
         
 
-        <p><br><br>
+        <p><br>
           <h4 class="section-title text-left pt-0">DOWNLOAD YOUR ENCRYPTFIRE SOFTWARE</h4>
           
           <a href="https://download-ef3.encryptfire.com/EncryptFire_v3-0.zip" class="btn btn-primary">Download Now</a><br><br>
@@ -169,5 +169,49 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      // Get query parameters from the URL
+      const params = new URLSearchParams(window.location.search);
+
+      // Extract cname and cemail
+      const fullName = params.get('cname') || '';
+      const email = params.get('cemail') || '';
+      const cbreceipt = params.get('cbreceipt') || '';
+
+      // Decode and extract first name
+      const firstName = decodeURIComponent(fullName).split(' ')[0];
+
+      document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll(".nav-link");
+            const navbarCollapse = document.querySelector(".navbar-collapse");
+
+            navLinks.forEach(link => {
+                link.addEventListener("click", function () {
+                    if (navbarCollapse.classList.contains("show")) {
+                        new bootstrap.Collapse(navbarCollapse).hide();
+                    }
+                });
+            });
+            
+            if (firstName != '') {
+            document.getElementById('greeting').textContent = `Hi ${firstName}, thanks for your purchase! Congratulations on taking important steps to secure your cold storage crypto backups.`;
+            } else {
+            document.getElementById('greeting').textContent = `Congratulations on taking important steps to secure your cold storage crypto backups. Below is your download link`;
+            }  
+            if (decodeURIComponent(email) != '') {
+            document.getElementById('email-display').textContent = `We’ve sent a confirmation to: ${decodeURIComponent(email)}`;
+            } else {
+              document.getElementById('email-display').textContent = 
+              `You will receive a confirmation email shortly
+              with your order details.`;
+            }
+            if (cbreceipt != '') {
+              document.getElementById('cbreceipt').textContent += `\n\nYour order number is: ${cbreceipt}`;
+            }
+            
+            
+        });
+      </script>
+      
   </body>
 </html>
