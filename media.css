@@ -185,6 +185,10 @@
 
       }
       @media (min-width:0px) and (max-width: 579.98px) {
+        .iframe-wrapper  {
+          width: 100%!important;
+          height: 750px!important;
+        }
         .white-overlay {
   position: fixed;
   inset: 0;
@@ -442,7 +446,7 @@
 /* Mobile: scale down to 80% (or less if needed) */
       @media (max-width: 768px) {
         .iframe-wrapper {
-          zoom: 0.80;
+          zoom: 0.90;
           height: 860px; /* important to crop the extra space */
           
         }
