@@ -2303,7 +2303,7 @@
             container.innerHTML +=
               //   '<p class="text-muted">[ Placeholder Frame 0 ]</p>';
               "";
-            nextBtn.textContent = "BACK IT UP!";
+            nextBtn.textContent = "Protect My Wallet!";
 
             nextBtn.style.display = "inline-block";
 
@@ -2323,7 +2323,7 @@
           case 1:
             container.innerHTML +=
               //   '<p class="text-muted">[ Placeholder Frame 0 ]</p>';
-              '<p class="text-dark mb-4">This is your wallet seed phrase</p>';
+              '<p class="text-dark mb-4 bold bigger">This is your wallet seed phrase</p>';
             const ulWrapper = document.createElement("div");
             ulWrapper.className = "max-400";
 
@@ -2383,7 +2383,7 @@
             scrollDiv.appendChild(table);
 
             caption.textContent =
-              "Your seed phrase comes from this much bigger list. There are 2048 words in total.";
+              "Your seeds come from this much bigger list of 2048 words";
             caption.className = "mt-3";
             container.appendChild(caption);
             container.appendChild(scrollDiv);
@@ -2403,8 +2403,8 @@
 
             setTimeout(() => {
               const finalNote = document.createElement("p");
-              finalNote.className = "mt-4 text-dark";
-              finalNote.textContent = "Next, we randomize the big list";
+              finalNote.className = "mt-4 text-dark bold bigger";
+              finalNote.textContent = "Now, we randomize the big list";
               container.appendChild(finalNote);
               setTimeout(() => {
                 nextBtn.textContent = "Randomize";
@@ -2477,9 +2477,9 @@
                     // Once all rows are done, show the text block
                     if (completed === totalRows) {
                       const finalNote = document.createElement("p");
-                      finalNote.className = "mt-4 text-dark";
+                      finalNote.className = "mt-4 text-dark bold bigger";
                       finalNote.textContent =
-                        "All words have been randomly and uniquiely mapped to new numbers";
+                        "All 2048 words are mapped to new numbers";
                       container.appendChild(finalNote);
                       caption.textContent = "Seed Map built!";
                       // show the next button on a delay
@@ -2510,7 +2510,7 @@
 
           case 4:
             caption.textContent = "This is your 'Seed Map'";
-            caption.className = "mt-3";
+            caption.className = "mt-3 bold bigger";
             container.appendChild(caption);
             const img = document.createElement("img");
             img.src = "pdf-locked.png";
@@ -2521,7 +2521,7 @@
             container.appendChild(img);
             container.appendChild(mapCaption);
             setTimeout(() => {
-              nextBtn.textContent = "Next";
+              nextBtn.textContent = "Save";
 
               nextBtn.style.display = "inline-block";
             }, 1000);
@@ -2532,7 +2532,7 @@
               '<p class="text-muted">Frame not yet implemented.</p>';
             break;
           case 5:
-            caption.textContent = "Match seed words to numbers";
+            caption.textContent = "Matching seed words to new numbers";
             caption.className = "mt-3";
             container.appendChild(caption);
 
@@ -2587,9 +2587,9 @@
                   scrollDiv3.remove();
                   displayArea.remove();
                   caption.textContent = "";
-                  finalNote.className = "mt-4 text-dark";
+                  finalNote.className = "mt-4 text-dark bold bigger";
                   finalNote.textContent =
-                    "NOTE: You are not required to enter your seed words to back them up";
+                    "We just turned your words into numbers.";
                   container.appendChild(finalNote);
 
                   // Add summary table
@@ -2662,8 +2662,8 @@
             break;
 
           case 6:
-            caption.textContent = "Your Seed Codes";
-            caption.className = "mt-3";
+            caption.textContent = "Wallet is now protected";
+            caption.className = "mt-3 bold bigger";
             container.appendChild(caption);
 
             const codeList = document.createElement("div");
@@ -2705,7 +2705,7 @@
 
           case 7:
             caption.textContent = "Your 'Seed Codes'";
-            caption.className = "mt-3";
+            caption.className = "mt-3 bold bigger";
             container.appendChild(caption);
 
             const mapImg = document.createElement("img");

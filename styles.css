@@ -237,9 +237,11 @@ html {
         font-size: 0.85em;
       }
       .orange {
-        background-color: rgb(255, 133, 3);
-        border: 2px solid rgb(253, 194, 131);
-        padding: 5px;
+        /* background-color: rgb(255, 133, 3); */
+        background-color: rgb(141, 141, 141);
+        border: 1px solid rgb(204, 204, 204);
+        border-radius: 3px;
+        padding: 7px;
         color: white;
       }
       .glow {
@@ -621,7 +623,7 @@ audio {
 
 .scroll-down-indicator {
   position: absolute;
-  bottom: -45px;
+  bottom: -55px;
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 2s infinite;
