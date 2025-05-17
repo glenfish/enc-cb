@@ -2336,15 +2336,15 @@
           case 0:
             container.innerHTML += '<div class="overlay-highlight"></div>';
 
-            nextBtn.textContent = "Protect My Wallet!";
+            nextBtn.textContent = "GO";
 
             nextBtn.style.display = "inline-block";
 
             nextBtn.style.width = "160px";
             nextBtn.style.height = "46px";
 
-            caption.textContent = "How it works in 60 seconds";
-            caption.className = "mt-3 bold bigger";
+            caption.textContent = "How it works";
+            caption.className = "mt-3 bold bigger pt-3";
             container.appendChild(caption);
             let image = document.createElement("img");
             container.appendChild(image);
@@ -2352,7 +2352,12 @@
             image.src = "hardware-wallet.png";
             image.style.width = "100%";
             image.style.maxWidth = "375px";
-            image.style.marginBottom = "30px";
+            image.style.marginBottom = "10px";
+
+            finalNote.className = "mt-4 text-dark bold bigger";
+            finalNote.textContent = "60 second walkthrough";
+            finalNote.style.paddingBottom = "20px";
+            container.appendChild(finalNote);
             break;
 
           case 1:
@@ -2438,7 +2443,6 @@
             }, 1000);
 
             setTimeout(() => {
-              const finalNote = document.createElement("p");
               finalNote.className = "mt-4 text-dark bold bigger";
               finalNote.textContent = "Now, we randomize the big list";
               container.appendChild(finalNote);
@@ -2512,7 +2516,6 @@
 
                     // Once all rows are done, show the text block
                     if (completed === totalRows) {
-                      const finalNote = document.createElement("p");
                       finalNote.className = "mt-4 text-dark bold bigger";
                       finalNote.textContent =
                         "All 2048 words are mapped to new numbers";
@@ -2826,7 +2829,6 @@
             });
 
             setTimeout(() => {
-              const finalNote = document.createElement("p");
               finalNote.className = "pt-4 mt-4 text-dark";
               finalNote.textContent =
                 "Ready to test your backup for 100% confidence?";
