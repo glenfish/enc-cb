@@ -2802,6 +2802,9 @@
 
             break;
           case 9:
+            displayArea.innerHTML = "";
+            displayArea.remove();
+
             caption.textContent = "Open Seed Map File";
             caption.className = "mt-3";
             container.appendChild(caption);
@@ -2969,7 +2972,7 @@
     <script>
       let devStatus;
       devStatus = false;
-      //   devStatus = true;
+      // devStatus = true;
       if (devStatus) {
         const devContainer = document.createElement("div");
         devContainer.className =
