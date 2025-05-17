@@ -185,6 +185,21 @@
 
       }
       @media (min-width:0px) and (max-width: 579.98px) {
+        .white-overlay {
+  position: fixed;
+  inset: 0;
+  background: white;
+  opacity: 0.85;
+  z-index: 1000;
+  pointer-events: none;
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+.iframe-focus-container {
+  position: relative;
+  z-index: 1001;
+}
         .hide-navbar {
   transform: translateY(-100%);
   transition: transform 0.3s ease-in-out;
@@ -434,6 +449,13 @@
 
         
       }
+
+@media (min-width: 768px) {
+  .scroll-down-indicator {
+    display: none !important;
+  }
+}
+
 
 
 

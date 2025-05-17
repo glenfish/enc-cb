@@ -156,6 +156,13 @@
         width: 100px;
         height: 40px;
       }
+      .bold {
+        font-weight: bold;
+      }
+      .bigger {
+        /* 125% bigger */
+        font-size: 125%;
+      }
     </style>
   </head>
   <body>
@@ -2295,23 +2302,22 @@
           case 0:
             container.innerHTML +=
               //   '<p class="text-muted">[ Placeholder Frame 0 ]</p>';
-              '<p class="text-dark mb-4">Your personal cold storage crypto backup & recovery tool</p>';
-            nextBtn.textContent = "START";
+              "";
+            nextBtn.textContent = "BACK IT UP!";
 
             nextBtn.style.display = "inline-block";
 
             nextBtn.style.width = "160px";
             nextBtn.style.height = "46px";
+
+            caption.textContent = "How it works in 60 seconds";
+            caption.className = "mt-3 bold bigger";
+            container.appendChild(caption);
             let image = document.createElement("img");
             container.appendChild(image);
 
             image.src = "hardware-wallet.png";
             image.style.width = "360px";
-
-            caption.textContent = "How it works in 60 seconds";
-            caption.className = "mt-3";
-            container.appendChild(caption);
-
             break;
 
           case 1:

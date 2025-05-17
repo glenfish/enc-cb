@@ -26,7 +26,8 @@
 
   </head>
   <body>
-    
+    <div class="white-overlay"></div>
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
       
@@ -111,14 +112,39 @@
         <span class="subheader ">
           <!-- <span class="larger antonio hero-headline">Your Crypto Wallets <br class="break"/>May Be At Risk</span> -->
           <span class="narrow pt-3">
-            <span class="strong large-subheader  smallscreen largescreen">We've solved the big problem with crypto wallet backups.<br><br>One backup is not enough and can lead to loss or destruction. More than one backup can make you vulnerable to theft. And what if you die?<br><br> <span class="red  normal-line-height" style="position:relative; top:-14px;">Protect your crypto wallets <span class="svg-underline underline">fast & easy.</span><br>Pass them on after you're gone with your own deadman switch!</span>
+            <span class="strong large-subheader  smallscreen largescreen"><span ><h2 class="pb-4">The big problem with crypto wallet backups?</h2></span>One backup is not enough and can lead to loss or destruction. More than one backup can make you vulnerable to theft. And what if you die?<br><br> <span class="orange  normal-line-height" style="position:relative; top:-11px;">Protect your digital assets fast & easy</span><br><div class="pt-4">Pass them on after you're gone with a <span class="svg-underline-2">deadman switch</span>!</div></span>
           </span>
+              <div class="scroll-down-indicator">
+  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+       stroke-linecap="round" stroke-linejoin="round"
+       class="feather feather-chevron-down">
+    <polyline points="6 9 12 15 18 9"></polyline>
+  </svg>
+</div>
+
           
           <!-- <br><span class="featured">The problem of losing access to your crypto wallet and keys <span class="">has been solved</span></span><br> -->
           
           
         
       </div>
+    </section>
+    <section>
+  
+
+
+          <!-- iframed interactive demo -->
+           <div class="iframe-focus-container">
+     <div class="iframe-container">
+     <div class="iframe-wrapper">
+        <iframe
+  src="walkthrough.html"
+  width="100%"
+  height="740"
+  style="border: none; border-radius: 12px; overflow: hidden;"
+  loading="lazy"
+  title="Secure Seed Walkthrough"
+></iframe></div></div></div>
     </section>
     <!-- <section>
       <div class="text-center mt-3">
@@ -128,7 +154,7 @@
 
    
     <!-- Introduction -->
-    <section class="pb-5 mb-5 mt-1 border-bottom bg-white">
+    <section class="pb-5 mb-5 mt-1 border-bottom bg-white post-iframe-section hidden-section">
       <div class="container container-narrow mb-4">
         <h2 class="antonio-h2 text-left pt-4">Get Bulletproof Backups</h2>
         <p>
@@ -154,17 +180,7 @@
 <section class="mb-5 pb-3">
   <h2 class="section-title antonio" >How <span class="strong">Encrypt<span class="orange-text">Fire</span> Works</span></h2>
 
-  <!-- iframed interactive demo -->
-   <div class="iframe-container">
-   <div class="iframe-wrapper">
-        <iframe
-  src="walkthrough.html"
-  width="100%"
-  height="800"
-  style="border: none; border-radius: 12px; overflow: hidden;"
-  loading="lazy"
-  title="Secure Seed Walkthrough"
-></iframe></div></div>
+
 
 
   <!-- end iframed interactive demo -->
@@ -412,17 +428,7 @@
 
 <!-- Video Section mobile -->
 <div id="mobile-video-layout" class="bg-light">
-    <!-- iframed interactive demo -->
-     <div class="iframe-container">
-     <div class="iframe-wrapper">
-        <iframe
-  src="walkthrough.html"
-  width="100%"
-  height="700"
-  style="border: none; border-radius: 12px; overflow: hidden;"
-  loading="lazy"
-  title="Secure Seed Walkthrough"
-></iframe></div></div>
+
 
 
 
@@ -1719,6 +1725,66 @@
 
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // avoid negative values
   });
+</script>
+<script>
+  const scrollIndicator = document.querySelector(".scroll-down-indicator");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    scrollIndicator.classList.add("hide");
+  } else {
+    scrollIndicator.classList.remove("hide");
+  }
+});
+
+</script>
+<script>
+  function enableIframeFocus() {
+  document.querySelector('.white-overlay').style.display = 'block';
+}
+
+function disableIframeFocus() {
+  document.querySelector('.white-overlay').style.display = 'none';
+}
+if (window.innerWidth < 768) {
+  const iframeContainer = document.querySelector('.iframe-focus-container');
+  const overlay = document.querySelector('.white-overlay');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        overlay.style.display = entry.isIntersecting ? 'block' : 'none';
+      });
+    },
+    {
+      threshold: 0.8,
+    }
+  );
+
+  observer.observe(iframeContainer);
+}
+
+
+</script>
+
+<script>
+  const fadeInTarget = document.querySelector('.post-iframe-section');
+
+const fadeInObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        fadeInTarget.classList.add('visible');
+      }
+    });
+  },
+  {
+    threshold: 0.2,
+  }
+);
+
+fadeInObserver.observe(fadeInTarget);
+
 </script>
 
   </body>
