@@ -236,12 +236,12 @@ html {
       .smaller {
         font-size: 0.85em;
       }
-      .orange {
+      .graybox {
         /* background-color: rgb(255, 133, 3); */
         background-color: rgb(141, 141, 141);
         border: 1px solid rgb(204, 204, 204);
-        border-radius: 3px;
-        padding: 7px;
+        border-radius: 5px;
+        padding: 7px 22px;
         color: white;
       }
       .glow {
@@ -350,6 +350,14 @@ html {
         color: #333;
         margin-top: 10px;
       }
+      .bigger {
+        /* 125% bigger */
+        font-size: 125%;
+      }
+      .bigger-200 {
+        /* 125% bigger */
+        font-size: 210%!important;
+      }
       .red {
         color: rgb(204, 3, 3);
       }
@@ -359,11 +367,128 @@ html {
       .lineheight-medium {
         line-height: 1.5;
       }
+      .dm-serif-text-regular {
+        font-family: "DM Serif Text", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .dm-serif-text-regular-italic {
+        font-family: "DM Serif Text", serif;
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      .kanit-medium {
+          font-family: "Kanit", sans-serif;
+          font-weight: 500;
+          font-style: normal;
+        }
+
+        .kanit-semibold {
+          font-family: "Kanit", sans-serif;
+          font-weight: 600;
+          font-style: normal;
+          letter-spacing: -2px;
+        }
+
+        .rambla-regular {
+          font-family: "Rambla", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+        }
+
+        .rambla-bold {
+          font-family: "Rambla", sans-serif;
+          font-weight: 700;
+          font-style: normal;
+        }
+
+        .rambla-regular-italic {
+          font-family: "Rambla", sans-serif;
+          font-weight: 400;
+          font-style: italic;
+        }
+
+        .rambla-bold-italic {
+          font-family: "Rambla", sans-serif;
+          font-weight: 700;
+          font-style: italic;
+        }
+
+
       .antonio {
         font-family: "Antonio", "Roboto", "Arial", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
           sans-serif;
           
       }
+      .titillium-web-extralight {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.titillium-web-light {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.titillium-web-regular {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.titillium-web-semibold {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.titillium-web-bold {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -3px;
+}
+
+.titillium-web-black {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.titillium-web-extralight-italic {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.titillium-web-light-italic {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.titillium-web-regular-italic {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.titillium-web-semibold-italic {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.titillium-web-bold-italic {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
       h2, h3 {
         font-family: "Antonio", "Roboto", "Arial", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
           sans-serif;
@@ -376,6 +501,11 @@ html {
         font-size: 1.45em; 
         padding-bottom:10px; 
         padding-left: 5px;
+      }
+      .roboto {
+        font-family: "Roboto", "Arial", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-weight: 400;
       }
       .hero-headline {
         font-size: 2.9em;
@@ -666,6 +796,10 @@ audio {
           width: 100%!important;
           height: 690px!important;
         }
+
+        .bold {
+        font-weight: bold;
+      }
 
 
 
