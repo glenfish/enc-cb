@@ -623,7 +623,7 @@ audio {
 
 .scroll-down-indicator {
   position: absolute;
-  bottom: -55px;
+  bottom: -45px;
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 2s infinite;
@@ -661,6 +661,9 @@ audio {
   opacity: 1;
   transform: translateY(0);
 }
+
+
+
 
 
 
