@@ -2576,7 +2576,7 @@
                   caption.textContent = "";
                   finalNote.className = "mt-4 text-dark";
                   finalNote.textContent =
-                    "NOTE: You are not required to enter your seed words to back them up. This is for demo purposes only.";
+                    "NOTE: You are not required to enter your seed words to back them up";
                   container.appendChild(finalNote);
 
                   // Add summary table
@@ -2839,16 +2839,15 @@
                   lockedImg.replaceWith(unlockedImg);
 
                   unlockMsg.textContent = "Seed Map successfully unlocked.";
+                  const beginBtn = document.createElement("button");
+                  beginBtn.textContent = "Begin Recovery";
+                  beginBtn.className = "btn btn-primary mt-3";
+                  beginBtn.onclick = () => {
+                    beginBtn.remove();
+                    startRecovery();
+                  };
+                  container.appendChild(beginBtn);
                 }, 1200);
-
-                const beginBtn = document.createElement("button");
-                beginBtn.textContent = "Begin Recovery";
-                beginBtn.className = "btn btn-primary mt-3";
-                beginBtn.onclick = () => {
-                  beginBtn.remove();
-                  startRecovery();
-                };
-                container.appendChild(beginBtn);
 
                 function startRecovery() {
                   container.innerHTML = "";
