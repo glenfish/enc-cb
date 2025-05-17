@@ -604,6 +604,26 @@ audio {
   cursor: pointer;
 }
 
+.iframe-wrapper {
+        transform-origin: top center;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      /* Default: 100% scale for desktops */
+      .iframe-wrapper {
+        transform: scale(1);
+      }
+
+      
+.iframe-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+
 
 
 

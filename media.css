@@ -152,7 +152,7 @@
       #company, #inside, #video {
         visibility: hidden;
         position: relative;
-        top: 100px;
+        top: 40px;
       }
       #pricing {
         visibility: hidden;
@@ -261,10 +261,15 @@
       .footer {
         line-height:2.5em;
       }
-      #company, #video {
+      #company {
         visibility: hidden;
         position: relative;
         top: -90px;
+      }
+      #video {
+        visibility: hidden;
+        position: relative;
+        top: -60px;
       }
       #inside {
         visibility: hidden;
@@ -409,6 +414,20 @@
 .normal-line-height {
   line-height:1.0!important;          
 }
+
+/* Mobile: scale down to 80% (or less if needed) */
+      @media (max-width: 768px) {
+        .iframe-wrapper {
+          zoom: 0.92;
+          height: 800px; /* important to crop the extra space */
+          
+        }
+
+        
+      }
+
+
+
 
 
 
