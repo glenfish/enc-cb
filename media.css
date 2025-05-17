@@ -443,7 +443,7 @@
       @media (max-width: 768px) {
         .iframe-wrapper {
           zoom: 0.80;
-          height: 720px; /* important to crop the extra space */
+          height: 760px; /* important to crop the extra space */
           
         }
 
