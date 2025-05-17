@@ -2343,7 +2343,7 @@
             nextBtn.style.width = "160px";
             nextBtn.style.height = "46px";
 
-            caption.textContent = "How it works";
+            caption.textContent = "Interactive Demo";
             caption.className = "mt-3 bold bigger pt-3";
             container.appendChild(caption);
             let image = document.createElement("img");
@@ -2424,7 +2424,7 @@
             scrollDiv.appendChild(table);
 
             caption.textContent =
-              "Your seeds come from this much bigger list of 2048 words";
+              "Your seed words come from a much bigger list of 2048 words, shown below";
             caption.className = "mt-3";
             container.appendChild(caption);
             container.appendChild(scrollDiv);
@@ -2444,7 +2444,7 @@
 
             setTimeout(() => {
               finalNote.className = "mt-4 text-dark bold bigger";
-              finalNote.textContent = "Now, we randomize the big list";
+              finalNote.textContent = "Now, we randomize this word list";
               container.appendChild(finalNote);
               setTimeout(() => {
                 nextBtn.textContent = "Randomize";
@@ -2518,7 +2518,7 @@
                     if (completed === totalRows) {
                       finalNote.className = "mt-4 text-dark bold bigger";
                       finalNote.textContent =
-                        "All 2048 words are mapped to new numbers";
+                        "All 2048 words are now re-mapped to new numbers";
                       container.appendChild(finalNote);
                       caption.textContent = "Seed Map built!";
                       // show the next button on a delay
@@ -2571,7 +2571,8 @@
               '<p class="text-muted">Frame not yet implemented.</p>';
             break;
           case 5:
-            caption.textContent = "Matching seed words to new numbers";
+            caption.textContent =
+              "Next we match your wallet seed words, one at a time... to these new numbers";
             caption.className = "mt-3";
             container.appendChild(caption);
 
