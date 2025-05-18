@@ -597,6 +597,11 @@ html {
 .video-thumbnail {
   display: inline-block;
 }
+.video-thumbnail label {
+    
+    color: #333;
+    
+  }
 
 .play-button {
   position: absolute;
