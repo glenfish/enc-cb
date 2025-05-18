@@ -50,12 +50,7 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
-table, tr, th, td, .no-border {
-	border-collapse: collapse!important;
-	border-spacing: 0!important;
-  border: none!important;
-  border-color: white!important;
-}
+
 html {
   box-sizing: border-box;
 }
