@@ -2456,95 +2456,114 @@
             break;
 
           case 3:
+            caption.textContent = "Randomizing...";
+            caption.className = "mt-3";
+            container.appendChild(caption);
+
+            // Create scrollable container
             const scrollDiv2 = document.createElement("div");
             scrollDiv2.className =
               "scroll-box border border-secondary rounded max-600";
-
-            scrollDiv2.style.margin = "0 auto"; // Center it
-            scrollDiv2.style.overflowX = "hidden"; // Ensure no horizontal scroll
+            scrollDiv2.style.margin = "0 auto";
+            scrollDiv2.style.overflowX = "hidden";
 
             const table2 = document.createElement("table");
             table2.className = "table bg-light table-sm";
-            // table2.style.width = "600px";
-            // table2.style.tableLayout = "fixed";
+            table2.style.width = "100%";
+            table2.style.tableLayout = "fixed";
 
+            // Create rows
             bip39Words.forEach((word, i) => {
               const row = table2.insertRow();
               row.id = `row-${i}`;
-              row.style.backgroundColor = i % 2 === 0 ? "#000" : "#000"; // Alternating gray shades
+              row.style.backgroundColor = i % 2 === 0 ? "#000" : "#000";
 
               const numCell = row.insertCell();
               const wordCell = row.insertCell();
 
-              numCell.textContent = i + 1; // or "" for Frame 3 animation init
+              numCell.textContent = ""; // Start blank
               wordCell.textContent = word;
 
-              // Optional: make long words wrap or truncate nicely
               wordCell.style.whiteSpace = "nowrap";
               wordCell.style.overflow = "hidden";
               wordCell.style.textOverflow = "ellipsis";
+              numCell.style.textAlign = "right";
+              numCell.style.width = "80px";
             });
 
             scrollDiv2.appendChild(table2);
-            caption.textContent = "Randomizing...";
-            caption.className = "mt-3";
-            container.appendChild(caption);
             container.appendChild(scrollDiv2);
 
-            setTimeout(() => {
-              const uniqueNumbers = Array.from(
-                { length: bip39Words.length },
-                (_, i) => i + 1
-              ).sort(() => Math.random() - 0.5);
-
-              const totalRows = bip39Words.length;
-              let completed = 0;
-
-              for (let i = 0; i < totalRows; i++) {
-                const row = document.getElementById(`row-${i}`);
-                const numCell = row.cells[0];
-                let counter = 0;
-                const targetNum = uniqueNumbers[i];
-
-                const interval = setInterval(() => {
-                  numCell.textContent = Math.floor(Math.random() * 999);
-                  counter++;
-                  if (counter > 20) {
-                    clearInterval(interval);
-                    numCell.textContent = targetNum;
-                    completed++;
-
-                    // Once all rows are done, show the text block
-                    if (completed === totalRows) {
-                      finalNote.className = "mt-4 text-dark bold bigger";
-                      finalNote.textContent =
-                        "All 2048 words are now re-mapped to new numbers";
-                      container.appendChild(finalNote);
-                      caption.textContent = "Seed Map built!";
-                      // show the next button on a delay
-                      setTimeout(() => {
-                        nextBtn.textContent = "Save";
-
-                        nextBtn.style.display = "inline-block";
-                      }, 1000);
-                    }
-                  }
-                }, 50);
-              }
-
-              // Scroll after a delay
-              setTimeout(() => {
-                scrollDiv2.scrollTo({
-                  top: scrollDiv2.scrollHeight,
-                  behavior: "smooth",
-                });
-              }, 1500);
-            }, 500);
-
+            // Step 1: Shuffle numbers
             uniqueNumbers = Array.from(
               { length: bip39Words.length },
               (_, i) => i + 1
             ).sort(() => Math.random() - 0.5);
+
+            // Step 2: Estimate how many rows fit in the scroll viewport
+            const estimatedRowHeight = 30;
+            const visibleRows = Math.floor(
+              scrollDiv2.offsetHeight / estimatedRowHeight
+            );
+            const lastVisibleIndex = visibleRows - 1;
+
+            let completed = 0;
+
+            function checkIfDone() {
+              if (completed === bip39Words.length) {
+                finalNote.className = "mt-4 text-dark bold bigger";
+                finalNote.textContent =
+                  "All 2048 words are now re-mapped to new numbers";
+                container.appendChild(finalNote);
+                caption.textContent = "Seed Map built!";
+
+                setTimeout(() => {
+                  nextBtn.textContent = "Save";
+                  nextBtn.style.display = "inline-block";
+                }, 1000);
+              }
+            }
+
+            // Step 3: Animate visible rows, assign the rest instantly
+            bip39Words.forEach((_, i) => {
+              const row = document.getElementById(`row-${i}`);
+              if (!row) return;
+              const numCell = row.cells[0];
+
+              if (i < visibleRows) {
+                // Animate visible rows
+                let fakeCount = 0;
+                const maxFakes = 6;
+
+                function fakeShuffle() {
+                  if (fakeCount < maxFakes) {
+                    numCell.textContent = Math.floor(Math.random() * 2048) + 1;
+                    fakeCount++;
+                    setTimeout(fakeShuffle, 40);
+                  } else {
+                    numCell.textContent = uniqueNumbers[i];
+                    completed++;
+
+                    if (i === lastVisibleIndex) {
+                      scrollDiv2.scrollTo({
+                        top: scrollDiv2.scrollHeight,
+                        behavior: "smooth",
+                      });
+                    }
+
+                    checkIfDone();
+                  }
+                }
+
+                setTimeout(fakeShuffle, i * 5); // optional stagger
+              } else {
+                // Instantly assign for non-visible rows
+                numCell.textContent = uniqueNumbers[i];
+                completed++;
+                checkIfDone();
+              }
+            });
+
             break;
 
           case 4:
