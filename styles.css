@@ -238,11 +238,11 @@ html {
         font-size: 0.85em;
       }
       .bounding-box {
-        border: 1px solid rgb(204, 204, 204);
+        border: 3px solid rgb(226, 226, 226);
         border-radius: 8px;
-        padding: 30px;
-        margin: 20px auto;
-        max-width: 840px;
+        padding: 20px;
+        margin: 10px ;
+        max-width: 720px;
         line-height: 1.7;
       }
       .graybox {
@@ -778,7 +778,7 @@ audio {
 
 .scroll-down-indicator {
   position: absolute;
-  bottom: -30px;
+  bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 2s infinite;
