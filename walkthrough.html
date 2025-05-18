@@ -2372,7 +2372,7 @@
             container.appendChild(image);
 
             // Conditionally set image based on screen width
-            if (window.innerWidth > 1024) {
+            if (window.innerWidth >= 768) {
               image.src = "hw-wallet-horiz.png"; // Desktop version
               image.style.width = "480px";
               image.style.maxWidth = "480px";
