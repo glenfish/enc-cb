@@ -186,6 +186,10 @@
 
       }
       @media (min-width:0px) and (max-width: 579.98px) {
+
+        .cryptokey {
+  display: block!important;
+}
         #inside {
         visibility: hidden;
         position: relative;
@@ -379,6 +383,11 @@
 
       .hero {
         padding:0px;
+        background-image: url('bgnd-mobile-gradient.jpg');
+        
+        background-position: top;
+        background-repeat: no-repeat;
+        height: 500px;
       }
       .heroimg img {
         position:relative!important;

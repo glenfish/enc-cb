@@ -837,6 +837,9 @@ audio {
   margin-top:20px;
   margin-bottom: 40px;
 }
+.cryptokey {
+  display: none!important;
+}
 
 
 
