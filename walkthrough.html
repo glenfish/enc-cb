@@ -205,12 +205,21 @@
         top: -20px;
         margin: auto;
       }
-      table,
-      tr,
-      th,
-      td {
-        border-color: white !important;
+
+      table {
+        border-left-style: none !important;
+        border-top-style: none !important;
+        border-left-style: none !important;
+        border-right-style: none !important;
+        border-bottom-style: none !important;
         margin-top: 15px;
+      }
+      tr,
+      td {
+        border-top-style: none !important;
+        border-left-style: none !important;
+        border-right-style: none !important;
+        border-bottom-style: none !important;
       }
     </style>
   </head>
@@ -2436,7 +2445,8 @@
             scrollDiv.style.overflowX = "hidden"; // Ensure no horizontal scroll
 
             const table = document.createElement("table");
-            table.className = "table  table-sm border-white border-opacity-0";
+            table.className =
+              "table  table-sm border-white border-opacity-0 border-0";
             // table.style.width = "600px";
             // table.style.tableLayout = "fixed";
 
@@ -2515,7 +2525,7 @@
 
             const table2 = document.createElement("table");
             table2.className =
-              "table bg-light table-sm border-white border-opacity-0";
+              "table bg-light table-sm border-white border-opacity-0 border-0";
             table2.style.width = "100%";
             table2.style.tableLayout = "fixed";
 
@@ -2627,7 +2637,7 @@
 
             const table3 = document.createElement("table");
             table3.className =
-              "table bg-light table-sm border-white border-opacity-0";
+              "table bg-light table-sm border-white border-opacity-0 border-0";
             table3.style.width = "100%";
             table3.style.tableLayout = "fixed";
 
