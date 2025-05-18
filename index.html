@@ -28,7 +28,16 @@
   </head>
   <body>
     <div class="white-overlay"></div>
-
+<div id="walkthrough-overlay" style="
+  position: fixed;
+  inset: 0;
+  background-color: white;
+  opacity: 0.9;
+  z-index: 9999;
+  display: none;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+"></div>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
       
@@ -113,7 +122,7 @@
         <span class="subheader ">
           <!-- <span class="larger antonio hero-headline">Your Crypto Wallets <br class="break"/>May Be At Risk</span> -->
           <span class=" pt-3">
-            <span class="strong large-subheader  smallscreen largescreen roboto"><span ><h2 class="pb-2 bold">Is Your Crypto Safe?</h2></span>Just one wallet seedphrase backup is a single point of failure. But making copies of your plain text wallet seed words just raises the risk of theft.<br><br> <span class="graybox  normal-line-height " style="position:relative; top:0px;">Protect your digital assets for life</span><br><div class="pt-4 roboto smaller" style="position:relative; top:10px; color: rgb(71, 71, 71)"><span class="strong ">What is Encrypt<span class="orange-text">Fire</span> - </span> a highly secure system for offline multi-backup cold storage of crypto assets. Its designed for regular people, not just tech heads. Plus add a <span class="underline">deadman switch</span> to pass Bitcoin & Alts to your family automatically if you pass on. We've got you.</div></span>
+            <span class="strong large-subheader  smallscreen largescreen roboto"><span ><h2 class="pb-2 bold">Is Your Crypto Safe?</h2></span>Just one wallet seedphrase backup is a single point of failure. But making copies of your plain text wallet seed words just raises the risk of theft.<br><br> <span class="graybox  normal-line-height">Protect your digital assets for life</span><br><div class="pt-4 roboto smaller" style="position:relative; top:10px; color: rgb(71, 71, 71)"><span class="strong ">Encrypt<span class="orange-text">Fire</span> </span> is a secure system for offline multi-backup cold storage of crypto. Its designed for regular people, not just tech heads. Add a <span class="underline">deadman switch</span> to pass Bitcoin & Alts to your family automatically if you pass on. We've got you!</div></span>
           </span>
               <div class="scroll-down-indicator">
   <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
@@ -130,22 +139,41 @@
         
       </div>
     </section>
+    
+    
+    
+    
     <section>
-  
-
-     
           <!-- iframed interactive demo -->
-           <div class="iframe-focus-container">
+           <div id="iframe-focus-container">
      <div class="iframe-container">
      <div class="iframe-wrapper">
         <iframe
   src="walkthrough.html"
+  id="walkthrough-iframe"
   width="100%"
   height="800"
-  style="border: none; overflow: hidden;"
+  style="border: none; overflow: hidden; position: relative; z-index: 1000000;"
   loading="lazy"
   title="Secure Seed Walkthrough"
-></iframe></div></div></div>
+></iframe></div></div>
+<button id="walkthrough-close" aria-label="Close walkthrough" style="
+  display: none;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  z-index: 10001;
+  background: none;
+  border: none;
+  cursor: pointer;
+">
+  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18"/>
+    <line x1="6" y1="6" x2="18" y2="18"/>
+  </svg>
+</button>
+
+</div>
     </section>
     <!-- <section>
       <div class="text-center mt-3">
@@ -1746,7 +1774,7 @@ function disableIframeFocus() {
   document.querySelector('.white-overlay').style.display = 'none';
 }
 if (window.innerWidth < 768) {
-  const iframeContainer = document.querySelector('.iframe-focus-container');
+  const iframeContainer = document.querySelector('#iframe-focus-container');
   const overlay = document.querySelector('.white-overlay');
 
   const observer = new IntersectionObserver(
@@ -1783,6 +1811,68 @@ const fadeInObserver = new IntersectionObserver(
 );
 
 fadeInObserver.observe(fadeInTarget);
+
+</script>
+
+<script>
+  const overlay = document.getElementById('walkthrough-overlay');
+  
+
+
+  window.addEventListener('message', (event) => {
+    const { data } = event;
+
+    if (data === 'activateOverlay' && window.innerWidth > 768) {
+      overlay.style.display = 'block';
+      overlay.style.opacity = '0.9';
+      document.getElementById("iframe-focus-container").classList.add("centered");
+      document.getElementById("walkthrough-close").style.display = "block";
+    }
+
+    if (data === 'deactivateOverlay') {
+      overlay.style.opacity = '0';
+      setTimeout(() => {
+        overlay.style.display = 'none';
+        document.getElementById("iframe-focus-container").classList.remove("centered");
+        document.getElementById("walkthrough-close").style.display = "none";
+        frameIndex = 0;
+      }, 500);
+    }
+  });
+</script>
+
+<script>
+  document.getElementById("walkthrough-close").addEventListener("click", () => {
+  const overlay = document.getElementById("walkthrough-overlay");
+  const iframe = document.getElementById("walkthrough-iframe");
+
+  // Start fade-out of overlay
+  overlay.style.opacity = "0";
+  document.getElementById("walkthrough-close").style.display = "none";
+  document.getElementById("iframe-focus-container").classList.remove("centered");
+
+  // Fade out the iframe before reload
+  iframe.classList.remove("show");
+
+  setTimeout(() => {
+    overlay.style.display = "none";
+
+    // Reload iframe AFTER fade-out finishes
+    iframe.src = iframe.src;
+
+    // Force opacity 0 first (if needed)
+    iframe.classList.add("fade-in");
+    iframe.classList.remove("show");
+
+    // Fade it back in after reload completes
+    iframe.onload = () => {
+      setTimeout(() => {
+        iframe.classList.add("show");
+      }, 50); // wait a moment after onload to allow smooth transition
+    };
+  }, 400); // match the fade-out time
+});
+
 
 </script>
 

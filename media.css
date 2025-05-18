@@ -186,6 +186,17 @@
       }
       @media (min-width:0px) and (max-width: 579.98px) {
 
+        .graybox {
+        /* background-color: rgb(255, 133, 3); */
+        background-color: rgb(141, 141, 141);
+        border: 1px solid rgb(204, 204, 204);
+        border-radius: 5px;
+        padding: 7px 12px;
+        color: white;
+        position:relative;
+        top:0px;
+      }
+
         .iframe-wrapper  {
           width: 100%!important;
           height: 740px!important;
