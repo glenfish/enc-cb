@@ -217,6 +217,12 @@
         border: none !important;
         background-color: white !important;
       }
+      @media (min-width: 0px) and (max-width: 579.98px) {
+        #nxt-btn {
+          position: relative;
+          top: -10px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -3075,10 +3081,10 @@
             caption.className = "mt-3 bold";
             container.appendChild(caption);
             const img11 = document.createElement("img");
-            img11.src = "password-key.png";
+            img11.src = "pwicon.png";
             img11.alt = "Key";
             img11.className = "d-block mx-auto my-4";
-            img11.style.width = "130px";
+            img11.style.width = "100px";
             container.appendChild(img11);
             const p11 = document.createElement("p");
             p11.className = "text-dark text-center fs-5 px-3";
