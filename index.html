@@ -27,7 +27,7 @@
 
   </head>
   <body>
-    <div id="pagecontainer">
+    
     <div class="white-overlay"></div>
 <div id="walkthrough-overlay" style="
   position: fixed;
@@ -170,7 +170,8 @@
   src="walkthrough.html"
   id="walkthrough-iframe"
   width="100%"
-  height="940"
+  max-width="100vw"
+  height="1000"
   style="border: none; overflow: hidden; position: relative; z-index: 1000000;"
   loading="lazy"
   title="Secure Seed Walkthrough"
@@ -1894,8 +1895,7 @@ fadeInObserver.observe(fadeInTarget);
 
 </script>
 
-<!-- end pagecontainer -->
-</div>
+
 <script>
 //   if (window.innerWidth < 768) {
 //      let width = window.innerWidth
