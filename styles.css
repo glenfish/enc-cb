@@ -52,8 +52,9 @@ q:before, q:after {
 }
 table, tr, th, td, .no-border {
 	border-collapse: collapse!important;
-	border-spacing: 0;
+	border-spacing: 0!important;
   border: none!important;
+  border-color: white!important;
 }
 html {
   box-sizing: border-box;
