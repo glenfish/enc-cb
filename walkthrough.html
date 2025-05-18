@@ -3012,17 +3012,17 @@
 
                         setTimeout(() => {
                           flipCard.classList.add("flipped");
-                        }, 400);
+                        }, 300);
 
                         setTimeout(() => {
                           restoreIndex++;
                           showRecoveryStep();
-                        }, 1000);
-                      }, 200); // tighter gap after 'matching...' message
-                    }, 300); // show matching... message quickly
+                        }, 800);
+                      }, 150); // tighter gap after 'matching...' message
+                    }, 200); // show matching... message quickly
                   }
 
-                  setTimeout(showRecoveryStep, 800);
+                  setTimeout(showRecoveryStep, 500);
                 }
               }
             }
