@@ -2386,7 +2386,8 @@
             // image.className = "throb-image";
 
             finalNote.className = "mt-4 text-dark bold bigger";
-            finalNote.textContent = "60 second backup walkthrough";
+            finalNote.textContent =
+              "Securely back up this wallet in 60 seconds";
             finalNote.style.paddingBottom = "20px";
             container.appendChild(finalNote);
             break;
@@ -2485,16 +2486,27 @@
 
             break;
 
+            // Fisher-Yates shuffle function
+            function shuffle(array) {
+              for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+              }
+              return array;
+            }
+
           case 3:
-            caption.textContent = "Randomizing...";
+            caption.textContent = "Generating random seed codes...";
             caption.className = "mt-3";
             container.appendChild(caption);
 
-            // Create scrollable container
+            uniqueNumbers = shuffle(
+              Array.from({ length: bip39Words.length }, (_, i) => i + 1)
+            );
+
             const scrollDiv2 = document.createElement("div");
             scrollDiv2.className =
               "scroll-box border border-secondary rounded max-600";
-            scrollDiv2.style.margin = "0 auto";
             scrollDiv2.style.overflowX = "hidden";
 
             const table2 = document.createElement("table");
@@ -2502,16 +2514,17 @@
             table2.style.width = "100%";
             table2.style.tableLayout = "fixed";
 
-            // Create rows
+            let completed = 0;
+
             bip39Words.forEach((word, i) => {
               const row = table2.insertRow();
               row.id = `row-${i}`;
-              row.style.backgroundColor = i % 2 === 0 ? "#000" : "#000";
+              row.style.backgroundColor = i % 2 === 0 ? "#000" : "#111";
 
               const numCell = row.insertCell();
               const wordCell = row.insertCell();
 
-              numCell.textContent = ""; // Start blank
+              numCell.textContent = "";
               wordCell.textContent = word;
 
               wordCell.style.whiteSpace = "nowrap";
@@ -2523,21 +2536,6 @@
 
             scrollDiv2.appendChild(table2);
             container.appendChild(scrollDiv2);
-
-            // Step 1: Shuffle numbers
-            uniqueNumbers = Array.from(
-              { length: bip39Words.length },
-              (_, i) => i + 1
-            ).sort(() => Math.random() - 0.5);
-
-            // Step 2: Estimate how many rows fit in the scroll viewport
-            const estimatedRowHeight = 30;
-            const visibleRows = Math.floor(
-              scrollDiv2.offsetHeight / estimatedRowHeight
-            );
-            const lastVisibleIndex = visibleRows - 1;
-
-            let completed = 0;
 
             function checkIfDone() {
               if (completed === bip39Words.length) {
@@ -2554,46 +2552,31 @@
               }
             }
 
-            // Step 3: Animate visible rows, assign the rest instantly
-            bip39Words.forEach((_, i) => {
-              const row = document.getElementById(`row-${i}`);
-              if (!row) return;
-              const numCell = row.cells[0];
-
-              if (i < visibleRows) {
-                // Animate visible rows
-                let fakeCount = 0;
-                const maxFakes = 6;
-
-                function fakeShuffle() {
-                  if (fakeCount < maxFakes) {
-                    numCell.textContent = Math.floor(Math.random() * 2048) + 1;
-                    fakeCount++;
-                    setTimeout(fakeShuffle, 40);
-                  } else {
-                    numCell.textContent = uniqueNumbers[i];
+            setTimeout(() => {
+              for (let i = 0; i < bip39Words.length; i++) {
+                const row = document.getElementById(`row-${i}`);
+                const numCell = row.cells[0];
+                let counter = 0;
+                const targetNum = uniqueNumbers[i];
+                const interval = setInterval(() => {
+                  numCell.textContent = Math.floor(Math.random() * 999);
+                  counter++;
+                  if (counter > 10) {
+                    clearInterval(interval);
+                    numCell.textContent = targetNum;
                     completed++;
-
-                    if (i === lastVisibleIndex) {
-                      scrollDiv2.scrollTo({
-                        top: scrollDiv2.scrollHeight,
-                        behavior: "smooth",
-                      });
-                    }
-
                     checkIfDone();
                   }
-                }
-
-                setTimeout(fakeShuffle, i * 5); // optional stagger
-              } else {
-                // Instantly assign for non-visible rows
-                numCell.textContent = uniqueNumbers[i];
-                completed++;
-                checkIfDone();
+                }, 30);
               }
-            });
 
+              setTimeout(() => {
+                scrollDiv2.scrollTo({
+                  top: scrollDiv2.scrollHeight,
+                  behavior: "smooth",
+                });
+              }, 1500);
+            }, 500);
             break;
 
           case 4:
@@ -3116,7 +3099,7 @@
             container.appendChild(img12);
             footerText.className = "text-dark text-center fs-5 px-3 mt-5";
             footerText.innerHTML =
-              "Your Seed Map & Seed Codes are secure on USB sticks in trusted hands.<br><br>This system works with just about every wallet. See below.";
+              "Your Seed Map & Seed Codes are secure on USB sticks in trusted hands.<br><br>The system works with practically all wallets. See below.";
             container.appendChild(footerText);
 
             nextBtn.textContent = "Got it!";

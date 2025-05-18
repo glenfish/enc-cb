@@ -149,11 +149,12 @@
         width: 90%!important;
         margin: auto;
       }
-      #company, #inside, #video {
+      #video {
         visibility: hidden;
         position: relative;
         top: 40px;
       }
+      
       #pricing {
         visibility: hidden;
         position: relative;
@@ -185,6 +186,16 @@
 
       }
       @media (min-width:0px) and (max-width: 579.98px) {
+        #inside {
+        visibility: hidden;
+        position: relative;
+        top: 40px;
+      }
+
+        .headline {
+  margin-top:10px;
+  margin-bottom: 0px;
+}
 
         .graybox {
         /* background-color: rgb(255, 133, 3); */
@@ -304,18 +315,14 @@
       #company {
         visibility: hidden;
         position: relative;
-        top: -90px;
+        top: 0px;
       }
       #video {
         visibility: hidden;
         position: relative;
         top: -20px;
       }
-      #inside {
-        visibility: hidden;
-        position: relative;
-        top: -100px;
-      }
+      
       #pricing {
         visibility: hidden;
         position: relative;
