@@ -2363,7 +2363,7 @@
           case 1:
             container.innerHTML +=
               //   '<p class="text-muted">[ Placeholder Frame 0 ]</p>';
-              '<p class="text-dark mb-4 bold bigger">This is your wallet seed phrase</p>';
+              '<p class="text-dark mt-5 bold bigger">This is your wallet seed phrase</p>';
             const ulWrapper = document.createElement("div");
             ulWrapper.className = "max-400";
 
@@ -2549,7 +2549,7 @@
 
           case 4:
             caption.textContent = "This is your 'Seed Map'";
-            caption.className = "mt-3 bold bigger";
+            caption.className = "mt-5 bold bigger";
             container.appendChild(caption);
             const img = document.createElement("img");
             img.src = "pdf-locked.png";
@@ -2572,7 +2572,7 @@
             break;
           case 5:
             caption.textContent =
-              "Next we match your wallet seed words, one at a time... to these new numbers";
+              "Next we match your wallet seed words, one at a time... using the Seed Map";
             caption.className = "mt-3";
             container.appendChild(caption);
 
@@ -2629,7 +2629,7 @@
                   caption.textContent = "";
                   finalNote.className = "mt-4 text-dark bold bigger";
                   finalNote.textContent =
-                    "We just turned your words into numbers.";
+                    "We just turned your words into numbers";
                   container.appendChild(finalNote);
 
                   // Add summary table
@@ -2702,7 +2702,7 @@
             break;
 
           case 6:
-            caption.textContent = "Wallet is now protected";
+            caption.textContent = "The wallet is now protected";
             caption.className = "mt-3 bold bigger";
             container.appendChild(caption);
 
@@ -2745,7 +2745,7 @@
 
           case 7:
             caption.textContent = "Your 'Seed Codes'";
-            caption.className = "mt-3 bold bigger";
+            caption.className = "mt-5 bold bigger";
             container.appendChild(caption);
 
             const mapImg = document.createElement("img");
