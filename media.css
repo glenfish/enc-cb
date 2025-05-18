@@ -186,7 +186,15 @@
 
       }
       @media (min-width:0px) and (max-width: 579.98px) {
-
+        h2.bulletproof-headline {
+          text-align:center!important;
+        }
+        .container {
+          padding: 5px;
+        }
+        .container-narrow, .levelup, .aboutus {
+          padding: 18px!important
+        }
         .cryptokey {
   display: block!important;
 }
@@ -210,6 +218,7 @@
         color: white;
         position:relative;
         top:0px;
+        display:none;
       }
 
         .iframe-wrapper  {
@@ -230,7 +239,9 @@
 .iframe-focus-container {
   position: relative;
   z-index: 1001;
+  
 }
+
         .hide-navbar {
   transform: translateY(-100%);
   transition: transform 0.3s ease-in-out;

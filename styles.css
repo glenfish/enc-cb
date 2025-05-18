@@ -50,9 +50,10 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
-table {
-	border-collapse: collapse;
+table, tr, th, td, .no-border {
+	border-collapse: collapse!important;
 	border-spacing: 0;
+  border: none!important;
 }
 html {
   box-sizing: border-box;
@@ -244,7 +245,11 @@ html {
         padding: 7px 18px;
         color: white;
         position:relative;
-        top:-15px;
+        top:7px;
+        display:block;
+        margin:  20px auto;
+        max-width: 600px;
+        
       }
       .glow {
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);

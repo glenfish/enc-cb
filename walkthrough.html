@@ -2359,7 +2359,7 @@
           case 0:
             container.innerHTML += '<div class="overlay-highlight"></div>';
 
-            nextBtn.textContent = "GO";
+            nextBtn.textContent = "GO!";
             nextBtn.style.display = "inline-block";
             nextBtn.style.width = "160px";
             nextBtn.style.height = "46px";
@@ -2386,8 +2386,7 @@
             // image.className = "throb-image";
 
             finalNote.className = "mt-4 text-dark bold bigger";
-            finalNote.textContent =
-              "Securely back up this wallet in 60 seconds";
+            finalNote.textContent = "Secure this wallet in 60 seconds";
             finalNote.style.paddingBottom = "20px";
             container.appendChild(finalNote);
             break;
@@ -2424,14 +2423,13 @@
 
           case 2:
             const scrollDiv = document.createElement("div");
-            scrollDiv.className =
-              "scroll-box border border-secondary rounded max-400";
+            scrollDiv.className = "scroll-box border-0 max-400";
 
             scrollDiv.style.margin = "0 auto"; // Center it
             scrollDiv.style.overflowX = "hidden"; // Ensure no horizontal scroll
 
             const table = document.createElement("table");
-            table.className = "table  table-sm";
+            table.className = "table  table-sm no-border table-borderless";
             // table.style.width = "600px";
             // table.style.tableLayout = "fixed";
 
@@ -2505,12 +2503,11 @@
             );
 
             const scrollDiv2 = document.createElement("div");
-            scrollDiv2.className =
-              "scroll-box border border-secondary rounded max-600";
+            scrollDiv2.className = "scroll-box border-0 max-600";
             scrollDiv2.style.overflowX = "hidden";
 
             const table2 = document.createElement("table");
-            table2.className = "table bg-light table-sm";
+            table2.className = "table bg-light table-sm table-borderless";
             table2.style.width = "100%";
             table2.style.tableLayout = "fixed";
 
@@ -2617,12 +2614,11 @@
 
             // Scrollable table from Frame 3 with random values
             const scrollDiv3 = document.createElement("div");
-            scrollDiv3.className =
-              "scroll-box border border-secondary rounded max-600";
+            scrollDiv3.className = "scroll-box border-0 max-600";
             scrollDiv3.style.overflowX = "hidden";
 
             const table3 = document.createElement("table");
-            table3.className = "table bg-light table-sm";
+            table3.className = "table bg-light table-sm table-borderless";
             table3.style.width = "100%";
             table3.style.tableLayout = "fixed";
 
