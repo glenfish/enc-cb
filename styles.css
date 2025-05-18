@@ -241,7 +241,7 @@ html {
         border: 3px solid rgb(226, 226, 226);
         border-radius: 8px;
         padding: 20px;
-        margin: 10px ;
+        margin: 17px auto ;
         max-width: 720px;
         line-height: 1.7;
       }
@@ -778,7 +778,7 @@ audio {
 
 .scroll-down-indicator {
   position: absolute;
-  bottom: -20px;
+  bottom: -25px;
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 2s infinite;
