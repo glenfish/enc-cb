@@ -494,8 +494,8 @@
 /* Mobile: scale down to 80% (or less if needed) */
       @media (max-width: 768px) {
         .iframe-wrapper {
-          zoom: 0.8;
-          height: 860px; /* important to crop the extra space */
+          zoom: 0.75;
+          height: 900px; /* important to crop the extra space */
           
         }
 
