@@ -50,7 +50,10 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
-
+table, tr, th, td {
+	
+  border-color: white!important;
+}
 html {
   box-sizing: border-box;
 }
