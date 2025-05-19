@@ -1661,6 +1661,7 @@ fadeInObserver.observe(fadeInTarget);
     }
     if (data === 'hide-scroll-down-indicator') {
       document.querySelector('.scroll-down-indicator').style.display = 'none';
+      document.getElementById("iframe-focus-container").scrollIntoView();
     }
 
     
