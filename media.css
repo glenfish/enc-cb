@@ -187,6 +187,12 @@
       }
       @media (min-width:0px) and (max-width: 579.98px) {
 
+        .phone-border {
+          width: 100%;
+          background-color: rgb(178, 178, 178);padding: 40px 0 40px 0;
+          margin-bottom: 40px;
+        }
+
          .aboutus {
         background: linear-gradient(to right, #fcfcfc, #f6f6f6, #f0f0f0);
         color: rgb(41, 41, 41)!important;
