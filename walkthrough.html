@@ -237,6 +237,7 @@
         font-size: 1.5rem;
         font-weight: 600;
         color: #212529;
+        padding-top: 10px;
       }
     </style>
   </head>
@@ -2395,8 +2396,8 @@
 
             nextBtn.textContent = "GO!";
             nextBtn.style.display = "inline-block";
-            nextBtn.style.width = "160px";
-            nextBtn.style.height = "46px";
+            nextBtn.style.width = "100px";
+            nextBtn.style.height = "56px";
 
             caption.textContent = "";
             caption.className = "mt-3 bold bigger pt-3";
@@ -2420,7 +2421,7 @@
             // image.className = "throb-image";
 
             finalNote.className = "mt-4 text-dark bold bigger";
-            finalNote.textContent = "Secure this wallet in 60 seconds";
+            finalNote.textContent = "Let's secure this wallet in 60 seconds";
             finalNote.style.paddingBottom = "20px";
             container.appendChild(finalNote);
             break;
@@ -2511,7 +2512,7 @@
               finalNote.textContent = "Next, we'll randomize this word list";
               container.appendChild(finalNote);
               setTimeout(() => {
-                nextBtn.textContent = "Randomize";
+                nextBtn.textContent = "OK";
 
                 nextBtn.style.display = "inline-block";
               }, 400);
@@ -2579,7 +2580,7 @@
                 caption.textContent = " ";
 
                 setTimeout(() => {
-                  nextBtn.textContent = "Save";
+                  nextBtn.textContent = "OK";
                   nextBtn.style.display = "inline-block";
                 }, 1000);
               }
@@ -2716,7 +2717,7 @@
 
                   container.appendChild(summaryTable);
                   container.appendChild(finalNote);
-                  nextBtn.textContent = "Get Seed Codes";
+                  nextBtn.textContent = "OK";
                   nextBtn.style.display = "inline-block";
                 }, 1000);
                 return;
@@ -2900,7 +2901,7 @@
                 "Ready to test your backup for 100% confidence?";
               container.appendChild(finalNote);
 
-              nextBtn.textContent = "Restore My Wallet";
+              nextBtn.textContent = "OK";
               nextBtn.style.display = "inline-block";
             }, 1800);
 

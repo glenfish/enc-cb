@@ -210,9 +210,7 @@
         .aboutus {
           padding: 30px!important
         }
-        .cryptokey {
-  display: block!important;
-}
+       
         #inside {
         visibility: hidden;
         position: relative;
@@ -232,8 +230,9 @@
         padding: 7px 12px;
         color: white;
         position:relative;
-        top:0px;
-        display:none;
+        top:-10px;
+        text-align: center
+        /* display:none; */
       }
 
         .iframe-wrapper  {
@@ -325,7 +324,7 @@
         display:block;
         line-height: 1.5!important;
         position:relative;
-        top:-20px;
+        top:-35px;
       }
       .underline {
         text-decoration: underline!important;
@@ -538,6 +537,16 @@
 
 
 @media (min-width:0px) and (max-width: 579.98px) {
+  .hero {
+    text-align:left;
+    padding-top: 30px;
+  }
+  h2.headline {
+    margin-bottom: 30px!important;
+  }
+  .cryptokey {
+    display:none;
+  }
 /* Force containment for video layout on mobile */
 #mobile-video-layout {
   width: 100%;
@@ -586,7 +595,7 @@ body {
       }
 .scroll-down-indicator {
   position: absolute;
-  bottom: 7px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 2s infinite;
@@ -596,6 +605,24 @@ body {
   transition: opacity 0.5s ease;
   zoom: 1.5;
 }
+.bounding-box {
+        border: 0px solid rgb(226, 226, 226);
+        border-radius: 8px;
+        padding-top: 20px;
+        margin: 0 auto 0 auto ;
+        max-width: 720px;
+        line-height: 1.7;
+      }
+      .bounding-box-bordered {
+        border: 5px solid rgb(226, 226, 226);
+        border-radius: 8px;
+        padding: 20px;
+        margin: 0px auto 0 auto ;
+        max-width: 720px;
+        line-height: 1.7;
+        position: relative;
+        top: -20px;
+      }
 
 }
 
