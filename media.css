@@ -236,7 +236,7 @@
       }
 
         .iframe-wrapper  {
-          height: 880px!important;
+          height: 920px!important;
         }
         .white-overlay {
   position: fixed;
@@ -507,7 +507,7 @@
       @media (max-width: 768px) {
         .iframe-wrapper {
           zoom: 0.80;
-          height: 880px; /* important to crop the extra space */
+          height: 920px; /* important to crop the extra space */
           
         }
 
