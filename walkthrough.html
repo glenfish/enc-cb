@@ -2361,6 +2361,9 @@
       const caption = document.createElement("p");
       const finalNote = document.createElement("p");
       nextBtn.addEventListener("click", () => {
+        if (currentFrame === 0 && window.innerWidth <= 768) {
+          window.parent.postMessage("hide-scroll-down-indicator", "*");
+        }
         if (currentFrame === 0 && window.innerWidth > 768) {
           window.parent.postMessage("activateOverlay", "*");
         }
