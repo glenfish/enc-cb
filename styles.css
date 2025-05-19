@@ -251,7 +251,7 @@ html {
         border: 0px solid rgb(226, 226, 226);
         border-radius: 8px;
         padding: 20px;
-        margin: 17px auto ;
+        margin: 17px auto 0 auto ;
         max-width: 720px;
         line-height: 1.7;
       }
@@ -259,7 +259,7 @@ html {
         border: 3px solid rgb(226, 226, 226);
         border-radius: 8px;
         padding: 20px;
-        margin: 17px auto ;
+        margin: 17px auto 0 auto ;
         max-width: 720px;
         line-height: 1.7;
       }

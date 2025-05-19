@@ -143,7 +143,7 @@
 
 
               <div class="scroll-down-indicator">
-  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="4"
        stroke-linecap="round" stroke-linejoin="round"
        class="feather feather-chevron-down">
     <polyline points="6 9 12 15 18 9"></polyline>
@@ -170,7 +170,7 @@
   src="walkthrough.html"
   id="walkthrough-iframe"
   width="100%"
-  height="880"
+  height="820"
   style="border: none; overflow: hidden; position: relative; z-index: 1000000;"
   loading="lazy"
   title="Secure Seed Walkthrough"
@@ -1725,7 +1725,7 @@
   const scrollIndicator = document.querySelector(".scroll-down-indicator");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 200) {
+  if (window.scrollY > 550) {
     scrollIndicator.classList.add("hide");
   } else {
     scrollIndicator.classList.remove("hide");

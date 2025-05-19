@@ -579,6 +579,24 @@ body {
   overflow-x: hidden !important;
 }
 
+#walkthrough-iframe {
+        position: relative;
+        top: -30px;
+        
+      }
+.scroll-down-indicator {
+  position: absolute;
+  bottom: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+  color: #c8c8c8;
+  z-index: 99000;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  zoom: 1.5;
+}
+
 }
 
 
