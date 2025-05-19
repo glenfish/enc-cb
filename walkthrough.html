@@ -2533,7 +2533,7 @@
             }
 
           case 3:
-            caption.textContent = "Generating random seed codes...";
+            caption.textContent = "Generating random mapping";
             caption.className = "pt-3";
             container.appendChild(caption);
 
@@ -2580,7 +2580,7 @@
                 finalNote.textContent =
                   "All 2048 words are now re-mapped to new numbers";
                 container.appendChild(finalNote);
-                caption.textContent = " ";
+                caption.textContent = "Map Generated!";
 
                 setTimeout(() => {
                   nextBtn.textContent = "OK";
@@ -3097,14 +3097,14 @@
             break;
 
           case 11:
-            caption.textContent = "What Google Sees";
+            caption.textContent = "";
             caption.className = "mt-3 bold";
             container.appendChild(caption);
             const img11 = document.createElement("img");
             img11.src = "pwicon.png";
             img11.alt = "Key";
             img11.className = "d-block mx-auto my-4";
-            img11.style.width = "100px";
+            img11.style.width = "90px";
             container.appendChild(img11);
             const p11 = document.createElement("p");
             p11.className = "text-dark text-center fs-5 px-3";
@@ -3116,9 +3116,9 @@
             ul.style.textAlign = "left";
 
             [
-              "✅ Encrypted by Google",
-              "✅ No mention of your wallet",
-              "✅ No access to your data",
+              "✅ Encrypted in Google cloud",
+              "✅ You control the timing",
+              "✅ You control the people",
             ].forEach((text) => {
               const li = document.createElement("li");
               li.textContent = text;
@@ -3136,7 +3136,7 @@
             container.appendChild(img12);
             footerText.className = "text-dark text-center fs-5 px-3 mt-5";
             footerText.innerHTML =
-              "Your Seed Map & Seed Codes are securely split across multiple USB sticks. Encoded, Encrypted and in different physical locations. Read more below.";
+              "Your Seed Map & Seed Codes are securely split across multiple USB sticks. <br>Encoded, Encrypted and stored in different physical locations. Read more below.";
             container.appendChild(footerText);
 
             nextBtn.textContent = "Got it!";
