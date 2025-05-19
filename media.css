@@ -191,9 +191,18 @@
           text-align:center!important;
         }
         .container {
-          padding: 5px;
-          
+          margin: 0px;
+          padding: 8px;
+          /* box-sizing: border-box; */
+          overflow-x: hidden !important;
      
+        }
+        .container-nav {
+          margin: 0px!important;
+          padding: 0px!important;
+          /* box-sizing: border-box; */
+          
+          
         }
         .container-narrow, .levelup {
           padding: 10px!important
@@ -316,7 +325,7 @@
         display:block;
         line-height: 1.5!important;
         position:relative;
-        top:10px;
+        top:-20px;
       }
       .underline {
         text-decoration: underline!important;
@@ -399,8 +408,9 @@
 
       .hero {
         padding:0px;
-        background-image: url('backgnd.png');
-        
+        /* background-image: url('backgnd.png'); */
+        background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.6)),
+            url('backgnd.png') center no-repeat;
         background-position: top;
         background-repeat: no-repeat;
       }
@@ -474,6 +484,9 @@
     
     
   }
+  .navbar {
+    z-index: 9998;
+  }
 }
 @media (max-width: 767px) {
   
@@ -482,7 +495,7 @@
   }
   #mobile-video-layout {
     display: block;
-    width: 100vw;
+  /* width: 100%; */
     
   }
 }
@@ -524,7 +537,49 @@
 
 
 
+@media (min-width:0px) and (max-width: 579.98px) {
+/* Force containment for video layout on mobile */
+#mobile-video-layout {
+  width: 100%;
+  /* overflow-x: hidden; */
+}
+#mobile-video-layout .container {
+  margin-left: auto;
+  margin-right: auto;
+}
 
+/* Ensure video thumbnails and labels do not overflow */
+.video-thumbnail {
+  width: 96%!important;
+  max-width: 100%;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.video-thumbnail > label {
+  padding-top:7px;
+  margin-bottom: 20px;
+}
+
+
+
+
+.video-thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* Catch any stubborn scrollbars */
+body {
+  overflow-x: hidden !important;
+}
+
+}
 
 
 

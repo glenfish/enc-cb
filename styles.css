@@ -28,7 +28,15 @@ html {
 }
 html, body {
     height: 100%!important;
+    
 }
+body {
+  width: 100%;
+}
+.hide {
+  display: none!important;
+}
+
 body {
 	/* line-height: 1; */
     display: flex!important;
@@ -112,6 +120,8 @@ html {
       }
       .logo-container {
         height:30px;
+        max-width: 260px;
+        padding-left: 8px;
       }
       .hero .logo img {
         position: relative;
@@ -238,6 +248,14 @@ html {
         font-size: 0.85em;
       }
       .bounding-box {
+        border: 0px solid rgb(226, 226, 226);
+        border-radius: 8px;
+        padding: 20px;
+        margin: 17px auto ;
+        max-width: 720px;
+        line-height: 1.7;
+      }
+      .bounding-box-bordered {
         border: 3px solid rgb(226, 226, 226);
         border-radius: 8px;
         padding: 20px;
@@ -756,7 +774,7 @@ audio {
         width: 100%;
         overflow: hidden;
         position: relative;
-  z-index: 10000;
+  z-index: 9997;
       }
 
       /* Default: 100% scale for desktops */
@@ -855,6 +873,7 @@ audio {
 .cryptokey {
   display: none!important;
 }
+
 
 
 

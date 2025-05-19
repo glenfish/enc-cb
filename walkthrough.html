@@ -222,6 +222,21 @@
           position: relative;
           top: -10px;
         }
+        .equation-wrapper {
+          max-width: 160px;
+          font-size: 1.2rem;
+          margin: auto;
+          text-align: center;
+        }
+      }
+      .pos-left {
+        position: relative;
+        left: -20px;
+      }
+      .frame-headline {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #212529;
       }
     </style>
   </head>
@@ -2375,14 +2390,15 @@
 
         switch (frameNum) {
           case 0:
-            container.innerHTML += '<div class="overlay-highlight"></div>';
+            container.innerHTML +=
+              '<div class="overlay-highlight frame-headline">Interactive Demo</div>';
 
             nextBtn.textContent = "GO!";
             nextBtn.style.display = "inline-block";
             nextBtn.style.width = "160px";
             nextBtn.style.height = "46px";
 
-            caption.textContent = "Interactive Demo";
+            caption.textContent = "";
             caption.className = "mt-3 bold bigger pt-3";
             container.appendChild(caption);
 
@@ -2431,7 +2447,7 @@
             caption.className = "mt-3";
             container.appendChild(caption);
             setTimeout(() => {
-              caption.textContent = "";
+              caption.textContent = "Securely backing this up is critical";
               nextBtn.textContent = "Next";
 
               nextBtn.style.display = "inline-block";
@@ -2492,7 +2508,7 @@
 
             setTimeout(() => {
               finalNote.className = "mt-4 text-dark bold bigger";
-              finalNote.textContent = "Now, we randomize this word list";
+              finalNote.textContent = "Next, we'll randomize this word list";
               container.appendChild(finalNote);
               setTimeout(() => {
                 nextBtn.textContent = "Randomize";
@@ -2514,7 +2530,7 @@
 
           case 3:
             caption.textContent = "Generating random seed codes...";
-            caption.className = "mt-3";
+            caption.className = "pt-3";
             container.appendChild(caption);
 
             uniqueNumbers = shuffle(
@@ -2560,7 +2576,7 @@
                 finalNote.textContent =
                   "All 2048 words are now re-mapped to new numbers";
                 container.appendChild(finalNote);
-                caption.textContent = "Seed Map built!";
+                caption.textContent = " ";
 
                 setTimeout(() => {
                   nextBtn.textContent = "Save";
@@ -2597,7 +2613,7 @@
             break;
 
           case 4:
-            caption.textContent = "This is your 'Seed Map'";
+            caption.innerHTML = "This is called your<br>'Seed Map'";
             caption.className = "mt-5 bold bigger";
             container.appendChild(caption);
             const img = document.createElement("img");
@@ -2627,7 +2643,7 @@
 
             // Top display area for current word and number
 
-            displayArea.className = "mt-4 text-dark";
+            displayArea.className = "mt-4 text-dark pos-left";
             displayArea.style.fontSize = "1.5rem";
             displayArea.style.minHeight = "3em";
             container.appendChild(displayArea);
@@ -2793,7 +2809,7 @@
             break;
 
           case 7:
-            caption.textContent = "Your 'Seed Codes'";
+            caption.innerHTML = "These are your<br>'Seed Codes'";
             caption.className = "mt-5 bold bigger";
             container.appendChild(caption);
 
@@ -2818,7 +2834,7 @@
 
             const equationWrapper = document.createElement("div");
             equationWrapper.className =
-              "d-flex justify-content-center align-items-center gap-3 flex-wrap mt-4";
+              "d-flex justify-content-center align-items-center gap-3 flex-wrap mt-4 equation-wrapper";
 
             function createBlock(imgUrl, labelText) {
               const wrapper = document.createElement("div");
@@ -2945,7 +2961,7 @@
                   unlockMsg.textContent = "Seed Map successfully unlocked.";
                   const beginBtn = document.createElement("button");
                   beginBtn.textContent = "Begin Recovery";
-                  beginBtn.className = "btn btn-primary mt-3";
+                  beginBtn.className = "btn btn-primary mt-3 p-3";
                   beginBtn.onclick = () => {
                     beginBtn.remove();
                     startRecovery();

@@ -42,7 +42,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
       
-      <div class="container">
+      <div class="container container-nav">
         
         <div class="logo-container">
           
@@ -103,11 +103,11 @@
 
     <!-- Hero Section with Logo & Subheadline -->
     <section class="hero">
-      <div class="container">
+      <div class="bounding-box">
         <!-- <div class="w-100 heroimg">
           <picture>
             <img 
-              src="dont-lose-access-to-your-crypto-wallets.avif" 
+              src="" 
               alt="Hero Image" 
               class="img-fluid w-100 d-block mb-3 position-relative " 
               style="top: 0.5rem;" 
@@ -125,20 +125,20 @@
         
         <span class="subheader ">
           <!-- <span class="larger antonio hero-headline">Your Crypto Wallets <br class="break"/>May Be At Risk</span> -->
-          <span class=" pt-4 ">
-            <span class="strong large-subheader  smallscreen largescreen roboto"><span ><h2 class="mt-md-5 mt-sm-1 pb-2 bold headline">Is Your Crypto Safe?</h2>
+          <div class=" pt-0 ">
+            <span class="strong large-subheader  smallscreen largescreen roboto"><span ><h2 class="mt-0  pb-2 bold headline">Is Your Crypto Safe?</h2>
             <!-- insert image -->
             <img src="password-key.png" alt="crypto key" class="img-fluid w-30 d-block mb-3 position-relative cryptokey" style="top: 0.1rem; margin:auto; opacity: 0.4;" width="90" height="auto" loading="eager" decoding="async">
             
             </span><span class="strong mt-3">The problem: </span><br>Just one wallet seedphrase backup is a single point of loss. But making copies of your plaintext wallet seed words raises the risk of theft & hacks.<br><div class="strong mt-3">Don't risk your crypto investments</div>
             
             <div class="pt-0 roboto smaller" style=" color: rgb(71, 71, 71)">
-              <div class="bounding-box">
+              <div class="bounding-box-bordered">
               <span class="strong ">Encrypt<span class="orange-text">Fire</span> </span> is a secure system for offline multi-backup cold storage of crypto. Designed for regular people. Add a <span class="underline">deadman switch</span> & pass Bitcoin & Alts to your family automatically if you pass on.
             </div>
             <span class="graybox  normal-line-height">Protect your digital assets for life</span>
             </div>
-          </span>
+          </div>
         </span>
 
 
@@ -170,8 +170,7 @@
   src="walkthrough.html"
   id="walkthrough-iframe"
   width="100%"
-  max-width="100vw"
-  height="1000"
+  height="880"
   style="border: none; overflow: hidden; position: relative; z-index: 1000000;"
   loading="lazy"
   title="Secure Seed Walkthrough"
@@ -543,106 +542,54 @@
 
   <!-- end iframed interactive demo -->
   <section class="mb-5 pb-3 video-full-width">
-          <h3 class="section-title antonio  mt-0 pb-3">Videos</h3>
-          <div class="mt-3 container center">
-            <div class="row">
-              
-              <!-- Left Column: Two stacked video thumbnails -->
-              <div class="col-md-6">
-                <div class="row">
-                  <div class="col-12 d-flex justify-content-center white">
-                    <div
-                      class="video-thumbnail"
-                      data-bs-toggle="modal"
-                      data-bs-target="#videoModal0b"
-                      style="cursor: pointer;"
-                    >
-                    <div class="video-thumbnail position-relative" data-bs-toggle="modal" data-bs-target="#videoModal0b" style="cursor: pointer;"></div>
-                      <img
-                        src="welcome-video.png"
-                        alt="Welcome from the creator"
-                        class="img-fluid"
-                      />
-                      <label>Welcome from the creator</label>
-                      <!-- Play Button -->
-                      <svg class="play-button" viewBox="0 0 100 100" fill="white">
-                        <circle cx="50" cy="50" r="40" fill="rgba(0, 0, 0, 0.6)" />
-                        <polygon points="40,30 70,50 40,70" fill="white" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="col-12 d-flex justify-content-center white">
-                    <div
-                      class="video-thumbnail"
-                      data-bs-toggle="modal"
-                      data-bs-target="#videoModal1b"
-                      style="cursor: pointer;"
-                    >
-                    <div class="video-thumbnail position-relative" data-bs-toggle="modal" data-bs-target="#videoModal1b" style="cursor: pointer;"></div>
-                      <img
-                        src="v1.png"
-                        alt="Video 1"
-                        class="img-fluid"
-                      />
-                      <label>Encrypting Wallet Seed Phrases</label>
-                      <!-- Play Button -->
-                      <svg class="play-button" viewBox="0 0 100 100" fill="white">
-                        <circle cx="50" cy="50" r="40" fill="rgba(0, 0, 0, 0.6)" />
-                        <polygon points="40,30 70,50 40,70" fill="white" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Right Column: Two stacked video thumbnails -->
-              <div class="col-md-6">
-                <div class="row">
-                  <div class="col-12 d-flex justify-content-center white">
-                    <div
-                      class="video-thumbnail"
-                      data-bs-toggle="modal"
-                      data-bs-target="#videoModal2b"
-                      style="cursor: pointer;"
-                    >
-                    <div class="video-thumbnail position-relative" data-bs-toggle="modal" data-bs-target="#videoModal2b" style="cursor: pointer;"></div>
-                      <img
-                        src="v2.png"
-                        alt="Video 2"
-                        class="img-fluid"
-                      />
-                      <label>File Handling & Offline Backup</label>
-                      
-                      
-                      <!-- Play Button -->
-                      <svg class="play-button" viewBox="0 0 100 100" fill="white">
-                        <circle cx="50" cy="50" r="40" fill="rgba(0, 0, 0, 0.6)" />
-                        <polygon points="40,30 70,50 40,70" fill="white" />
-                      </svg>
-                    </div>
-                  </div>
-                  
-                  <div class="col-12 d-flex justify-content-center ">
-                    <div
-                      
-                    >
-                    <div class="video-thumbnail position-relative"  ></div>
-                      <img
-                        src="v3-vid.png"
-                        alt="Video 3"
-                        class="img-fluid"
-                      />
-                      <label>DEADMAN SWITCH Setup & Walkthrough</label>
-                      <!-- Play Button -->
-                      <!-- <svg class="play-button" viewBox="0 0 100 100" fill="white">
-                        <circle cx="50" cy="50" r="40" fill="rgba(0, 0, 0, 0.6)" />
-                        <polygon points="40,30 70,50 40,70" fill="white" />
-                      </svg> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <h3 class="section-title antonio mt-0 pb-3 text-center">Videos</h3>
+    <div class="container">
+      <div class="row">
+        <!-- Video 0 -->
+        <div class="col-12 col-md-6 d-flex justify-content-center mb-4">
+          <div class="video-thumbnail position-relative" data-bs-toggle="modal" data-bs-target="#videoModal0b" style="cursor: pointer;">
+            <img src="welcome-video.png" alt="Welcome from the creator" class="img-fluid" />
+            <label>Welcome from the creator</label>
+            <svg class="play-button" viewBox="0 0 100 100" fill="white">
+              <circle cx="50" cy="50" r="40" fill="rgba(0, 0, 0, 0.6)" />
+              <polygon points="40,30 70,50 40,70" fill="white" />
+            </svg>
           </div>
+        </div>
+
+        <!-- Video 1 -->
+        <div class="col-12 col-md-6 d-flex justify-content-center mb-4">
+          <div class="video-thumbnail position-relative" data-bs-toggle="modal" data-bs-target="#videoModal1b" style="cursor: pointer;">
+            <img src="v1.png" alt="Encrypting Wallet Seed Phrases" class="img-fluid" />
+            <label>Encrypting Wallet Seed Phrases</label>
+            <svg class="play-button" viewBox="0 0 100 100" fill="white">
+              <circle cx="50" cy="50" r="40" fill="rgba(0, 0, 0, 0.6)" />
+              <polygon points="40,30 70,50 40,70" fill="white" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="col-12 col-md-6 d-flex justify-content-center mb-4">
+          <div class="video-thumbnail position-relative" data-bs-toggle="modal" data-bs-target="#videoModal2b" style="cursor: pointer;">
+            <img src="v2.png" alt="File Handling & Offline Backup" class="img-fluid" />
+            <label>File Handling & Offline Backup</label>
+            <svg class="play-button" viewBox="0 0 100 100" fill="white">
+              <circle cx="50" cy="50" r="40" fill="rgba(0, 0, 0, 0.6)" />
+              <polygon points="40,30 70,50 40,70" fill="white" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="col-12 col-md-6 d-flex justify-content-center mb-4">
+          <div class="video-thumbnail position-relative" data-bs-toggle="modal" data-bs-target="#videoModal3b" style="cursor: pointer;">
+            <img src="v3-vid.png" alt="DEADMAN SWITCH Setup & Walkthrough" class="img-fluid" />
+            <label>DEADMAN SWITCH Setup & Walkthrough</label>
+          </div>
+        </div>
+      </div>
+    </div>
   
     <!-- Modal for Video 0 -->
   <div class="modal fade custom-video-modal" id="videoModal0" tabindex="-1" aria-labelledby="videoModal0Label" aria-hidden="true">
@@ -1607,7 +1554,7 @@
       window.onscroll = function() {scrollFunction()};
       
         function scrollFunction() {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 500) {
                 document.getElementById("topBtn").style.display = "block";
             } else {
                 document.getElementById("topBtn").style.display = "none";
@@ -1761,12 +1708,14 @@
   window.addEventListener("scroll", function () {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (scrollTop > lastScrollTop && scrollTop > 50) {
+    if (scrollTop > lastScrollTop && scrollTop > 10) {
       // scrolling down
       navbar.classList.add("hide-navbar");
     } else {
+      if (scrollTop < lastScrollTop && scrollTop < 70 ||  scrollTop > 1500)  {
       // scrolling up
       navbar.classList.remove("hide-navbar");
+    }
     }
 
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // avoid negative values
