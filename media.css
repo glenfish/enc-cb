@@ -186,6 +186,14 @@
 
       }
       @media (min-width:0px) and (max-width: 579.98px) {
+
+         .aboutus {
+        background: linear-gradient(to right, #fcfcfc, #f6f6f6, #f0f0f0);
+        color: rgb(41, 41, 41)!important;
+        border: 0px rgb(224, 224, 224) solid;
+        border-radius: 0px;
+        margin: 30px;
+      }
        
         h2.bulletproof-headline {
           text-align:center!important;

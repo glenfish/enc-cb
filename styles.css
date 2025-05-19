@@ -363,6 +363,14 @@ html {
         color: rgb(41, 41, 41)!important;
         border: 1px rgb(224, 224, 224) solid;
       }
+      .aboutus {
+        background: linear-gradient(to right, #fcfcfc, #f6f6f6, #f0f0f0);
+        color: rgb(41, 41, 41)!important;
+        border: 1px rgb(224, 224, 224) solid;
+        border-radius: 20px;
+        margin-bottom: 70px;
+        width: 90%;
+      }
       .video {
         width: 96%;
         height: 470px;
