@@ -240,7 +240,7 @@
         .graybox {
         /* background-color: rgb(255, 133, 3); */
         background-color: rgb(184, 184, 184);
-        border: 1px solid rgb(204, 204, 204);
+        border: 1px solid rgb(184, 184, 184);
         border-radius: 5px;
         padding: 7px 12px;
         color: white;
@@ -605,15 +605,15 @@ body {
       }
 .scroll-down-indicator {
   position: absolute;
-  bottom: -4px;
+  bottom: -5px;
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 2s infinite;
-  color: #c8c8c8;
+  color: rgb(184, 184, 184);
   z-index: 99000;
   opacity: 1;
   transition: opacity 0.5s ease;
-  zoom: 1.5;
+  zoom: 2;
   /* display: none !important; */
 }
 .bounding-box {
