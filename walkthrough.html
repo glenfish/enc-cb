@@ -2580,7 +2580,7 @@
                 finalNote.innerHTML =
                   "All 2048 words are now<br>re-mapped to new numbers";
                 container.appendChild(finalNote);
-                caption.textContent = "Map Generated!";
+                caption.textContent = "";
 
                 setTimeout(() => {
                   nextBtn.textContent = "OK";
@@ -2641,7 +2641,7 @@
             break;
           case 5:
             caption.innerHTML =
-              "Next we match your wallet seed words, one at a time...<br>using the Seed Map";
+              "Next we match your wallet seed words, one at a time...using the Seed Map";
             caption.className = "pt-3";
             container.appendChild(caption);
 
@@ -3136,7 +3136,7 @@
             container.appendChild(img12);
             footerText.className = "text-dark text-center fs-5 px-3 mt-5";
             footerText.innerHTML =
-              "Your Seed Map & Seed Codes are securely split across multiple USB sticks. <br>Encoded, Encrypted and stored in different physical locations. Read more below.";
+              "Your Seed Map & Seed Codes are securely split across multiple USB sticks. Encoded, Encrypted and stored in different physical locations. Read more below.";
             container.appendChild(footerText);
 
             nextBtn.textContent = "Got it!";
