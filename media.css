@@ -247,6 +247,7 @@
         top:-34px;
         text-align: center;
         display: block;
+        max-width: 100%;
       }
 
         .iframe-wrapper  {
