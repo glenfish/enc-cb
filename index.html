@@ -1743,17 +1743,14 @@ fadeInObserver.observe(fadeInTarget);
       document.querySelector('.scroll-down-indicator').style.display = 'none';
       scrollToIframe();
     }
-
+    if (data === 'hide-scroll-down-indicator') {
+      document.querySelector('.scroll-down-indicator').style.display = 'none';
+      scrollToIframe();
+    }
     
 
-    if (data === 'deactivateOverlay') {
-      overlay.style.opacity = '0';
-      setTimeout(() => {
-        overlay.style.display = 'none';
-        document.getElementById("iframe-focus-container").classList.remove("centered");
-        document.getElementById("walkthrough-close").style.display = "none";
-        frameIndex = 0;
-      }, 500);
+    if (data === 'reposition') {
+      scrollToIframe();
     }
   });
 </script>

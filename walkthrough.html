@@ -2364,6 +2364,9 @@
         if (currentFrame === 0 && window.innerWidth <= 768) {
           window.parent.postMessage("hide-scroll-down-indicator", "*");
         }
+        if (currentFrame < 11 && window.innerWidth <= 768) {
+          window.parent.postMessage("reposition", "*");
+        }
         if (currentFrame === 0 && window.innerWidth > 768) {
           window.parent.postMessage("activateOverlay", "*");
         }
