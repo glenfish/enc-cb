@@ -2970,6 +2970,7 @@
                   beginBtn.textContent = "Begin Recovery";
                   beginBtn.className = "btn btn-primary mt-3 p-3";
                   beginBtn.onclick = () => {
+                    window.parent.postMessage("reposition", "*");
                     beginBtn.remove();
                     startRecovery();
                   };
