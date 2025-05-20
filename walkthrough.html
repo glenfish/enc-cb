@@ -2397,17 +2397,17 @@
 
         switch (frameNum) {
           case 0:
-            container.innerHTML +=
-              '<div class="overlay-highlight frame-headline">How It Works ...</div>';
-
+            // container.innerHTML +=
+            //   '<div class="overlay-highlight frame-headline">How It Works ...</div>';
+            container.innerHTML += "";
             nextBtn.textContent = "GO";
             nextBtn.style.display = "inline-block";
             nextBtn.style.width = "100px";
             nextBtn.style.height = "56px";
 
-            caption.textContent = "";
-            caption.className = "mt-3 bold bigger pt-3";
-            container.appendChild(caption);
+            // caption.textContent = "";
+            // caption.className = "mt-3 bold bigger pt-3";
+            // container.appendChild(caption);
 
             let image = document.createElement("img");
             container.appendChild(image);
