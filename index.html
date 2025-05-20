@@ -1788,8 +1788,13 @@ fadeInObserver.observe(fadeInTarget);
 </script>
 <script>
   function scrollToIframe() {
-    document.getElementById("iframe-focus-container").scrollIntoView();
-  }
+  const element = document.getElementById("iframe-focus-container");
+  const yOffset = 20; // negative offset
+
+  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+  window.scrollTo({ top: y, behavior: 'smooth' });
+}
 </script>
 
 
