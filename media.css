@@ -244,9 +244,9 @@
         padding: 7px 12px;
         color: white;
         position:relative;
-        top:-10px;
-        text-align: center
-        /* display:none; */
+        top:-34px;
+        text-align: center;
+        display: block;
       }
 
         .iframe-wrapper  {
@@ -610,6 +610,7 @@ body {
   opacity: 1;
   transition: opacity 0.5s ease;
   zoom: 1.5;
+  display: none !important;
 }
 .bounding-box {
         border: 0px solid rgb(226, 226, 226);
@@ -622,12 +623,16 @@ body {
       .bounding-box-bordered {
         border: 5px solid rgb(226, 226, 226);
         border-radius: 8px;
-        padding: 20px;
+        padding: 10px 20px;
         margin: 0px auto 0 auto ;
         max-width: 720px;
         line-height: 1.7;
         position: relative;
         top: -20px;
+      }
+      .smaller {
+        font-size: 0.8em!important;
+        line-height: 1.5!important;
       }
 
 }
