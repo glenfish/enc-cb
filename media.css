@@ -613,7 +613,7 @@ body {
   z-index: 99000;
   opacity: 1;
   transition: opacity 0.5s ease;
-  zoom: 2;
+  zoom: 1.6;
   /* display: none !important; */
 }
 .bounding-box {
