@@ -250,8 +250,8 @@
       }
 
         .iframe-wrapper  {
-          height: 850px!important;
-          zoom: 0.80;
+          height: 940px!important;
+          zoom: 0.75;
         }
         .white-overlay {
   position: fixed;
