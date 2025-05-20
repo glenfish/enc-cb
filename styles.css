@@ -643,10 +643,11 @@ html {
   display: inline-block;
 
 }
-.video-thumbnail label {
-    
+label {
+    width: 100%;
     color: #333;
-    
+    text-align: center!important;
+    /* display:none!important; */
   }
 
 .play-button {
@@ -932,7 +933,11 @@ audio {
   top:-2px;
 }
 
-
+#pagecontainer {
+  width: 100%;
+  margin: auto;
+  overflow-x: hidden;
+}
 
 
 

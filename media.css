@@ -205,10 +205,11 @@
           text-align:center!important;
         }
         .container {
-          margin: 0px;
-          padding: 8px;
+          margin: auto!important;
+          padding: 10px!important;
+          width: 100%!important;
           /* box-sizing: border-box; */
-          overflow-x: hidden !important;
+          /* overflow-x: hidden !important; */
      
         }
         .container-nav {
@@ -247,7 +248,8 @@
         top:-34px;
         text-align: center;
         display: block;
-        max-width: 100%;
+        width: 100%;
+        max-width:538px;
       }
 
         .iframe-wrapper  {
@@ -521,7 +523,7 @@
 
 
 
-@media (min-width: 768px) {
+@media (min-width: 539px) {
   .scroll-down-indicator {
     display: none !important;
   }
@@ -671,6 +673,13 @@ body {
 }
 
 
+
+}
+
+@media (max-width: 330px) {
+.graybox {
+display: none!important;
+}
 
 }
 
