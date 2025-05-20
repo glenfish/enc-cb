@@ -2425,7 +2425,7 @@
 
             finalNote.className = "mt-4 text-dark bold bigger";
             finalNote.textContent = "Securely backup this wallet in 60 seconds";
-            finalNote.style.paddingBottom = "20px";
+            // finalNote.style.paddingBottom = "20px";
             container.appendChild(finalNote);
             break;
 
@@ -2493,7 +2493,7 @@
 
             caption.textContent =
               "Your seed words come from a much bigger list of 2048 words, shown below";
-            caption.className = "mt-3";
+            caption.className = "pt-3";
             container.appendChild(caption);
             container.appendChild(scrollDiv);
 
@@ -2511,7 +2511,7 @@
             }, 1000);
 
             setTimeout(() => {
-              finalNote.className = "mt-4 text-dark bold bigger";
+              finalNote.className = "mt-1 text-dark bold bigger";
               finalNote.textContent = "Next, we'll randomize this word list";
               container.appendChild(finalNote);
               setTimeout(() => {
@@ -2577,8 +2577,8 @@
             function checkIfDone() {
               if (completed === bip39Words.length) {
                 finalNote.className = "mt-4 text-dark bold bigger";
-                finalNote.textContent =
-                  "All 2048 words are now re-mapped to new numbers";
+                finalNote.innerHTML =
+                  "All 2048 words are now<br>re-mapped to new numbers";
                 container.appendChild(finalNote);
                 caption.textContent = "Map Generated!";
 
@@ -2640,9 +2640,9 @@
               '<p class="text-muted">Frame not yet implemented.</p>';
             break;
           case 5:
-            caption.textContent =
-              "Next we match your wallet seed words, one at a time... using the Seed Map";
-            caption.className = "mt-3";
+            caption.innerHTML =
+              "Next we match your wallet seed words, one at a time...<br>using the Seed Map";
+            caption.className = "pt-3";
             container.appendChild(caption);
 
             // Top display area for current word and number
@@ -2772,11 +2772,11 @@
 
           case 6:
             caption.textContent = "The wallet is now protected";
-            caption.className = "mt-3 bold bigger";
+            caption.className = "mt-4 bold bigger";
             container.appendChild(caption);
 
             const codeList = document.createElement("div");
-            codeList.className = "mt-4 max-400 mx-auto";
+            codeList.className = "mt-5 max-400 mx-auto";
 
             mappedSeed = seedWords.map((word) => {
               const index = bip39Words.indexOf(word);
@@ -2833,7 +2833,7 @@
             break;
           case 8:
             caption.textContent = "Backed up to multiple USB drives ...";
-            caption.className = "mt-3";
+            caption.className = "pt-3";
             container.appendChild(caption);
 
             const equationWrapper = document.createElement("div");
@@ -2914,7 +2914,7 @@
             displayArea.remove();
 
             caption.textContent = "Open Seed Map File";
-            caption.className = "mt-3";
+            caption.className = "pt-3";
             container.appendChild(caption);
 
             // Locked PDF icon
@@ -2977,7 +2977,7 @@
                   container.innerHTML = "";
 
                   caption.textContent = "";
-                  caption.className = "mt-3";
+                  caption.className = "pt-3";
                   container.appendChild(caption);
 
                   displayArea.className = "mt-4 text-dark text-center fs-5";
@@ -3001,7 +3001,7 @@
                   function showRecoveryStep() {
                     if (restoreIndex >= mappedSeed.length) {
                       caption.textContent = "Wallet Successfully Recovered";
-                      caption.className = "mt-3  fw-bold";
+                      caption.className = "pt-3  fw-bold";
 
                       displayArea.remove();
 
