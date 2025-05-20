@@ -2772,7 +2772,7 @@
 
           case 6:
             caption.textContent = "The wallet is now protected";
-            caption.className = "mt-4 bold bigger";
+            caption.className = "pt-3 bold bigger";
             container.appendChild(caption);
 
             const codeList = document.createElement("div");
@@ -3001,14 +3001,14 @@
                   function showRecoveryStep() {
                     if (restoreIndex >= mappedSeed.length) {
                       caption.textContent = "Wallet Successfully Recovered";
-                      caption.className = "pt-3  fw-bold";
+                      caption.className = "pt-5  fw-bold";
 
                       displayArea.remove();
 
                       if (!document.getElementById("restore-success")) {
                         const success = document.createElement("p");
                         success.id = "restore-success";
-                        success.className = "text-dark mt-4 fs-5";
+                        success.className = "text-dark mt-2 fs-5";
                         success.textContent = "";
                         container.appendChild(success);
                       }
@@ -3074,7 +3074,7 @@
 
           case 10:
             caption.textContent = "What happens if you're gone?";
-            caption.className = "mt-3 bold";
+            caption.className = "pt-3 bold";
             container.appendChild(caption);
 
             const img10 = document.createElement("img");
@@ -3098,7 +3098,7 @@
 
           case 11:
             caption.textContent = "";
-            caption.className = "mt-3 bold";
+            caption.className = "pt-1 bold";
             container.appendChild(caption);
             const img11 = document.createElement("img");
             img11.src = "pwicon.png";
