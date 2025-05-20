@@ -923,11 +923,11 @@ audio {
   100% { opacity: 0; }
 }
 .crypto-logo {
-  height:24px;
-  width:24px;
+  height:28px;
+  width:28px;
   vertical-align:middle;
-  margin-left:6px;
-  margin-right:6px;
+  margin-left:12px;
+  margin-right:12px;
   position:relative;
   top:-2px;
 }
