@@ -264,7 +264,7 @@ html {
         line-height: 1.7;
       }
       .graybox {
-        /* background-color: rgb(255, 133, 3); */
+        background-color: #0275d8;
         /* background-color: rgb(184, 184, 184); */
         /* border: 0px solid rgb(204, 204, 204); */
         border-radius: 8px;
@@ -815,7 +815,7 @@ audio {
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 2s infinite;
-  color: #414141;
+  color: #0275d8;
   z-index: 99000;
   opacity: 1;
   transition: opacity 0.5s ease;
