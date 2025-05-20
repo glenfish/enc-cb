@@ -605,7 +605,7 @@ body {
       }
 .scroll-down-indicator {
   position: absolute;
-  bottom: -11px;
+  bottom: -4px;
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 2s infinite;
