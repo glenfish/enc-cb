@@ -2380,6 +2380,9 @@
         if (currentFrame === 10 && window.innerWidth > 768) {
           window.parent.postMessage("deactivateOverlay", "*");
         }
+        if (currentFrame === 10 && window.innerWidth <= 768) {
+          window.parent.postMessage("contract-frame", "*");
+        }
         if (currentFrame === 0) {
           window.parent.postMessage("expand-frame", "*");
         }
