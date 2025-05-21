@@ -2786,11 +2786,11 @@
 
           case 6:
             caption.textContent = "Wallet encoded as numbers";
-            caption.className = "pt-1 bold bigger";
+            caption.className = "pt-0 bold bigger";
             container.appendChild(caption);
 
             const codeList = document.createElement("div");
-            codeList.className = "mt-2 max-400 mx-auto";
+            codeList.className = "mt-1 max-400 mx-auto";
 
             mappedSeed = seedWords.map((word) => {
               const index = bip39Words.indexOf(word);
@@ -2801,7 +2801,7 @@
               const item = document.createElement("div");
               item.textContent = `${num}`;
               item.className =
-                "text-light border bg-green whiteborder-secondary rounded px-4 py-1 fs-6 mb-1";
+                "text-light border bg-green whiteborder-secondary rounded px-4 py-0 fs-6 mb-1";
               item.style.opacity = 0;
 
               codeList.appendChild(item);
