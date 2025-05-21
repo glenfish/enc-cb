@@ -18,7 +18,7 @@
 
       .fade-in {
         opacity: 0;
-        animation: fadeIn 1s forwards;
+        animation: fadeIn 0.4s forwards;
       }
       @keyframes fadeIn {
         to {
@@ -2406,11 +2406,26 @@
       function renderFrame(frameNum) {
         nextBtn.style.display = "none";
         container.innerHTML = "";
+
+        // Wrap all new content in a fade-in div
+        const fadeWrapper = document.createElement("div");
+        fadeWrapper.classList.add("fade-in");
+        container.appendChild(fadeWrapper);
+
         const ul = document.createElement("ul");
+        ul.classList.add("fade-in");
         const description = document.createElement("p");
         description.textContent = "";
         description.className = "text-dark mb-4";
-        container.appendChild(description);
+        description.classList.add("fade-in");
+
+        fadeWrapper.appendChild(description);
+        fadeWrapper.appendChild(ul);
+
+        // Trigger fade-in after a tick
+        requestAnimationFrame(() => {
+          fadeWrapper.classList.add("visible");
+        });
 
         switch (frameNum) {
           case 0:
@@ -2422,6 +2437,7 @@
             nextBtn.style.display = "inline-block";
             nextBtn.style.width = "100px";
             nextBtn.style.height = "56px";
+            nextBtn.classList.add("fade-in");
 
             // caption.textContent = "";
             // caption.className = "mt-3 bold bigger pt-3";
@@ -2447,6 +2463,7 @@
             finalNote.className = "mt-4 text-dark bold bigger";
             finalNote.textContent = "Securely backup this wallet in 60 seconds";
             // finalNote.style.paddingBottom = "20px";
+            container.classList.add("fade-in");
             container.appendChild(finalNote);
             break;
 
@@ -2475,7 +2492,7 @@
             setTimeout(() => {
               caption.textContent = "";
               nextBtn.textContent = "OK";
-
+              nextBtn.classList.add("fade-in");
               nextBtn.style.display = "inline-block";
             }, 1500);
 
@@ -2511,12 +2528,13 @@
               wordCell.style.overflow = "hidden";
               wordCell.style.textOverflow = "ellipsis";
             });
-
+            scrollDiv.classList.add("fade-in");
             scrollDiv.appendChild(table);
 
             caption.textContent =
               "Your seed words come from a much bigger list of 2048 words, shown below";
-            caption.className = "pt-3";
+            caption.className = "pt-3 fade-in";
+
             container.appendChild(caption);
             container.appendChild(scrollDiv);
 
@@ -2534,12 +2552,12 @@
             }, 1000);
 
             setTimeout(() => {
-              finalNote.className = "mt-1 text-dark bold bigger";
+              finalNote.className = "mt-1 text-dark bold bigger fade-in";
               finalNote.textContent = "Next, we'll randomize this word list";
               container.appendChild(finalNote);
               setTimeout(() => {
                 nextBtn.textContent = "OK";
-
+                nextBtn.classList.add("fade-in");
                 nextBtn.style.display = "inline-block";
               }, 400);
             }, 2000);
@@ -2558,7 +2576,7 @@
           case 3:
             // console.log("frame 3");
             caption.textContent = "Generating random mapping";
-            caption.className = "pt-3";
+            caption.className = "pt-3 fade-in";
             container.appendChild(caption);
 
             uniqueNumbers = shuffle(
@@ -2566,14 +2584,15 @@
             );
 
             const scrollDiv2 = document.createElement("div");
-            scrollDiv2.className = "scroll-box border-opacity-0 max-600";
+            scrollDiv2.className =
+              "scroll-box border-opacity-0 max-600 fade-in";
             scrollDiv2.style.overflowX = "hidden";
 
             const table2 = document.createElement("table");
             table2.className =
               "table bg-light table-sm border-white border-opacity-0 border-0";
             table2.style.width = "100%";
-            table2.style.tableLayout = "fixed";
+            table2.style.tableLayout = "fixed fade-in";
 
             let completed = 0;
 
@@ -2600,7 +2619,7 @@
 
             function checkIfDone() {
               if (completed === bip39Words.length) {
-                finalNote.className = "mt-4 text-dark bold bigger";
+                finalNote.className = "mt-4 text-dark bold bigger fade-in";
                 finalNote.innerHTML =
                   "All 2048 words are now<br>re-mapped to new numbers";
                 container.appendChild(finalNote);
@@ -2608,6 +2627,7 @@
 
                 setTimeout(() => {
                   nextBtn.textContent = "OK";
+                  nextBtn.classList.add("fade-in");
                   nextBtn.style.display = "inline-block";
                 }, 1000);
               }
@@ -2643,19 +2663,20 @@
           case 4:
             // console.log("frame 4");
             caption.innerHTML = "This is called your<br>'Seed Map'";
-            caption.className = "mt-5 bold bigger";
+            caption.className = "mt-5 bold bigger fade-in";
             container.appendChild(caption);
             const img = document.createElement("img");
             img.src = "pdf-locked.png";
             img.style.width = "100px";
             img.style.margin = "20px";
-
+            img.classList.add("fade-in");
             mapCaption.textContent = "saved as a password protected PDF";
+            mapCaption.classList.add("fade-in");
             container.appendChild(img);
             container.appendChild(mapCaption);
             setTimeout(() => {
               nextBtn.textContent = "Save";
-
+              nextBtn.classList.add("fade-in");
               nextBtn.style.display = "inline-block";
             }, 600);
             break;
@@ -2672,19 +2693,20 @@
 
             // Top display area for current word and number
 
-            displayArea.className = "mt-4 text-dark";
+            displayArea.className = "mt-4 text-dark fade-in";
             displayArea.style.fontSize = "1.5rem";
             displayArea.style.minHeight = "3em";
             container.appendChild(displayArea);
 
             // Scrollable table from Frame 3 with random values
             const scrollDiv3 = document.createElement("div");
-            scrollDiv3.className = "scroll-box border-opacity-0 max-600";
+            scrollDiv3.className =
+              "scroll-box border-opacity-0 max-600 fade-in";
             scrollDiv3.style.overflowX = "hidden";
 
             const table3 = document.createElement("table");
             table3.className =
-              "table bg-light table-sm border-white border-opacity-0 border-0";
+              "table bg-light table-sm border-white border-opacity-0 border-0 fade-in";
             table3.style.width = "100%";
             table3.style.tableLayout = "fixed";
 
@@ -2721,14 +2743,14 @@
                   scrollDiv3.remove();
                   displayArea.remove();
                   caption.textContent = "";
-                  finalNote.className = "mt-4 text-dark bold bigger";
+                  finalNote.className = "mt-4 text-dark bold bigger fade-in";
                   finalNote.textContent = "Seed words turned into numbers";
                   container.appendChild(finalNote);
 
                   // Add summary table
                   const summaryTable = document.createElement("table");
                   summaryTable.className =
-                    "table  table-sm table-light max-600 mt-1";
+                    "table  table-sm table-light max-600 mt-1 fade-in";
                   summaryTable.style.margin = "0 auto";
                   summaryTable.style.width = "100%";
 
@@ -2745,6 +2767,7 @@
                   container.appendChild(summaryTable);
                   container.appendChild(finalNote);
                   nextBtn.textContent = "OK";
+                  nextBtn.classList.add("fade-in");
                   nextBtn.style.display = "inline-block";
                 }, 1000);
                 return;
@@ -2797,7 +2820,7 @@
           case 6:
             // console.log("frame 6");
             caption.textContent = "Wallet encoded as numbers";
-            caption.className = "pt-0 bold bigger";
+            caption.className = "pt-0 bold bigger fade-in";
             container.appendChild(caption);
 
             const codeList = document.createElement("div");
@@ -2812,7 +2835,7 @@
               const item = document.createElement("div");
               item.textContent = `${num}`;
               item.className =
-                "text-light border bg-green whiteborder-secondary rounded px-4 py-1 fs-5 mb-0";
+                "text-light border bg-green whiteborder-secondary rounded px-4 py-1 fs-5 mb-0 fade-in";
               item.style.opacity = 0;
 
               codeList.appendChild(item);
@@ -2826,11 +2849,12 @@
 
             setTimeout(() => {
               const finalMsg = document.createElement("p");
-              finalMsg.className = "";
+              finalMsg.className = "fade-in";
               finalMsg.textContent = "";
               container.appendChild(finalMsg);
 
               nextBtn.textContent = "Done";
+              nextBtn.classList.add("fade-in");
               nextBtn.style.display = "inline-block";
             }, mappedSeed.length * 200 + 80);
 
@@ -2839,27 +2863,28 @@
           case 7:
             // console.log("frame 7");
             caption.innerHTML = "These are your<br>'Seed Codes'";
-            caption.className = "mt-5 bold bigger";
+            caption.className = "mt-5 bold bigger fade-in";
             container.appendChild(caption);
 
             const mapImg = document.createElement("img");
             mapImg.src = "pdf-locked.png";
 
             mapImg.alt = "Seed Codes";
-            mapImg.className = "img-fluid  mt-4 mb-4";
+            mapImg.className = "img-fluid  mt-4 mb-4 fade-in";
             container.appendChild(mapImg);
             mapImg.style.width = "100px";
             mapImg.style.margin = "20px";
-
-            container.appendChild(mapCaption);
+            mapCaption.classList.add("fade-in");
             mapCaption.textContent = "saved as a password protected PDF";
+            container.appendChild(mapCaption);
             nextBtn.textContent = "Save";
+            nextBtn.classList.add("fade-in");
             nextBtn.style.display = "inline-block";
             break;
           case 8:
             // console.log("frame 8");
             caption.textContent = "Backed up to multiple USB drives ...";
-            caption.className = "pt-3";
+            caption.className = "pt-3 fade-in";
             container.appendChild(caption);
 
             const equationWrapper = document.createElement("div");
@@ -2876,12 +2901,12 @@
                 img.src = imgUrl;
                 img.alt = labelText;
                 img.style.width = "60px";
-                img.className = "mb-2";
+                img.className = "mb-2 fade-in";
                 wrapper.appendChild(img);
               }
 
               const label = document.createElement("div");
-              label.className = "text-dark";
+              label.className = "text-dark fade-in";
               label.textContent = labelText;
 
               wrapper.appendChild(label);
@@ -2925,12 +2950,13 @@
             });
 
             setTimeout(() => {
-              finalNote.className = "pt-4 mt-4 text-dark";
+              finalNote.className = "pt-4 mt-4 text-dark fade-in";
               finalNote.textContent =
                 "Ready to test your backup for 100% confidence?";
               container.appendChild(finalNote);
 
               nextBtn.textContent = "OK";
+              nextBtn.classList.add("fade-in");
               nextBtn.style.display = "inline-block";
             }, 1800);
 
@@ -2941,7 +2967,7 @@
             displayArea.remove();
 
             caption.textContent = "Open Seed Map File";
-            caption.className = "pt-3";
+            caption.className = "pt-3 fade-in";
             container.appendChild(caption);
 
             // Locked PDF icon
@@ -2957,7 +2983,7 @@
             passwordDisplay.className =
               "text-dark text-center fs-5 password-line";
             passwordDisplay.style.minHeight = "3em";
-            passwordDisplay.innerHTML = `<span>Enter password:</span><br><span id="password-stars"></span>`;
+            passwordDisplay.innerHTML = `<span class="fade-in">Enter password:</span><br><span id="password-stars"></span>`;
 
             container.appendChild(passwordDisplay);
 
@@ -2973,7 +2999,7 @@
               } else {
                 // Show unlocking message
                 const unlockMsg = document.createElement("p");
-                unlockMsg.className = "text-dark text-center fs-5 mt-2";
+                unlockMsg.className = "text-dark text-center fs-5 mt-2 fade-in";
                 unlockMsg.textContent = "Unlocking with password...";
                 container.appendChild(unlockMsg);
 
@@ -2992,7 +3018,7 @@
                   unlockMsg.textContent = "Seed Map successfully unlocked.";
                   const beginBtn = document.createElement("button");
                   beginBtn.textContent = "Begin Recovery";
-                  beginBtn.className = "btn btn-primary mt-3 p-3";
+                  beginBtn.className = "btn btn-primary mt-3 p-3 fade-in";
                   beginBtn.onclick = () => {
                     beginBtn.remove();
                     if (currentFrame < 11 && window.innerWidth <= 768) {
@@ -3007,15 +3033,16 @@
                   container.innerHTML = "";
 
                   caption.textContent = "";
-                  caption.className = "pt-3";
+                  caption.className = "pt-3 fade-in";
                   container.appendChild(caption);
 
-                  displayArea.className = "mt-4 text-dark text-center fs-5";
+                  displayArea.className =
+                    "mt-4 text-dark text-center fs-5 fade-in";
                   displayArea.style.minHeight = "3em";
                   container.appendChild(displayArea);
 
                   const seedList = document.createElement("div");
-                  seedList.className = "mt-2 max-400 mx-auto";
+                  seedList.className = "mt-2 max-400 mx-auto fade-in";
                   container.appendChild(seedList);
 
                   mappedSeed = seedWords.map((word) => {
@@ -3038,12 +3065,13 @@
                       if (!document.getElementById("restore-success")) {
                         const success = document.createElement("p");
                         success.id = "restore-success";
-                        success.className = "text-dark mt-1 fs-5";
+                        success.className = "text-dark mt-1 fs-5 fade-in";
                         success.textContent = "";
                         container.appendChild(success);
                       }
 
                       nextBtn.textContent = "Hook Up Your Deadman Switch";
+                      nextBtn.classList.add("fade-in");
                       nextBtn.style.display = "inline-block";
                       nextBtn.style.width = "280px";
                       nextBtn.style.height = "46px";
@@ -3105,25 +3133,26 @@
           case 10:
             // console.log("frame 10");
             caption.textContent = "Emergency Mode - Pass It On";
-            caption.className = "pt-3 bold";
+            caption.className = "pt-3 bold fade-in";
             container.appendChild(caption);
 
             const img10 = document.createElement("img");
             img10.src = "google-drive-icon.png";
             img10.alt = "Deadman Switch";
-            img10.className = "d-block mx-auto my-4";
+            img10.className = "d-block mx-auto my-4 fade-in";
             img10.style.width = "100px";
             container.appendChild(img10);
 
             const p10 = document.createElement("p");
-            p10.className = "text-dark text-center fs-5 px-3 mb-5";
+            p10.className = "text-dark text-center fs-5 px-3 mb-5 fade-in";
             p10.innerHTML = `
-    We set up a simple Deadman Switch — powered by Google.<br><br>
-    Your trusted contacts can access your vault <strong>only</strong> if you become inactive.
-  <br><br>You decide the release timing <strong>and</strong> the people you trust.`;
+          We set up a simple Deadman Switch — powered by Google.<br><br>
+          Your trusted contacts can access your vault <strong>only</strong> if you become inactive.
+        <br><br>You decide the release timing <strong>and</strong> the people you trust.`;
             container.appendChild(p10);
 
             nextBtn.textContent = "Next";
+            nextBtn.classList.add("fade-in");
             nextBtn.style.display = "inline-block";
             break;
 
@@ -3131,16 +3160,16 @@
             // console.log("frame 11");
             window.parent.postMessage("contract-frame", "*");
             caption.textContent = "";
-            caption.className = "pt-1 bold";
+            caption.className = "pt-1 bold fade-in";
             container.appendChild(caption);
             const img11 = document.createElement("img");
             img11.src = "pwicon.png";
             img11.alt = "Key";
-            img11.className = "d-block mx-auto my-3";
+            img11.className = "d-block mx-auto my-3 fade-in";
             img11.style.width = "70px";
             container.appendChild(img11);
             const p11 = document.createElement("p");
-            p11.className = "text-dark text-center fs-5 px-3";
+            p11.className = "text-dark text-center fs-5 px-3 fade-in";
             p11.innerHTML = `If setting up the Deadman Switch, only your <strong>password</strong> is stored online`;
             container.appendChild(p11);
 
@@ -3158,22 +3187,25 @@
               ul.appendChild(li);
             });
 
+            ul.classList.add("fade-in");
             container.appendChild(ul);
 
             const footerText = document.createElement("p");
             const img12 = document.createElement("img");
             img12.src = "usb-locked-pdf.png";
             img12.alt = "Encrypted USB Drive";
-            img12.className = "d-block mx-auto my-4";
+            img12.className = "d-block mx-auto my-4 fade-in";
             img12.style.width = "130px";
             container.appendChild(img12);
-            footerText.className = "text-dark text-center fs-5 px-3 mt-1";
+            footerText.className =
+              "text-dark text-center fs-5 px-3 mt-1 fade-in";
             footerText.innerHTML =
               "Your Seed Map & Seed Codes are securely split across multiple USB sticks. <br class='wide-break'/>Encoded, Encrypted and stored in different physical locations.";
             container.appendChild(footerText);
 
             nextBtn.textContent = "Got it!";
             nextBtn.className = "continue-button";
+            nextBtn.classList.add("fade-in");
             nextBtn.style.display = "inline-block";
             break;
         }
