@@ -948,6 +948,9 @@ audio {
   position:relative;
   top:-2px;
 }
+.continue-button {
+  display: block;
+}
 
 
 

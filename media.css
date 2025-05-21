@@ -265,6 +265,9 @@
   
   overflow: hidden!important;
 }
+.continue-button {
+  display: none;
+}
 .end-condensed-iframe-wrapper {
   
   height: 350px!important;
