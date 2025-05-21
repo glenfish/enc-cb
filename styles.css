@@ -739,8 +739,8 @@ audio {
   border: 0px!important
 
 }
-#videoModal0, #videoModal1, #videoModal2, #videoModal3 {
-  background-color: rgba(48, 48, 48, 0.8);
+#videoModal, #videoModal0, #videoModal1, #videoModal2, #videoModal3 {
+  background-color: rgba(255,255,255, 0.8);
 }
 #widescreen-video-layout {
   display: block;

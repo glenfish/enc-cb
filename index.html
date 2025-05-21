@@ -408,8 +408,8 @@
 
     <div id="video"></div>
 <!-- Video Section widescreen -->
-<div id="video-container video-nonmobile">
-<section class="mb-5 pb-3">
+<div id="video-container">
+<section class="mb-5 pb-3 video-nonmobile">
   <h2 class="section-title antonio"><span class="strong">ENCRYPT<span class="orange-text">FIRE</span> Videos</span></h2>
 
   <div class="container mt-3">
@@ -462,7 +462,14 @@
     </div>
   </div>
 
-  <!-- Video Section mobile -->
+ 
+
+  
+  <!-- end video container -->
+  </div>
+</section>
+
+ <!-- Video Section mobile -->
 <div id="mobile-video-layout" class="bg-light">
   <section class="mb-5 pb-3 video-full-width">
       <h3 class="section-title antonio mt-0 pb-3 text-center">Videos</h3>
@@ -483,7 +490,7 @@
             <!-- Video Thumbnail -->
             <div class="col-12 col-md-6 d-flex justify-content-center mb-4">
               <div class="video-thumbnail position-relative" data-video-id="t4GBFQFpXnQ" data-bs-toggle="modal" data-bs-target="#videoModal" style="cursor: pointer;">
-                <img src="v2.png" alt="Welcome from the founder" class="img-fluid" />
+                <img src="v1.png" alt="Welcome from the founder" class="img-fluid" />
                 <label>Encoding & Encrypting Wallets</label>
                 <svg class="play-button" viewBox="0 0 100 100" fill="white">
                   <circle cx="50" cy="50" r="40" fill="rgba(0, 0, 0, 0.6)" />
@@ -495,7 +502,7 @@
             <!-- Video Thumbnail -->
             <div class="col-12 col-md-6 d-flex justify-content-center mb-4">
               <div class="video-thumbnail position-relative" data-video-id="kISPbLPyg0Q" data-bs-toggle="modal" data-bs-target="#videoModal" style="cursor: pointer;">
-                <img src="v1.png" alt="Welcome from the founder" class="img-fluid" />
+                <img src="v2.png" alt="Welcome from the founder" class="img-fluid" />
                 <label>File Handling & Offline Backup</label>
                 <svg class="play-button" viewBox="0 0 100 100" fill="white">
                   <circle cx="50" cy="50" r="40" fill="rgba(0, 0, 0, 0.6)" />
@@ -513,12 +520,13 @@
               </div>
             </div>
             <!-- end video -->
+             
           </div>
       </div>
   </section>
+  
 </div>
-
-  <!-- Reusable Modal -->
+<!-- Reusable Modal -->
   <div class="modal fade custom-video-modal" id="videoModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered custom-video-dialog">
       <div class="modal-content">
@@ -533,9 +541,6 @@
       </div>
     </div>
   </div>
-  <!-- end video container -->
-  </div>
-</section>
 
 <script>
   document.querySelectorAll('.video-thumbnail').forEach(thumb => {
