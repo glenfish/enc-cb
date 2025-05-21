@@ -3019,14 +3019,14 @@
                   function showRecoveryStep() {
                     if (restoreIndex >= mappedSeed.length) {
                       caption.textContent = "Wallet Successfully Recovered";
-                      caption.className = "pt-2  bold";
+                      caption.className = "pt-3  bold";
 
                       displayArea.remove();
 
                       if (!document.getElementById("restore-success")) {
                         const success = document.createElement("p");
                         success.id = "restore-success";
-                        success.className = "text-dark mt-2 fs-5";
+                        success.className = "text-dark mt-1 fs-5";
                         success.textContent = "";
                         container.appendChild(success);
                       }
