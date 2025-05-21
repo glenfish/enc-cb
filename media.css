@@ -259,7 +259,7 @@
         width: 100%;
         overflow: hidden;
         position: relative;
-        top: 30px;
+        top: 0px;
   z-index: 9997;
         }
         .condensed-iframe-wrapper {
