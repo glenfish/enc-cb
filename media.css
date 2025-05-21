@@ -559,7 +559,7 @@
 
 @media (min-width:0px) and (max-width: 579.98px) {
   .scroll-box {
-    max-height: 360px!important;
+    height: 360px!important;
   }
   .hero {
     text-align:left;
