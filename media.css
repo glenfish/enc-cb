@@ -254,7 +254,7 @@
 
         #iframe-wrapper  {
           height: 980px!important;
-          zoom: 0.68;
+          zoom: 0.65;
           transform-origin: top center;
         width: 100%;
         overflow: hidden;
