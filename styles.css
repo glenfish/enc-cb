@@ -644,8 +644,8 @@ html {
 }
 .video-thumbnail {
   display: inline-block;
-  margin-left: 2px;
-  margin-right: 2px;
+  
+  width: 100%;
 }
 label {
     width: 100%;

@@ -265,9 +265,7 @@
   
   overflow: hidden!important;
 }
-.continue-button {
-  display: none;
-}
+
 .end-condensed-iframe-wrapper {
   
   height: 350px!important;
@@ -584,9 +582,12 @@
   margin-left: auto;
   margin-right: auto;
 }
-
+#video-container {
+  max-width: 100%;
+  /* overflow-x: hidden; */
+}
 /* Ensure video thumbnails and labels do not overflow */
-.video-thumbnail {
+.video-thumbnail, .video-thumbnail-inactive {
   width: 96%!important;
   max-width: 100%;
   position: relative;
@@ -596,7 +597,7 @@
   box-sizing: border-box;
 }
 
-.video-thumbnail > label {
+.video-thumbnail > label, .video-thumbnail-inactive > label {
   padding-top:7px;
   margin-bottom: 20px;
   text-align: center;
@@ -605,7 +606,7 @@
 
 
 
-.video-thumbnail img {
+.video-thumbnail img, .video-thumbnail img {
   width: 100%;
   height: auto;
   display: block;
