@@ -265,6 +265,12 @@
   
   overflow: hidden!important;
 }
+.end-condensed-iframe-wrapper {
+  
+  height: 350px!important;
+  
+  overflow: hidden!important;
+}
         .white-overlay {
   position: fixed;
   inset: 0;
