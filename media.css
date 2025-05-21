@@ -631,7 +631,7 @@ body {
 .bounding-box {
         border: 0px solid rgb(226, 226, 226);
         border-radius: 8px;
-        padding-top: 20px;
+        padding-top: 8px;
         margin: 0 auto 0 auto ;
         max-width: 720px;
         line-height: 1.7;
