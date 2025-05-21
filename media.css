@@ -264,7 +264,7 @@
         }
         .condensed-iframe-wrapper {
   position: relative;
-  height: 850px!important;
+  height: 870px!important;
   top: -50px;
   overflow: hidden;
 }
@@ -612,7 +612,7 @@ body {
 
 #walkthrough-iframe {
         position: relative;
-        top: -30px;
+        top: -20px;
         
       }
 .scroll-down-indicator {
