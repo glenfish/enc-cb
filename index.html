@@ -1746,11 +1746,7 @@ fadeInObserver.observe(fadeInTarget);
     }
     if (data === 'deactivateOverlay') {
       // console.log('Overlay deactivated');
-      document.getElementById("walkthrough-close").style.display = "none";
-      overlay.style.display = 'none';
-      overlay.style.opacity = '0.9';
-      document.getElementById("iframe-focus-container").classList.add("condensed-iframe-wrapper");
-    scrollToIframe();
+      closeFrame();
       
     }
     if (data === 'hide-scroll-down-indicator') {
@@ -1778,8 +1774,9 @@ fadeInObserver.observe(fadeInTarget);
 </script>
 
 <script>
-  document.getElementById("walkthrough-close").addEventListener("click", () => {
-    document.getElementById("iframe-focus-container").classList.add("condensed-iframe-wrapper");
+  document.getElementById("walkthrough-close").addEventListener("click", closeFrame() )
+    function closeFrame() {
+  document.getElementById("iframe-focus-container").classList.add("condensed-iframe-wrapper");
     scrollToIframe();
   const overlay = document.getElementById("walkthrough-overlay");
   const iframe = document.getElementById("walkthrough-iframe");
@@ -1809,8 +1806,8 @@ fadeInObserver.observe(fadeInTarget);
       }, 50); // wait a moment after onload to allow smooth transition
     };
   }, 400); // match the fade-out time
-});
 
+    }
 
 </script>
 <script>
