@@ -263,14 +263,14 @@
         }
         .condensed-iframe-wrapper {
   
-  height: 600px!important;
+  height: 550px!important;
   
   overflow: hidden!important;
 }
 
 .end-condensed-iframe-wrapper {
   
-  height: 350px!important;
+  height: 430px!important;
   
   overflow: hidden!important;
 }
@@ -628,7 +628,7 @@ body {
       }
 .scroll-down-indicator {
   position: absolute;
-  bottom: -5px;
+  bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 2s infinite;

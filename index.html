@@ -1295,14 +1295,14 @@ fadeInObserver.observe(fadeInTarget);
     const { data } = event;
 
     if (data === 'activateOverlay') {
-      // console.log('Overlay activated');
+      console.log('Overlay activated');
       overlay.style.display = 'block';
       overlay.style.opacity = '0.9';
       document.getElementById("iframe-focus-container").classList.add("centered");
       document.getElementById("walkthrough-close").style.display = "block";
     }
     if (data === 'deactivateOverlay') {
-      // console.log('Overlay deactivated');
+      console.log('Overlay deactivated');
       closeFrame();
       
     }
@@ -1321,9 +1321,11 @@ fadeInObserver.observe(fadeInTarget);
     }
     if (data === 'expand-frame') {
           document.getElementById("iframe-focus-container").classList.remove("condensed-iframe-wrapper");
+          console.log('iframe expanded');
         }
     if (data === 'contract-frame') {
-          document.getElementById("iframe-focus-container").classList.add("condensed-iframe-wrapper");
+          document.getElementById("iframe-focus-container").classList.add("end-condensed-iframe-wrapper");
+          console.log('iframe contracted');
         } 
 
     
