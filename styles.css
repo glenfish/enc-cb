@@ -949,7 +949,7 @@ audio {
   top:-2px;
 }
 .continue-button {
-  display: block;
+  display: inline-block;
 }
 
 
