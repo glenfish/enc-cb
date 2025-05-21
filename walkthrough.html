@@ -2381,7 +2381,7 @@
         if (currentFrame === 10 && window.innerWidth > 768) {
           window.parent.postMessage("deactivateOverlay", "*");
         }
-        if (currentFrame === 11 && window.innerWidth <= 768) {
+        if (currentFrame === 10 && window.innerWidth <= 768) {
           window.parent.postMessage("contract-frame", "*");
         }
         if (currentFrame === 0) {
@@ -2659,7 +2659,7 @@
             break;
           case 5:
             caption.innerHTML =
-              "Next we match your wallet seed words, one at a time...using the Seed Map";
+              "Next we match your wallet seed words, one at a time... using the Seed Map";
             caption.className = "pt-3";
             container.appendChild(caption);
 
