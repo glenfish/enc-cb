@@ -644,7 +644,8 @@ html {
 }
 .video-thumbnail {
   display: inline-block;
-
+  margin-left: 2px;
+  margin-right: 2px;
 }
 label {
     width: 100%;
@@ -947,6 +948,9 @@ audio {
   margin-right:12px;
   position:relative;
   top:-2px;
+}
+.blurred {
+  opacity: 0.4!important;
 }
 
 

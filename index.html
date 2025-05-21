@@ -503,7 +503,7 @@
                     <img
                       src="v3-vid.png"
                       alt="Video 3"
-                      class="img-fluid"
+                      class="img-fluid blurred"
                     />
                     <label>DEADMAN SWITCH Setup & Walkthrough</label>
                     <!-- Play Button -->
@@ -709,7 +709,7 @@
         <!-- Video 3 -->
         <div class="col-12 col-md-6 d-flex justify-content-center mb-4">
           <div class="video-thumbnail position-relative" data-bs-toggle="modal" data-bs-target="#videoModal3b" style="cursor: pointer;">
-            <img src="v3-vid.png" alt="DEADMAN SWITCH Setup & Walkthrough" class="img-fluid" />
+            <img src="v3-vid.png" alt="DEADMAN SWITCH Setup & Walkthrough" class="img-fluid blurred" />
             <label>DEADMAN SWITCH Setup & Walkthrough</label>
           </div>
         </div>
@@ -1774,7 +1774,7 @@ fadeInObserver.observe(fadeInTarget);
 </script>
 
 <script>
-  document.getElementById("walkthrough-close").addEventListener("click", closeFrame() )
+  document.getElementById("walkthrough-close").addEventListener("click", closeFrame )
     function closeFrame() {
   document.getElementById("iframe-focus-container").classList.add("condensed-iframe-wrapper");
     scrollToIframe();
