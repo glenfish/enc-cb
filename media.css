@@ -186,7 +186,9 @@
 
       }
       @media (min-width:0px) and (max-width: 579.98px) {
-
+        .video-nonmobile {
+          display:none!important;
+        }
         .phone-border {
           width: 100%;
           background-color: rgb(178, 178, 178);padding: 40px 0 40px 0;
