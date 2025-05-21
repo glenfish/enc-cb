@@ -254,19 +254,16 @@
 
         #iframe-wrapper  {
           height: 870px!important;
-          /* zoom: 0.80!important; */
           transform-origin: top center;
-        width: 100%;
-        /* overflow: hidden; */
-        position: relative;
-        top: 0px;
-  z-index: 9997;
+          width: 100%;
+          overflow: hidden;
+          z-index: 9997;
         }
         .condensed-iframe-wrapper {
-  position: relative;
-  height: 870px!important;
-  top: -50px;
-  overflow: hidden;
+  
+  height: 400px!important;
+  
+  overflow: hidden!important;
 }
         .white-overlay {
   position: fixed;
