@@ -530,7 +530,8 @@
   }
   #mobile-video-layout {
     display: block;
-  /* width: 100%; */
+  width: 100%;
+  
     
   }
 }
@@ -565,8 +566,9 @@
 
 @media (min-width:0px) and (max-width: 579.98px) {
   .pagecontainer {
-    max-width: 100%!important;
-    overflow-x: hidden!important;
+    width: 95%!important;
+    margin: auto;
+    /* overflow-x: hidden!important; */
   }
   .hero {
     text-align:left;
