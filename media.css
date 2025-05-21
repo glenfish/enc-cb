@@ -253,8 +253,8 @@
       }
 
         #iframe-wrapper  {
-          height: 880px!important;
-          zoom: 0.75;
+          height: 850px!important;
+          zoom: 0.7;
           transform-origin: top center;
         width: 100%;
         /* overflow: hidden; */
