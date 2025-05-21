@@ -30,7 +30,7 @@
 
   </head>
   <body>
-    
+    <div class="pagecontainer">
     <div class="white-overlay"></div>
 <div id="walkthrough-overlay" style="
   position: fixed;
@@ -120,11 +120,11 @@
             <!-- <span class=" large-subheader  smallscreen largescreen roboto pb-md-3 pb-xs-2"><span class="gray-text  ">Is your biggest risk your wallet backup?</span></span> -->
 
               <div class="pb-2 smallscreen  roboto smaller left">
-            Having just one backup of your wallet seed words can lead to loss.
-        Making unprotected copies can increase the chances its stolen.</div>
-<div class="left   smallscreen largescreen roboto pt-md-3 pt-xs-2">
-        Theft, loss, fire, flood, disaster, hacks... even human error can lock you out.
-</div>
+                Having just one backup of your wallet seed words can lead to loss.
+                Making unprotected copies can increase the chances its stolen.</div>
+              <div class="left   smallscreen largescreen roboto pt-md-3 pt-xs-2">
+                Theft, loss, fire, flood, disaster, hacks... even human error can lock you out.
+              </div>
             <div class="py-md-4 smallscreen  roboto smaller">
             <!-- <span class="strong ">The solution: </span><br class="wide-break ">Make it unreadable to hackers, thieves, and anyone who stumbles across it. Use a secure cold storage backup system that encrypts your assets. Make it simple & safe, for regular folks.  -->
             </div>
@@ -138,8 +138,8 @@
         </div>
             <div class="d-flex justify-content-center pt-1">
               <button class="btn btn-outline-primary graybox" onclick="scrollToIframePositiveOffset()" style="font-size:1.1rem;">
-  <img src="bitcoin-btc-logo.svg" alt="Bitcoin logo" class="crypto-logo" ><span class="bigger">Protect it for life</span><img src="bitcoin-btc-logo.svg" alt="Ethereum logo" class="crypto-logo">
-</button>
+              <img src="bitcoin-btc-logo.svg" alt="Bitcoin logo" class="crypto-logo" ><span class="bigger">Protect it for life</span><img src="bitcoin-btc-logo.svg" alt="Ethereum logo" class="crypto-logo">
+              </button>
 
             </div>
             
@@ -150,15 +150,15 @@
 
 
               <div class="scroll-down-indicator">
-  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="4"
-       stroke-linecap="round" stroke-linejoin="round"
-       class="feather feather-chevron-down">
-    <polyline points="6 9 12 15 18 9"></polyline>
-  </svg>
-</div>
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="4"
+            stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-chevron-down">
+            <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
 
           
-          <!-- <br><span class="featured">The problem of losing access to your crypto wallet and keys <span class="">has been solved</span></span><br> -->
+          
           
           
         
@@ -300,11 +300,11 @@
       <div class=" container">
         <!-- <h2 class="section-title antonio" >Inside <span class="strong">ENCRYPT<span class="orange-text">FIRE</span></span></h2> -->
 
-        <section>
+       
       <div class="text-center">
         <img src="./screenshot-ef.png" alt="ENCRYPTFIRE Screenshot" class="screenshot img-fluid" />
       </div>
-    </section>
+    
         <p class="text-center mt-4">
           <span class="strong bigger">WHATS INSIDE ?</span>
           <div class="strong mb-5 text-center">Put your asset data into deep cold storage.<br>The toolkit is split into three main sections:</div>
@@ -1087,6 +1087,7 @@
           
         </div>
       </div>
+      </section>
       <!-- end offer section -->
     <!-- start disclaimer -->
      <section id="disclaimer">
@@ -1183,7 +1184,7 @@
 
   modalIDs.forEach(function(modalID) {
     const modalEl = document.getElementById(modalID);
-    if (!modalEl) return; // 👈 skip if modal is not found
+    if (!modalEl) return; //  skip if modal is not found
 
     modalEl.addEventListener('hidden.bs.modal', function () {
       const iframe = modalEl.querySelector('iframe');
@@ -1295,14 +1296,14 @@ fadeInObserver.observe(fadeInTarget);
     const { data } = event;
 
     if (data === 'activateOverlay') {
-      console.log('Overlay activated');
+      // console.log('Overlay activated');
       overlay.style.display = 'block';
       overlay.style.opacity = '0.9';
       document.getElementById("iframe-focus-container").classList.add("centered");
       document.getElementById("walkthrough-close").style.display = "block";
     }
     if (data === 'deactivateOverlay') {
-      console.log('Overlay deactivated');
+      // console.log('Overlay deactivated');
       closeFrame();
       
     }
@@ -1321,11 +1322,11 @@ fadeInObserver.observe(fadeInTarget);
     }
     if (data === 'expand-frame') {
           document.getElementById("iframe-focus-container").classList.remove("condensed-iframe-wrapper");
-          console.log('iframe expanded');
+          // console.log('iframe expanded');
         }
     if (data === 'contract-frame') {
           document.getElementById("iframe-focus-container").classList.add("end-condensed-iframe-wrapper");
-          console.log('iframe contracted');
+          // console.log('iframe contracted');
         } 
 
     
@@ -1351,7 +1352,7 @@ fadeInObserver.observe(fadeInTarget);
   setTimeout(() => {
     overlay.style.display = "none";
 
-    // Reload iframe AFTER fade-out finishes
+    // Reload iframe after fade-out finishes
     iframe.src = iframe.src;
 
     // Force opacity 0 first (if needed)
@@ -1362,7 +1363,7 @@ fadeInObserver.observe(fadeInTarget);
     iframe.onload = () => {
       setTimeout(() => {
         iframe.classList.add("show");
-      }, 50); // wait a moment after onload to allow smooth transition
+      }, 50); // allow smooth transition
     };
   }, 400); // match the fade-out time
 
@@ -1394,8 +1395,8 @@ fadeInObserver.observe(fadeInTarget);
 
 
 
-
-
+<!-- end pagecontainer -->
+</div>
   </body>
 
 </html>
