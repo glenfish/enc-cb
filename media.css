@@ -558,9 +558,7 @@
 
 
 @media (min-width:0px) and (max-width: 579.98px) {
-  .scroll-box {
-    height: 360px!important;
-  }
+  
   .hero {
     text-align:left;
     padding-top: 30px;
