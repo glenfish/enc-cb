@@ -1744,6 +1744,15 @@ fadeInObserver.observe(fadeInTarget);
       document.getElementById("iframe-focus-container").classList.add("centered");
       document.getElementById("walkthrough-close").style.display = "block";
     }
+    if (data === 'deactivateOverlay') {
+      // console.log('Overlay deactivated');
+      document.getElementById("walkthrough-close").style.display = "none";
+      overlay.style.display = 'none';
+      overlay.style.opacity = '0.9';
+      document.getElementById("iframe-focus-container").classList.add("condensed-iframe-wrapper");
+    scrollToIframe();
+      
+    }
     if (data === 'hide-scroll-down-indicator') {
       document.querySelector('.scroll-down-indicator').style.display = 'none';
       scrollToIframe();
