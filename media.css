@@ -264,7 +264,7 @@
         }
         .condensed-iframe-wrapper {
   position: relative;
-  height: 800px;
+  height: 850px!important;
   top: -50px;
   overflow: hidden;
 }
