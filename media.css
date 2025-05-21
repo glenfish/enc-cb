@@ -254,7 +254,7 @@
 
         #iframe-wrapper  {
           height: 870px!important;
-          zoom: 0.80!important;
+          /* zoom: 0.80!important; */
           transform-origin: top center;
         width: 100%;
         /* overflow: hidden; */
@@ -613,7 +613,9 @@ body {
 #walkthrough-iframe {
         position: relative;
         top: -20px;
-        
+        zoom: 0.8;
+        transform-origin: top center;
+        width: 100%;
       }
 .scroll-down-indicator {
   position: absolute;
