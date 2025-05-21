@@ -3002,7 +3002,7 @@
                   container.appendChild(displayArea);
 
                   const seedList = document.createElement("div");
-                  seedList.className = "mt-4 max-400 mx-auto";
+                  seedList.className = "mt-2 max-400 mx-auto";
                   container.appendChild(seedList);
 
                   mappedSeed = seedWords.map((word) => {
@@ -3018,7 +3018,7 @@
                   function showRecoveryStep() {
                     if (restoreIndex >= mappedSeed.length) {
                       caption.textContent = "Wallet Successfully Recovered";
-                      caption.className = "pt-1  fw-bold";
+                      caption.className = "pt-1  bold";
 
                       displayArea.remove();
 
