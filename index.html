@@ -178,7 +178,7 @@
   width="100%"
   height="860"
   style="background-color: white; border: none; overflow: hidden; position: relative; z-index: 1000000;width:100%;"
-  loading="eager"
+  loading="lazy"
   title="Secure Seed Walkthrough"
 ></iframe></div></div>
 <button id="walkthrough-close" aria-label="Close walkthrough" style="
@@ -1582,7 +1582,7 @@
         }
 
         document.addEventListener("DOMContentLoaded", function () {
-         
+         document.getElementById("iframe-focus-container").classList.add("condensed-iframe-wrapper");
     
 
     
