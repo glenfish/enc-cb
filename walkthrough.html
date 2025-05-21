@@ -2820,7 +2820,7 @@
           case 6:
             // console.log("frame 6");
             caption.textContent = "Wallet encoded as numbers";
-            caption.className = "pt-0 bold bigger fade-in";
+            caption.className = "pt-0 bold bigger";
             container.appendChild(caption);
 
             const codeList = document.createElement("div");
@@ -2835,14 +2835,14 @@
               const item = document.createElement("div");
               item.textContent = `${num}`;
               item.className =
-                "text-light border bg-green whiteborder-secondary rounded px-4 py-1 fs-5 mb-0 fade-in";
+                "text-light border bg-green whiteborder-secondary rounded px-4 py-1 fs-5 mb-0";
               item.style.opacity = 0;
 
               codeList.appendChild(item);
 
               setTimeout(() => {
                 item.classList.add("zoom-in");
-              }, i * 200);
+              }, i * 120);
             });
 
             container.appendChild(codeList);
