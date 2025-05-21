@@ -252,15 +252,27 @@
         max-width:538px;
       }
 
-        .iframe-wrapper  {
+        #iframe-wrapper  {
           height: 980px!important;
-          zoom: 0.75;
+          zoom: 0.85;
+          transform-origin: top center;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        top: 30px;
+  z-index: 9997;
         }
+        .condensed-iframe-wrapper {
+  position: relative;
+  height: 590px;
+  top: -50px;
+  overflow: hidden;
+}
         .white-overlay {
   position: fixed;
   inset: 0;
   background: white;
-  opacity: 0.85;
+  opacity: 0.95;
   z-index: 1000;
   pointer-events: none;
   display: none;

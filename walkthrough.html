@@ -149,8 +149,8 @@
         margin-bottom: 0.5rem;
       }
       #applet-wrapper {
-        padding-top: 0;
-        margin-top: 0;
+        padding-top: 0px;
+        margin-top: 0px;
       }
       .large {
         width: 100px;
@@ -239,10 +239,13 @@
         color: #212529;
         padding-top: 10px;
       }
+      .wide-break {
+        display: none;
+      }
     </style>
   </head>
   <body>
-    <div id="applet-wrapper" class="container pb-1">
+    <div id="applet-wrapper" class="container py-2">
       <div id="demo-container" class="text-center"></div>
       <div class="text-center mt-3">
         <button id="next-btn" class="btn btn-primary">Next</button>
@@ -2373,6 +2376,9 @@
         if (currentFrame === 10 && window.innerWidth > 768) {
           window.parent.postMessage("deactivateOverlay", "*");
         }
+        if (currentFrame === 0) {
+          window.parent.postMessage("expand-frame", "*");
+        }
 
         currentFrame++;
         renderFrame(currentFrame);
@@ -2381,6 +2387,7 @@
       window.addEventListener("message", (event) => {
         if (event.data === "resetWalkthrough") {
           // Reset your variables and UI state
+          window.parent.postMessage("condense-frame", "*");
           frameIndex = 0;
           renderFrame(0);
         }
@@ -2435,7 +2442,7 @@
           case 1:
             container.innerHTML +=
               //   '<p class="text-muted">[ Placeholder Frame 0 ]</p>';
-              '<p class="text-dark mt-5 bold bigger">This is your wallet seed phrase</p>';
+              '<p class="text-dark mt-3 bold bigger">This is your wallet seed phrase</p>';
             const ulWrapper = document.createElement("div");
             ulWrapper.className = "max-400";
 
@@ -3142,7 +3149,7 @@
             container.appendChild(img12);
             footerText.className = "text-dark text-center fs-5 px-3 mt-5";
             footerText.innerHTML =
-              "Your Seed Map & Seed Codes are securely split across multiple USB sticks. Encoded, Encrypted and stored in different physical locations. Read more below.";
+              "Your Seed Map & Seed Codes are securely split across multiple USB sticks. <br class='wide-break'/>Encoded, Encrypted and stored in different physical locations. Read more below.";
             container.appendChild(footerText);
 
             nextBtn.textContent = "Got it!";

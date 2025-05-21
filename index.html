@@ -164,27 +164,27 @@
           <!-- iframed interactive demo -->
            <div id="iframe-focus-container">
      <div class="iframe-container">
-     <div class="iframe-wrapper">
+     <div class=" condensed-iframe-wrapper" id="iframe-wrapper">
         <iframe
   src="walkthrough.html"
   id="walkthrough-iframe"
   width="100%"
-  height="940px"
-  style="border: none; overflow: hidden; position: relative; z-index: 1000000;"
-  loading="lazy"
+  height="900"
+  style="background-color: white; border: none; overflow: hidden; position: relative; z-index: 1000000;width:100%;"
+  loading="eager"
   title="Secure Seed Walkthrough"
 ></iframe></div></div>
 <button id="walkthrough-close" aria-label="Close walkthrough" style="
   display: none;
   position: absolute;
   top: -20px;
-  right: -20px;
+  right: 20px;
   z-index: 10001;
   background: none;
-  border: none;
+  
   cursor: pointer;
 ">
-  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#a0a0a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <line x1="18" y1="6" x2="6" y2="18"/>
     <line x1="6" y1="6" x2="18" y2="18"/>
   </svg>
@@ -1575,7 +1575,7 @@
         }
 
         document.addEventListener("DOMContentLoaded", function () {
-         
+         document.getElementById("iframe-focus-container").classList.add("condensed-iframe-wrapper");
     
 
     
@@ -1750,11 +1750,18 @@ fadeInObserver.observe(fadeInTarget);
     if (data === 'reposition') {
       scrollToIframe();
     }
+    if (data === 'expand-frame') {
+          document.getElementById("iframe-focus-container").classList.remove("condensed-iframe-wrapper");
+        }
+      
+
+    
   });
 </script>
 
 <script>
   document.getElementById("walkthrough-close").addEventListener("click", () => {
+    document.getElementById("iframe-focus-container").classList.add("condensed-iframe-wrapper");
     scrollToIframe();
   const overlay = document.getElementById("walkthrough-overlay");
   const iframe = document.getElementById("walkthrough-iframe");
@@ -1791,7 +1798,7 @@ fadeInObserver.observe(fadeInTarget);
 <script>
   function scrollToIframe() {
   const element = document.getElementById("iframe-focus-container");
-  const yOffset = 32; // negative offset
+  const yOffset = -10; // negative offset
 
   const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
@@ -1800,11 +1807,14 @@ fadeInObserver.observe(fadeInTarget);
 
   function scrollToIframePositiveOffset() {
   const element = document.getElementById("iframe-focus-container");
-  const yOffset = -30; // positive offset
+  const yOffset = -70; // positive offset
 
   const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
   window.scrollTo({ top: y, behavior: 'smooth' });
+
+    
+  
 }
 </script>
 

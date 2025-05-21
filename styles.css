@@ -784,20 +784,29 @@ audio {
   cursor: pointer;
 }
 
-.iframe-wrapper {
+#iframe-wrapper {
         transform-origin: top center;
         width: 100%;
         overflow: hidden;
         position: relative;
-  z-index: 9997;
+  z-index: 9999;
+  position: relative;
+  height: 850px;
+  top: 30px;
+  
       }
 
       /* Default: 100% scale for desktops */
-      .iframe-wrapper {
+      #iframe-wrapper {
         transform: scale(1);
       }
 
-
+.condensed-iframe-wrapper {
+  position: relative!important;
+  height: 500px!important;
+  top: 0px!important;
+  overflow: hidden!important;
+}
 
       
 .iframe-container {
@@ -806,7 +815,9 @@ audio {
   align-items: flex-start;
   width: 100%;
   position:relative;
-  top: 30px;
+  top: 0px;
+  max-height: 890px;
+  /* overflow: hidden; */
 }
 
 .scroll-down-indicator {
@@ -851,7 +862,7 @@ audio {
   transform: translateY(0);
 }
 
-.iframe-wrapper  {
+#iframe-wrapper  {
           width: 100%!important;
           height: 690px!important;
         }
@@ -878,7 +889,9 @@ audio {
 }
 
 #walkthrough-close {
-  margin-right: 50px;
+  margin-right: 100px;
+  border: 1px solid #a0a0a0;
+  border-radius: 5px;
 }
 
 .headline {
