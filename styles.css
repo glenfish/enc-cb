@@ -1203,6 +1203,7 @@ audio {
 #video-overview video {
   width: 100%;
   max-width: 1100px;
+  margin: auto;
 }
 
 .bgnd-bluegray {
