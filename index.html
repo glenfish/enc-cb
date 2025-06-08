@@ -300,7 +300,7 @@
     <div style="margin: auto;text-align: center;">
     <h2 class="section-title  antonio ">See It In Action</h2><p class="pb-5 ">Runs offline in your browser and stores no data</p><br>
     </div>
-    <video controls autoplay muted loop loading="lazy">
+    <video id="vid" controls autoplay muted loop loading="lazy">
       <source src="ef-quick-overview.webm" type="video/webm">
       Your browser does not support the video tag.
     </video>
@@ -877,7 +877,10 @@
             });
             
             
-            
+            var video = document.querySelector('#vid');
+            video.play().catch(function(error) {
+              // video not autoplayed
+            });
         });
 
     </script>
