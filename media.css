@@ -784,6 +784,12 @@
     top: -20px;
   }
 
+  .bgnd-lightbluegray {
+    background-color: rgb(244, 251, 255) !important;
+    border: 1px solid rgb(198, 226, 243) !important;
+    border-radius: 10px !important;
+  }
+
   .smaller {
     font-size: 0.8em !important;
     line-height: 1.5 !important;
