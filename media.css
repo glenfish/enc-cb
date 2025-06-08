@@ -651,14 +651,23 @@
     /* overflow-x: hidden!important; */
   }
 
+  .sticker-container {
+    position: relative;
+    /* critical for sticker positioning */
+    display: inline-block;
+    /* optional: shrink-wrap content */
+    width: 100%;
+    margin-top: 25px;
+  }
+
   #problem-solved {
     background-image: url('./problem-solved.png');
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    top: -69px;
+    top: -72px;
     /* shift slightly above the top edge */
-    right: 0px;
+    right: -9px;
     /* shift beyond the right edge */
     width: 90px;
     height: 90px;
