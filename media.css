@@ -751,9 +751,9 @@
   }
 
   .scroll-down-indicator {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
+    position: relative;
+    bottom: 50px;
+    text-align: center;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
     color: #0275d8;
