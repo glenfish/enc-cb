@@ -752,7 +752,7 @@
 
   .scroll-down-indicator {
     position: absolute;
-    bottom: 2px;
+    bottom: -30px;
     left: 50%;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
@@ -761,7 +761,7 @@
     opacity: 1;
     transition: opacity 0.5s ease;
     zoom: 1.6;
-    display: none !important;
+    /* display: none !important; */
   }
 
   .bounding-box {
