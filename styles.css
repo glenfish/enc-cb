@@ -1213,3 +1213,8 @@ audio {
   border: 1px solid rgb(198, 226, 243);
   border-radius: 5px;
 }
+
+.center {
+  text-align: center;
+  margin: auto;
+}
