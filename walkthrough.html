@@ -2868,7 +2868,7 @@
               nextBtn.textContent = "Done";
               nextBtn.classList.add("fade-in");
               nextBtn.style.display = "inline-block";
-            }, mappedSeed.length * 200 + 80);
+            }, mappedSeed.length * 120 + 80);
 
             break;
 
@@ -3095,7 +3095,7 @@
                     displayArea.innerHTML = `<strong>Looking up Seed Code:</strong> ${code}`;
 
                     setTimeout(() => {
-                      displayArea.innerHTML += `<br/><em>Matching code to seed word...</em>`;
+                      displayArea.innerHTML += `<br/><em>Matching code to seed word ${restoreIndex+1} of 12</em>`;
 
                       setTimeout(() => {
                         const flipCard = document.createElement("div");
