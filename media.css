@@ -651,6 +651,25 @@
     /* overflow-x: hidden!important; */
   }
 
+  #problem-solved {
+    background-image: url('./problem-solved.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -69px;
+    /* shift slightly above the top edge */
+    right: 0px;
+    /* shift beyond the right edge */
+    width: 90px;
+    height: 90px;
+    transform: rotate(15deg);
+    z-index: 10;
+    /* ensure it overlaps */
+    pointer-events: none;
+    /* optional: lets clicks pass through */
+    opacity: 1;
+  }
+
   .hero {
     text-align: left;
     padding-top: 30px;
