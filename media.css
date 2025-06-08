@@ -667,7 +667,7 @@
     /* ensure it overlaps */
     pointer-events: none;
     /* optional: lets clicks pass through */
-    opacity: 0.5;
+    opacity: 0.7;
   }
 
   .hero {
