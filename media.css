@@ -657,7 +657,7 @@
     display: inline-block;
     /* optional: shrink-wrap content */
     width: 100%;
-    margin-top: 25px;
+    margin-top: 15px;
   }
 
   #problem-solved {
@@ -665,12 +665,12 @@
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    top: -72px;
+    top: -62px;
     /* shift slightly above the top edge */
     right: -9px;
     /* shift beyond the right edge */
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     transform: rotate(15deg);
     z-index: 10;
     /* ensure it overlaps */
