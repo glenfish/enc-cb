@@ -258,6 +258,12 @@
           margin-top: 10px;
         }
       }
+      .small {
+        font-size: 80%;
+        padding-right: 20px;
+        color: gray;
+        font-weight: normal;
+      }
     </style>
   </head>
   <body>
@@ -2802,7 +2808,7 @@
               smoothScrollToElement(scrollDiv3, row, 200); // 200ms = faster scroll
 
               // Show word and number at top
-              displayArea.innerHTML = `<strong>${word}</strong> → <span style="color:green;">${mappedNumber}</span>`;
+              displayArea.innerHTML = `<strong><span class='small'>${currentIndex+1}/12 </span> ${word}</strong> → <span style="color:green;">${mappedNumber}</span>`;
 
               const speedFactor = currentIndex >= 3 ? 0.3 : 1; // halve the delay from word 5 onward
 
