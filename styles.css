@@ -1207,3 +1207,9 @@ audio {
 .bgnd-bluegray {
   background-color: rgb(208, 231, 240) !important;
 }
+
+.bgnd-lightbluegray {
+  background-color: rgb(244, 251, 255) !important;
+  border: 1px solid rgb(198, 226, 243);
+  border-radius: 5px;
+}
