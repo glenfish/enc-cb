@@ -15,7 +15,9 @@
         background-color: #fff;
         color: #212529;
       }
-
+      .scroll-down {
+          display: none;
+        }
       .fade-in {
         opacity: 0;
         animation: fadeIn 0.4s forwards;
@@ -250,6 +252,10 @@
       @media (min-width: 0px) and (max-width: 579.98px) {
         .continue-button {
           display: none !important;
+        }
+        .scroll-down {
+          display: block !important;
+          margin-top: 10px;
         }
       }
     </style>
@@ -3200,7 +3206,8 @@
             footerText.className =
               "text-dark text-center fs-5 px-3 mt-1 fade-in";
             footerText.innerHTML =
-              "You Seed Map & Seed Codes are saved on pairs of USB sticks. <br class='wide-break'/>Encoded, Encrypted and stored in different physical locations.";
+              "You Seed Map & Seed Codes are saved on pairs of USB sticks. <br class='wide-break'/>Encoded, Encrypted and stored in different physical locations.<br><span class='scroll-down'>⬇️</span>";
+          
             container.appendChild(footerText);
 
             nextBtn.textContent = "Got it!";
