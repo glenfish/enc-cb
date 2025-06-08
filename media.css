@@ -743,7 +743,7 @@
 
   .scroll-down-indicator {
     position: absolute;
-    bottom: 5px;
+    bottom: 2px;
     left: 50%;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
