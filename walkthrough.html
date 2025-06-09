@@ -277,6 +277,25 @@
     zoom: 1.6;
     /* display: none !important; */
   }
+
+  @keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translate(-50%, 0);
+    }
+
+    40% {
+      transform: translate(-50%, 8px);
+    }
+
+    60% {
+      transform: translate(-50%, 4px);
+    }
+  }
     </style>
   </head>
   <body>
@@ -3225,7 +3244,7 @@
             footerText.className =
               "text-dark text-center fs-5 px-3 mt-1 fade-in";
             footerText.innerHTML =
-              "You Seed Map & Seed Codes are saved on pairs of USB sticks. <br class='wide-break'/>Encoded, Encrypted and stored in different physical locations. <div class='scroll-down-indicator-walkthrough'><svg width='24' height='24' fill='none' stroke='currentColor' stroke-width='4'stroke-linecap='round' stroke-linejoin='round'class='feather feather-chevron-down'><polyline points='6 9 12 15 18 9'></polyline></svg></div>";
+              "You Seed Map & Seed Codes are saved on pairs of USB sticks. <br class='wide-break'/>Encoded, Encrypted and stored in different physical locations. <span class='scroll-down-indicator-walkthrough'><svg width='24' height='24' fill='none' stroke='currentColor' stroke-width='4'stroke-linecap='round' stroke-linejoin='round'class='feather feather-chevron-down'><polyline points='6 9 12 15 18 9'></polyline></svg></span>";
           
             container.appendChild(footerText);
 
