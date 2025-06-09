@@ -661,7 +661,7 @@
     display: inline-block;
     /* optional: shrink-wrap content */
     width: 100%;
-    margin-top: 15px;
+    margin-top: 5px;
   }
 
   #problem-solved {
@@ -673,20 +673,20 @@
     /* shift slightly above the top edge */
     right: -9px;
     /* shift beyond the right edge */
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     transform: rotate(15deg);
     z-index: 10;
     /* ensure it overlaps */
     pointer-events: none;
     /* optional: lets clicks pass through */
-    opacity: 0.9;
+    opacity: 0.8;
   }
 
   .the-problem {
 
     background-color: rgb(255, 252, 247);
-    font-size: 1.1rem !important;
+    font-size: 1.12rem !important;
     padding: 15px;
     border-radius: 12px;
     border: 0px solid rgb(255, 244, 224);
@@ -794,7 +794,7 @@
     max-width: 720px;
     line-height: 1.7;
     position: relative;
-    top: -20px;
+    top: -30px;
   }
 
   .bgnd-lightbluegray {
