@@ -772,6 +772,7 @@
     position: absolute;
     bottom: 0px;
     text-align: center;
+    margin: auto;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
     color: #0275d8;
