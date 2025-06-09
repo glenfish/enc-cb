@@ -446,7 +446,7 @@ footer {
 nav {
   border-bottom: 1px solid #d0d0d0;
   background-color: white;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0px 4px 8px rgba(112, 112, 112, 0.2) !important;
 }
 
 #navbarNav {
