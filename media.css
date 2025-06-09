@@ -764,8 +764,8 @@
   }
 
   .scroll-down-indicator {
-    position: relative;
-    bottom: 50px;
+    position: absolute;
+    bottom: -20px;
     text-align: center;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
