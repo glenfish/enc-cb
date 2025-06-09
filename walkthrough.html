@@ -264,6 +264,19 @@
         color: gray;
         font-weight: normal;
       }
+        .scroll-down-indicator {
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    color: #0275d8;
+    z-index: 99000;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    zoom: 1.6;
+    /* display: none !important; */
+  }
     </style>
   </head>
   <body>
@@ -3212,7 +3225,7 @@
             footerText.className =
               "text-dark text-center fs-5 px-3 mt-1 fade-in";
             footerText.innerHTML =
-              "You Seed Map & Seed Codes are saved on pairs of USB sticks. <br class='wide-break'/>Encoded, Encrypted and stored in different physical locations.<br><span class='scroll-down'>⬇️</span>";
+              "You Seed Map & Seed Codes are saved on pairs of USB sticks. <br class='wide-break'/>Encoded, Encrypted and stored in different physical locations. <div class='scroll-down-indicator-walkthrough'><svg width='24' height='24' fill='none' stroke='currentColor' stroke-width='4'stroke-linecap='round' stroke-linejoin='round'class='feather feather-chevron-down'><polyline points='6 9 12 15 18 9'></polyline></svg></div>";
           
             container.appendChild(footerText);
 
@@ -3282,5 +3295,17 @@
         document.body.appendChild(devSkipContainer);
       }
     </script>
+    <script>
+  const scrollIndicator = document.querySelector(".scroll-down-indicator-walkthrough");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollIndicator.classList.add("hide");
+  } else {
+    scrollIndicator.classList.remove("hide");
+  }
+});
+
+</script>
   </body>
 </html>
