@@ -633,7 +633,16 @@
 
 @media (min-width: 539px) {
   .scroll-down-indicator {
-    display: none !important;
+    position: absolute;
+    bottom: -15px;
+    /* space between button and arrow */
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    color: #d0d7dd;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    zoom: 1.6;
   }
 }
 
@@ -781,7 +790,7 @@
     left: 50%;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
-    color: #0275d8;
+    color: #d0d7dd;
     opacity: 1;
     transition: opacity 0.5s ease;
     zoom: 1.6;
