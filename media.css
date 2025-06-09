@@ -322,12 +322,17 @@
     position: fixed;
     inset: 0;
     background: white;
-    opacity: 0.95;
+    opacity: 0;
+    visibility: hidden;
     z-index: 1000;
-
-    display: none;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
   }
+
+  .white-overlay.visible {
+    opacity: 0.95;
+    visibility: visible;
+  }
+
 
   .iframe-focus-container {
     position: relative;
@@ -774,7 +779,7 @@
     opacity: 1;
     transition: opacity 0.5s ease;
     zoom: 1.6;
-    display: none !important;
+    /* display: none !important; */
   }
 
   .bounding-box {

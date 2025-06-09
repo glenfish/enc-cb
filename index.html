@@ -1037,18 +1037,21 @@ if (window.innerWidth < 768) {
   const overlay = document.querySelector('.white-overlay');
 
   const observer = new IntersectionObserver(
-    (entries) => {
+    entries => {
       entries.forEach(entry => {
-        overlay.style.display = entry.isIntersecting ? 'block' : 'none';
+        if (entry.isIntersecting) {
+          overlay.classList.add('visible');
+        } else {
+          overlay.classList.remove('visible');
+        }
       });
     },
-    {
-      threshold: 0.8,
-    }
+    { threshold: 0.8 }
   );
 
   observer.observe(iframeContainer);
 }
+
 
 
 </script>

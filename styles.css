@@ -1349,3 +1349,18 @@ ul.list-unstyled {
   margin-top: 40px;
   padding: 20px;
 }
+
+.white-overlay {
+  position: fixed;
+  inset: 0;
+  background: white;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.white-overlay.visible {
+  opacity: 0.95;
+  visibility: visible;
+}
