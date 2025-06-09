@@ -674,13 +674,13 @@
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    top: -88px;
+    top: -68px;
     /* shift slightly above the top edge */
     right: -9px;
     /* shift beyond the right edge */
-    width: 90px;
-    height: 90px;
-    transform: rotate(15deg);
+    width: 80px;
+    height: 80px;
+    transform: rotate(10deg);
     z-index: 10;
     /* ensure it overlaps */
     pointer-events: none;
