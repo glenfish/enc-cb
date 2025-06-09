@@ -770,18 +770,17 @@
 
   .scroll-down-indicator {
     position: absolute;
-    bottom: 0px;
-    text-align: center;
-    margin: auto;
+    bottom: -30px;
+    /* space between button and arrow */
+    left: 50%;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
     color: #0275d8;
-    z-index: 99000;
     opacity: 1;
     transition: opacity 0.5s ease;
     zoom: 1.6;
-    display: none !important;
   }
+
 
   @keyframes bounce {
 
