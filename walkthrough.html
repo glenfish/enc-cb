@@ -219,6 +219,9 @@
         border: none !important;
         background-color: white !important;
       }
+      #scroll-down-indicator-walkthrough-container {
+        display: none;
+      }
       @media (min-width: 0px) and (max-width: 579.98px) {
         #nxt-btn {
           position: relative;
@@ -257,14 +260,7 @@
           display: block !important;
           margin-top: 10px;
         }
-      }
-      .small {
-        font-size: 80%;
-        padding-right: 20px;
-        color: gray;
-        font-weight: normal;
-      }
-      #scroll-down-indicator-walkthrough-container {
+        #scroll-down-indicator-walkthrough-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -291,17 +287,25 @@
     50%,
     80%,
     100% {
-      transform: translate(-50%, 0);
+      transform: translate(0%, 0);
     }
 
     40% {
-      transform: translate(-50%, 8px);
+      transform: translate(0%, 8px);
     }
 
     60% {
-      transform: translate(-50%, 4px);
+      transform: translate(0%, 4px);
     }
   }
+      }
+      .small {
+        font-size: 80%;
+        padding-right: 20px;
+        color: gray;
+        font-weight: normal;
+      }
+      
     </style>
   </head>
   <body>
