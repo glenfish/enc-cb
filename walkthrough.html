@@ -264,9 +264,18 @@
         color: gray;
         font-weight: normal;
       }
+      #scroll-down-indicator-walkthrough-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        text-align: center;
+      }
         .scroll-down-indicator-walkthrough {
           display: block;
-    margin-top: 10px;
+    margin-top: 15px;
     text-align: center;
     margin: auto;
     transform: translateX(-50%);
@@ -275,7 +284,7 @@
     z-index: 99000;
     opacity: 1;
     transition: opacity 0.5s ease;
-    zoom: 1.6;
+    zoom: 1.2;
     /* display: none !important; */
   }
 
@@ -3245,7 +3254,7 @@
             footerText.className =
               "text-dark text-center fs-5 px-3 mt-1 fade-in";
             footerText.innerHTML =
-              "You Seed Map & Seed Codes are saved on pairs of USB sticks. <br class='wide-break'/>Encoded, Encrypted and stored in different physical locations.<br><span class='scroll-down-indicator-walkthrough'><svg width='24' height='24' fill='none' stroke='currentColor' stroke-width='4'stroke-linecap='round' stroke-linejoin='round'class='feather feather-chevron-down'><polyline points='6 9 12 15 18 9'></polyline></svg></span>";
+              "You Seed Map & Seed Codes are saved on pairs of USB sticks. <br class='wide-break'/>Encoded, Encrypted and stored in different physical locations.<br><div id='scroll-down-indicator-walkthrough-container'><span class='scroll-down-indicator-walkthrough'><svg width='24' height='24' fill='none' stroke='currentColor' stroke-width='4'stroke-linecap='round' stroke-linejoin='round'class='feather feather-chevron-down'><polyline points='6 9 12 15 18 9'></polyline></svg></span></div";
           
             container.appendChild(footerText);
 
