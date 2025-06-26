@@ -1216,7 +1216,7 @@ audio {
   width: 100%;
   box-sizing: border-box;
 
-  margin-bottom: 90px;
+  padding-bottom: 90px !important;
 }
 
 #video-overview video {
@@ -1230,6 +1230,10 @@ audio {
 
 .video-section h2 {
   padding-top: 90px !important;
+
+}
+
+.video-section {
   padding-bottom: 60px;
 }
 
