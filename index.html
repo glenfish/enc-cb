@@ -25,6 +25,32 @@
     
    <style>
 
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 696px;
+  margin: auto;
+  padding-top: 36%; /* 16:9 aspect ratio (9/16 = 0.5625) */
+  height: 0;            /* key to make the padding-top define height */
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding-bottom: 60px;
+}
+
+/* Mobile override: allow taller aspect ratio */
+@media (max-width: 480px) {
+  .video-wrapper {
+    padding-top: 68%; /* more vertical room (4:3-ish) */
+  }
+}
+
+</style>
 
    </style>
 
@@ -422,20 +448,31 @@
 
     <div id="video"></div>
 <!-- Video Section widescreen -->
+<!-- Video Section widescreen -->
 <section class="video-section fade-in-block">
   <div id="video-overview" class="bgnd-bluegray">
-    <div style="margin: auto;text-align: center;" class="px-4">
-    <h2 class="section-title  antonio ">▶️ <span style="padding-left:10px;position:relative; top:2px;">See It In Action</span></h2><p class="pb-5 largequote">Runs offline in your browser and stores no data. All code viewable.</p>
+    <div class="px-4" style="margin:auto;text-align:center;">
+      <h2 class="section-title antonio">▶️ 
+        <span style="padding-left:10px;position:relative;top:2px;">See It In Action</span>
+      </h2>
+      <p class="pb-5 largequote">
+        Runs offline in your browser and stores no data. All code viewable.
+      </p>
     </div>
-    <div class="center">
-    <video class="center" id="vid" controls  muted loop loading="lazy" poster=
-"video-poster.png">
-      <source src="ef-quick-overview.webm" type="video/webm">
-      Your browser does not support the video tag.
-    </video>
+
+    <!-- Responsive YT wrapper -->
+    <div class="video-wrapper center">
+      <iframe
+        id="yt-player"
+        loading="lazy"
+        title="See It In Action"
+        src="https://www.youtube.com/embed/5AMHcn5Vx84?autoplay=0&loop=1&playlist=5AMHcn5Vx84&controls=1&rel=0&modestbranding=1"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
     </div>
   </div>
-</section> 
+</section>
 
    
 
@@ -958,7 +995,7 @@
             
             
           const video = document.getElementById('vid');
-          video.playbackRate = 0.6;
+          // video.playbackRate = 0.6;
 
             
         });
