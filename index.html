@@ -25,34 +25,43 @@
     
    <style>
 
-.video-wrapper {
-  border: 2px solid rgb(36, 36, 36);
-  position: relative;
-  width: 100%;
-  max-width: 659px;
-  margin: auto;
-  padding-top: 30.9%; /* 16:9 aspect ratio (9/16 = 0.5625) */
-  height: 0;            /* key to make the padding-top define height */
+/* --- UNIVERSAL STYLES --------------------------------------- */
+.video-wrapper{
+  /* layout */
+  width:100%;
+  max-width:940px;
+  margin:auto;
+  position:relative;
+
+  /* perfect 16:9 without the padding-top hack */
+  aspect-ratio:16 / 9;
+
+  /* cosmetics */
+  border:2px solid #242424;
+  background:#242424;       /* dark frame while loading */
 }
 
-.video-wrapper iframe {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  background-color: rgb(36, 36, 36);
-  padding-left: 2px;
-  padding-right: 2px;
+.video-wrapper iframe{
+  position:absolute;
+  inset:0;                  /* shorthand for top/right/bottom/left:0 */
+  width:100%;
+  height:100%;
+  border:none;
+  display:block;            /* kills the small gap some browsers add */
 }
 
-
-/* Mobile override: allow taller aspect ratio */
-@media (max-width: 480px) {
-  .video-wrapper {
-    padding-top: 72%; /* more vertical room (4:3-ish) */
+/* --- FALLBACK FOR REALLY OLD ENGINES (pre-2021) --------------- */
+@supports not (aspect-ratio: 16 / 9){
+  .video-wrapper{
+    aspect-ratio:auto;      /* ignore unknown property */
+    height:0;               /* old intrinsic-ratio technique */
+    padding-top:56.25%;     /* 9/16 = 0.5625 */
   }
 }
+
+
+
+
 
 </style>
 
@@ -465,16 +474,16 @@
     </div>
 
     <!-- Responsive YT wrapper -->
-    <div class="video-wrapper center">
-      <iframe
-        id="yt-player"
-        loading="lazy"
-        title="See It In Action"
-        src="https://www.youtube.com/embed/5AMHcn5Vx84?autoplay=0&loop=1&playlist=5AMHcn5Vx84&controls=1&rel=0&modestbranding=1"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
-    </div>
+    <!-- HTML — nothing fancy needed -->
+<div class="video-wrapper center">
+  <iframe
+    src="https://www.youtube.com/embed/gUPaiKYcMwQ?rel=0&modestbranding=1&controls=1&loop=1&playlist=gUPaiKYcMwQ"
+    title="See It In Action"
+    loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div>
+
   </div>
 </section>
 
