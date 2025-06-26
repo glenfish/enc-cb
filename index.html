@@ -29,16 +29,16 @@
 .video-wrapper{
   /* layout */
   width:100%;
-  max-width:940px;
+  max-width:960px;
   margin:auto;
   position:relative;
-
+  overflow: hidden;
   /* perfect 16:9 without the padding-top hack */
   aspect-ratio:16 / 9;
-
-  /* cosmetics */
-  border:2px solid #242424;
-  background:#242424;       /* dark frame while loading */
+  border: 2px solid rgb(200, 200, 200);
+  background-color: white; 
+  border-radius: 20px; 
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;  
 }
 
 .video-wrapper iframe{
@@ -48,6 +48,7 @@
   height:100%;
   border:none;
   display:block;            /* kills the small gap some browsers add */
+  margin: auto;
 }
 
 /* --- FALLBACK FOR REALLY OLD ENGINES (pre-2021) --------------- */
@@ -56,9 +57,20 @@
     aspect-ratio:auto;      /* ignore unknown property */
     height:0;               /* old intrinsic-ratio technique */
     padding-top:56.25%;     /* 9/16 = 0.5625 */
+    
   }
 }
 
+@media (max-width: 480px) {
+  .video-wrapper {
+    border: none;
+    height: 211px;     /* fixed height */
+    padding: 0px;    /* disable aspect ratio */
+    background-color: white;
+    border-radius: 0px!important; 
+    box-shadow: none!important; 
+  }
+}
 
 
 
@@ -377,6 +389,35 @@
   });
 </script>
 
+
+ <div id="video"></div>
+<!-- Video Section widescreen -->
+<!-- Video Section widescreen -->
+<section class="video-section fade-in-block">
+  <div id="video-overview" class="">
+    <div class="px-4" style="margin:auto;text-align:center;">
+      <h2 class="section-title antonio">▶️ 
+        <span style="padding-left:10px;position:relative;top:2px;">See It In Action</span>
+      </h2>
+      <p class="pb-5 largequote">
+        Runs offline in your browser and stores no data. All code viewable.
+      </p>
+    </div>
+
+    <!-- Responsive YT wrapper -->
+    <!-- HTML — nothing fancy needed -->
+<div class="video-wrapper center">
+  <iframe
+    src="https://www.youtube.com/embed/_UPN5RSPqiM?rel=0&modestbranding=1&controls=1&loop=1&playlist=_UPN5RSPqiM"
+    title="See It In Action"
+    loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div>
+
+  </div>
+</section>
+
     
   
  
@@ -459,33 +500,7 @@
    
     
 
-    <div id="video"></div>
-<!-- Video Section widescreen -->
-<!-- Video Section widescreen -->
-<section class="video-section fade-in-block">
-  <div id="video-overview" class="">
-    <div class="px-4" style="margin:auto;text-align:center;">
-      <h2 class="section-title antonio">▶️ 
-        <span style="padding-left:10px;position:relative;top:2px;">See It In Action</span>
-      </h2>
-      <p class="pb-5 largequote">
-        Runs offline in your browser and stores no data. All code viewable.
-      </p>
-    </div>
-
-    <!-- Responsive YT wrapper -->
-    <!-- HTML — nothing fancy needed -->
-<div class="video-wrapper center">
-  <iframe
-    src="https://www.youtube.com/embed/_UPN5RSPqiM?rel=0&modestbranding=1&controls=1&loop=1&playlist=_UPN5RSPqiM"
-    title="See It In Action"
-    loading="lazy"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen></iframe>
-</div>
-
-  </div>
-</section>
+   
 
    
 
