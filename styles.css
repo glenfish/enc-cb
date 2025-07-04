@@ -259,6 +259,11 @@ body {
   color: rgb(64, 64, 64);
 }
 
+h4.intro-header {
+  font-size: 3rem !important;
+  padding-bottom: 0 !important;
+}
+
 /* Section Titles */
 .section-title {
   margin-bottom: 10px;
@@ -531,8 +536,16 @@ nav {
   color: rgb(255, 133, 3);
 }
 
+.blue-text {
+  color: #235077;
+}
+
 .gray-text {
   color: rgb(129, 129, 129);
+}
+
+.compress {
+  transform: scaleY(0.85);
 }
 
 .levelup {

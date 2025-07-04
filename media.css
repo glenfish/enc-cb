@@ -221,8 +221,18 @@
 }
 
 @media (min-width:0px) and (max-width: 579.98px) {
+  h4.intro-header {
+    font-size: 1.75rem !important;
+    padding-bottom: 0 !important;
+    text-align: center !important;
+    padding-top: 10px !important;
+    margin-top: 5px !important;
+    color: rgb(71, 71, 71) !important;
+  }
+
   .video-nonmobile {
     display: none !important;
+
   }
 
   .phone-border {
@@ -279,6 +289,16 @@
   .headline {
     margin-top: 4px;
     margin-bottom: 0px;
+  }
+
+  h3.headline {
+    /* margin-top: 4px; */
+    /* margin-bottom: 35px !important; */
+    display: block !important;
+    font-size: 2.2rem !important;
+    margin: 4px auto 35px auto !important;
+    text-align: center !important;
+
   }
 
   .graybox {
@@ -829,7 +849,7 @@
     border: 5px solid rgb(226, 226, 226);
     border-radius: 8px;
     padding: 10px 20px;
-    margin: 0px auto 0 auto;
+    margin: 10px auto 0 auto;
     max-width: 720px;
     line-height: 1.7;
     position: relative;
