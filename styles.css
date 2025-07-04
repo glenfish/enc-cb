@@ -402,6 +402,7 @@ footer {
   margin: 0 auto 0 auto;
   max-width: 720px;
   line-height: 1.7;
+  background-color: rgb(246, 246, 246);
 }
 
 .bounding-box-bordered {
@@ -537,7 +538,7 @@ nav {
 }
 
 .blue-text {
-  color: #235077;
+  color: #245c8c;
 }
 
 .gray-text {

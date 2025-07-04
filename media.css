@@ -843,6 +843,7 @@
     margin: 0 auto 0 auto;
     max-width: 720px;
     line-height: 1.7;
+    background-color: white !important;
   }
 
   .bounding-box-bordered {
