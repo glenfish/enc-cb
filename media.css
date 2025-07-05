@@ -221,6 +221,10 @@
 }
 
 @media (min-width:0px) and (max-width: 579.98px) {
+  .why-encryptfire {
+    padding: 40px 20px;
+  }
+
   h4.intro-header {
     font-size: 1.75rem !important;
     padding-bottom: 0 !important;

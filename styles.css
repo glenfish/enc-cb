@@ -1382,3 +1382,78 @@ ul.list-unstyled {
   opacity: 0.95;
   visibility: visible;
 }
+
+.why-encryptfire p {
+  padding: 8px 0px;
+}
+
+.why-encryptfire {
+  line-height: 1.75rem;
+
+}
+
+.why-encryptfire ul li {
+  line-height: 2rem;
+  padding: 10px 0 0 0;
+}
+
+.round-top {
+  border-radius: 20px 20px 0px 0px;
+}
+
+.round-bottom {
+  border-radius: 0px 0px 20px 20px;
+}
+
+.round-top-bottom {
+  border-radius: 20px 20px 20px 20px;
+  border: 1px solid rgb(212, 212, 212);
+}
+
+.why-encryptfire .the-app,
+.why-encryptfire .the-system {
+  /* width: 100px; */
+  height: 95px;
+  overflow: hidden;
+  margin-right: 10px;
+
+}
+
+.why-encryptfire .the-app {
+  width: 100px;
+  height: 90px;
+  overflow: hidden;
+  margin-right: 20px;
+
+}
+
+.bgnd-purple-blue-grad {
+  background: #020024;
+  background: linear-gradient(323deg, rgba(2, 0, 36, 0.71) 0%, rgba(39, 9, 121, 0.79) 35%, rgba(0, 212, 255, 0.77) 100%);
+
+}
+
+.bgnd-blue-grad-rev {
+  background: #020024;
+  background: linear-gradient(358deg, rgba(2, 0, 36, 0.69) 0%, rgba(9, 9, 121, 0.61) 35%, rgba(0, 212, 255, 0.63) 100%);
+
+}
+
+.bgnd-orange-yellow-grad {
+  background: rgb(53, 53, 53);
+
+  background: linear-gradient(90deg, hsla(40, 94%, 74%, 0.3) 0%, hsla(60, 89%, 72%, 0.3) 100%);
+
+  background: -moz-linear-gradient(90deg, hsla(40, 94%, 74%, 0.4) 0%, hsla(60, 89%, 72%, 0.6) 100%);
+
+  background: -webkit-linear-gradient(90deg, hsla(40, 94%, 74%, 0.4) 0%, hsla(60, 89%, 72%, 0.6) 100%);
+
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#FBD07C", endColorstr="#F7F779", GradientType=1);
+}
+
+
+
+.why-encryptfire .subsection-headline {
+  position: relative;
+  top: -30px;
+}
