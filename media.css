@@ -228,7 +228,7 @@
   h4.intro-header {
     font-size: 1.75rem !important;
     padding-bottom: 0 !important;
-    text-align: center !important;
+    /* text-align: center !important; */
     padding-top: 10px !important;
     margin-top: 5px !important;
     color: rgb(71, 71, 71) !important;
