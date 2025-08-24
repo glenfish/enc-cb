@@ -1300,9 +1300,9 @@ audio {
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  top: -100px;
+  top: -90px;
   /* shift slightly above the top edge */
-  right: -17px;
+  right: -10px;
   /* shift beyond the right edge */
   width: 120px;
   height: 120px;
