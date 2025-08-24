@@ -2488,15 +2488,15 @@
             container.innerHTML +=
               '<div class="overlay-highlight frame-headline pb-4">How it Works</div>';
             container.innerHTML += "";
-            nextBtn.textContent = "GO";
+            nextBtn.textContent = "DEMO";
             nextBtn.style.display = "inline-block";
             nextBtn.style.width = "100px";
             nextBtn.style.height = "56px";
             nextBtn.classList.add("fade-in");
 
-            // caption.textContent = "";
-            // caption.className = "mt-3 bold bigger pt-3";
-            // container.appendChild(caption);
+            caption.textContent = "Back Up This Wallet Now";
+            caption.className = "mt-3 bold bigger pt-3";
+            container.appendChild(caption);
 
             let image = document.createElement("img");
             container.appendChild(image);
@@ -2516,7 +2516,7 @@
             // image.className = "throb-image";
 
             finalNote.className = "mt-4 text-dark bold bigger";
-            finalNote.textContent = "60 Second Demo";
+            finalNote.textContent = "";
             // finalNote.style.paddingBottom = "20px";
             container.classList.add("fade-in");
             container.appendChild(finalNote);
