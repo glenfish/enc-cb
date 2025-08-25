@@ -695,7 +695,7 @@
   #mobile-container-wrapper {
     width: 100% !important;
     margin: auto;
-    overflow-x: hidden !important;
+    /* overflow-x: hidden !important; */
   }
 
   .pagecontainer {
