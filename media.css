@@ -221,6 +221,26 @@
 }
 
 @media (min-width:0px) and (max-width: 579.98px) {
+  #nic-fehlberg {
+    background-image: url('./nic-fehlberg-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 20px;
+    /* shift slightly above the top edge */
+    right: 0px;
+    /* shift beyond the right edge */
+    width: 110px;
+    height: 110px;
+    /* transform: rotate(-4deg); */
+    z-index: 10;
+    /* ensure it overlaps */
+    pointer-events: none;
+    /* optional: lets clicks pass through */
+    opacity: 1;
+    /* background-color: white; */
+  }
+
   .why-encryptfire {
     padding: 40px 20px;
   }

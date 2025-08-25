@@ -1303,6 +1303,26 @@ audio {
 
 }
 
+#nic-fehlberg {
+  background-image: url('./nic-fehlberg-icon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 60px;
+  /* shift slightly above the top edge */
+  right: 0px;
+  /* shift beyond the right edge */
+  width: 140px;
+  height: 140px;
+  /* transform: rotate(-4deg); */
+  z-index: 10;
+  /* ensure it overlaps */
+  pointer-events: none;
+  /* optional: lets clicks pass through */
+  opacity: 1;
+  /* background-color: white; */
+}
+
 #problem-solved {
   background-image: url('./problem-solved.png');
   background-size: contain;
