@@ -693,7 +693,7 @@
 
 @media (min-width:0px) and (max-width: 579.98px) {
   .pagecontainer {
-    width: 95% !important;
+    width: 100% !important;
     margin: auto;
     /* overflow-x: hidden!important; */
   }

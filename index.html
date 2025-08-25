@@ -269,16 +269,148 @@ iframe {
 </div>
     </section>
 
+<section id="why-it-matters" class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <h2 class="h2 font-weight-bold mb-3 center">Why Harden a Crypto Wallet?</h2>
+
+        <p class="lead text-muted mb-3 center">
+         
+          A single paper or steel backup = single point of failure
+        </p>
+
+        <p class="mb-4">
+          We fix this with a simple idea: your seed is split into two files — a
+          <strong>Seed Map</strong> and <strong>Seed Codes</strong> — linked by a unique cipher, and encrypted.
+          Alone, each file is useless. Together, they restore your wallet.
+        </p>
+
+        <p class="text-uppercase text-muted small mb-2">This makes backups:</p>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <div class="d-flex align-items-start border rounded p-3 shadow-sm">
+              <svg class="text-success mr-2 mt-1" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M9.55 17.54a1 1 0 0 1-1.41 0l-3.68-3.68a1 1 0 1 1 1.41-1.41l2.97 2.97 8.29-8.29a1 1 0 1 1 1.41 1.41z"/>
+              </svg>
+              <div><strong>Safer to duplicate</strong> — copy them freely without risking compromise.</div>
+            </div>
+          </li>
+          <li class="mb-2">
+            <div class="d-flex align-items-start border rounded p-3 shadow-sm">
+              <svg class="text-success mr-2 mt-1" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M9.55 17.54a1 1 0 0 1-1.41 0l-3.68-3.68a1 1 0 1 1 1.41-1.41l2.97 2.97 8.29-8.29a1 1 0 1 1 1.41 1.41z"/>
+              </svg>
+              <div><strong>Easier to distribute</strong> — store across real-world locations with no weak link.</div>
+            </div>
+          </li>
+          <li>
+            <div class="d-flex align-items-start border rounded p-3 shadow-sm">
+              <svg class="text-success mr-2 mt-1" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M9.55 17.54a1 1 0 0 1-1.41 0l-3.68-3.68a1 1 0 1 1 1.41-1.41l2.97 2.97 8.29-8.29a1 1 0 1 1 1.41 1.41z"/>
+              </svg>
+              <div><strong>Ready for inheritance</strong> — pair with a deadman switch so your family can recover assets when it matters most.</div>
+            </div>
+          </li>
+        </ul>
+
+        <p class="lead font-weight-bold mt-4 mb-0">
+          It’s not about complexity. It’s about resilience. EncryptFire turns fragile backups into vaults you can pass on with confidence.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
     
+   
+    
+    
+    
+   
+
+ 
+
+   
+
+    
+
 
     
     
-    
-    
-    
-    <div class="pagecontainer">
+
+ 
+  
+
+<!-- Reusable Modal -->
+  <div class="modal fade custom-video-modal" id="videoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-video-dialog">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-end border-0">
+          <button type="button" class="btn btn-warning btn-lg rounded-circle p-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio embed-responsive embed-responsive-16by9">
+            <div id="yt-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  document.querySelectorAll('.video-thumbnail').forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      const videoId = thumb.dataset.videoId;
+      const container = document.getElementById('yt-container');
+      container.innerHTML = `
+        <iframe width="100%" height="360"
+          src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>`;
+    });
+  });
+
+  document.getElementById('videoModal').addEventListener('hidden.bs.modal', () => {
+    document.getElementById('yt-container').innerHTML = '';
+  });
+</script>
+
+
+
+ <div id="video"></div>
+<!-- Video Section widescreen -->
+<!-- Video Section widescreen -->
+<section class="video-section fade-in-block">
+  <div id="video-overview" class="">
+    <div class="px-4" style="margin:auto;text-align:center;">
+      <h2 class="section-title antonio">▶️ 
+        <span style="padding-left:10px;position:relative;top:2px;">Walkthrough</span>
+      </h2>
+      <p class="pb-5 largequote">
+        We're all about self-security. No 3rd party custody here.
+      </p>
+    </div>
+
+    <!-- Responsive YT wrapper -->
+    <!-- HTML — nothing fancy needed https://youtu.be/FVBNc28qIyI-->
+<div class="video-wrapper center">
+  <iframe
+    src="https://www.youtube.com/embed/FVBNc28qIyI?rel=0&modestbranding=1&controls=1&loop=1&playlist=FVBNc28qIyI"
+    title="See It In Action"
+    loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div>
+
+  </div>
+</section>
+
+
+ <div class="pagecontainer">
     <!-- wallet logos section -->
-   <section class="bg-white pb-0 mt-4 pt-0" style="width:100%">
+   <section class="bg-white pb-0 mt-0 pt-0" style="width:100%">
   <div class="py-3 py-lg-3  pl-md-5  container ">
     
   
@@ -342,106 +474,30 @@ iframe {
 </section>
 </div>
 
- 
 
-   
-
-    
-
-
-    
-    
-
- 
-  
-
-<!-- Reusable Modal -->
-  <div class="modal fade custom-video-modal" id="videoModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered custom-video-dialog">
-      <div class="modal-content">
-        <div class="modal-header d-flex justify-content-end border-0">
-          <button type="button" class="btn btn-warning btn-lg rounded-circle p-3" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-0">
-          <div class="ratio embed-responsive embed-responsive-16by9">
-            <div id="yt-container"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<script>
-  document.querySelectorAll('.video-thumbnail').forEach(thumb => {
-    thumb.addEventListener('click', () => {
-      const videoId = thumb.dataset.videoId;
-      const container = document.getElementById('yt-container');
-      container.innerHTML = `
-        <iframe width="100%" height="360"
-          src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>`;
-    });
-  });
-
-  document.getElementById('videoModal').addEventListener('hidden.bs.modal', () => {
-    document.getElementById('yt-container').innerHTML = '';
-  });
-</script>
-
-
- <div id="video"></div>
-<!-- Video Section widescreen -->
-<!-- Video Section widescreen -->
-<section class="video-section fade-in-block">
-  <div id="video-overview" class="">
-    <div class="px-4" style="margin:auto;text-align:center;">
-      <h2 class="section-title antonio">▶️ 
-        <span style="padding-left:10px;position:relative;top:2px;">Be Your Own Bank</span>
-      </h2>
-      <p class="pb-5 largequote">
-        We're all about self-security. No 3rd party custody here.
-      </p>
-    </div>
-
-    <!-- Responsive YT wrapper -->
-    <!-- HTML — nothing fancy needed https://youtu.be/FVBNc28qIyI-->
-<div class="video-wrapper center">
-  <iframe
-    src="https://www.youtube.com/embed/FVBNc28qIyI?rel=0&modestbranding=1&controls=1&loop=1&playlist=FVBNc28qIyI"
-    title="See It In Action"
-    loading="lazy"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen></iframe>
-</div>
-
-  </div>
-</section>
 
  <!-- Introduction -->
-    <section class="p-3 mb-5  border  fade-in-block bgnd-lightbluegray" >
+    <section class="p-3 mb-0  border  fade-in-block bgnd-lightbluegray" >
       <div class="container  bulletproof mb-4">
-        <h2 class="section-title pb-5  antonio">🛡️ Security For All</h2>
+        <h2 class="section-title pb-2 pt-5  antonio">🛡️ Disaster-Proof Your Assets</h2>
         <div class="container-narrow text-left" style="text-align:center;">
-        <p>Are you hiding your seed phrases in plain sight? Or worse.. storing them in a password manager</p>
         <p>
-          <div class="strong quote pb-4 ">Get peace of mind and disaster-proof your digital assets fast! Built for real people, not computer nerds.</div>
+          <div class="strong quote pb-4 ">Built for real people, not computer nerds. A turn-key system ensures nothing is left to chance. With the knowledge you've made your wallets robust and secure, comes the peace of mind to hold them long term.</div>
           
           
-          Imagine having a <span class="strong quote">bulletproof backup</span> of your crypto wallet seed phrases completely offline, encrypted, and accessible only to you. No risk of hacks, no lost access... no forgotten passwords.  It's offline crypto hardened cold storage.  The serious self-custody solution built for regular folks who hold crypto / digital assets such as Bitcoin, Ethereum, Solana, Litecoin, XRP, Dogecoin, and maybe even a whole raft of memecoins that might moon. They all deserve a solid backup.
+          Imagine a <span class="strong quote">bulletproof backup</span> of your crypto wallet seed phrases completely offline, encrypted, and accessible only to you. No risk of hacks, no lost access... no forgotten passwords.  It's offline crypto hardened cold storage.<br><br>The serious self-custody solution built for regular folks who hold crypto / digital assets such as Bitcoin, Ethereum, Solana, Litecoin, XRP, Dogecoin, and maybe even a whole raft of memecoins that might moon. They all deserve a solid backup.
         </p>
         </div>
         <p class="my-5  largequote highlight mx-4 italic p-4">
-          <span class="curlyquotes ">“</span> Now with <span class="strong ">ENCRYPT<span class="orange-text">FIRE</span></span> your secure crypto backups are quick and easy. This turnkey app runs in your web browser, disconnected from the Internet. We're all about self-custody, safe multi-location cold storage for regular folks. Ready to go when you need to recover access any time <span class="curlyquotes">”</span><span class="text-left pl-4 smaller "><br> ~ Nic Fehlberg (creator/founder)</span>
+          <span class="curlyquotes ">“</span> Now with <span class="strong ">ENCRYPT<span class="orange-text">FIRE</span></span> your secure crypto backups are quick and easy. This turnkey app runs in your web browser, disconnected from the Internet. We're all about self-custody, safe multi-location cold storage for regular people. Ready to go when you need to recover access any time <span class="curlyquotes">”</span><span class="text-left pl-4 smaller "><br> ~ Nic Fehlberg (creator/founder)</span>
         </p>
         
       </div>
     </section>
 
 <!-- why encryptfire section -->
-<section class=" p-md-5  why-encryptfire bgnd-bluegray">
-  <div class="container ">
+<section class=" p-md-5 why-encryptfire bgnd-bluegray">
+  <div class="container mt-md-5">
     <div class="row justify-content-center">
       <div class="col-lg-12 bg-white round-top-bottom">
 
@@ -450,7 +506,7 @@ iframe {
         <span class="strong ">What is ENCRYPT<span class="orange-text">FIRE</span></span>
       </h2>
       <p class="pb-5 largequote">
-        A web app and a crypto backup system
+        Web app + crypto backup system
       </p>
     </div>
     <div class=" p-4  ">

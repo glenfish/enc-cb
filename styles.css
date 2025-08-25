@@ -1230,7 +1230,7 @@ audio {
   width: 100%;
   box-sizing: border-box;
 
-  padding-bottom: 90px !important;
+  padding-bottom: 30px !important;
 }
 
 #video-overview video {
@@ -1248,7 +1248,8 @@ audio {
 }
 
 .video-section {
-  padding-bottom: 60px;
+  padding-bottom: 0px !important;
+  margin-bottom: 0px !important;
 }
 
 
