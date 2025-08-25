@@ -226,12 +226,15 @@
   }
 
   h4.intro-header {
-    font-size: 1.75rem !important;
+    font-size: 1.825rem !important;
     padding-bottom: 0 !important;
     /* text-align: center !important; */
-    padding-top: 10px !important;
-    margin-top: 5px !important;
+    padding-top: 0px !important;
+    margin-top: 0px !important;
     color: rgb(71, 71, 71) !important;
+    position: relative;
+    left: -8px;
+
   }
 
   .video-nonmobile {
@@ -853,8 +856,8 @@
   .bounding-box-bordered {
     border: 5px solid rgb(226, 226, 226);
     border-radius: 8px;
-    padding: 10px 20px;
-    margin: 10px auto 0 auto;
+    padding: 0px 20px 5px 20px;
+    margin: 5px auto 0 auto;
     max-width: 720px;
     line-height: 1.7;
     position: relative;
