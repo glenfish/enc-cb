@@ -298,6 +298,10 @@
 
   }
 
+  .logo-container {
+    height: 45px;
+  }
+
   .container-narrow,
   .levelup {
     padding: 10px !important
@@ -712,6 +716,20 @@
 
 
 @media (min-width:0px) and (max-width: 579.98px) {
+  #subheadline-navbar {
+    display: block;
+    font-size: 0.75rem;
+    position: relative;
+    left: 36px;
+    top: -10px;
+  }
+
+  #subheadline-hero {
+    display: none;
+  }
+
+
+
   #mobile-container-wrapper {
     width: 100% !important;
     margin: auto;
