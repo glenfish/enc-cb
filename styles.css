@@ -1168,6 +1168,13 @@ audio {
   margin-bottom: 40px;
 }
 
+h1.headline {
+  display: block !important;
+  font-size: 4.5rem !important;
+  margin: 14px auto 25px auto !important;
+  text-align: center !important;
+}
+
 .cryptokey {
   display: none;
 }
