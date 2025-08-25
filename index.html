@@ -76,7 +76,7 @@ iframe {
 @media (max-width: 958px) {
   .video-wrapper {
     border: none!important;
-    width: 100vw!important;
+    width: 100%!important;
     padding: 0px;    /* disable aspect ratio */
     margin: auto;
     background-color: white!important;
@@ -91,7 +91,8 @@ iframe {
   background-color: rgb(0, 0, 0)!important;
   border-radius: 0; 
   transform: none;
-  width: 100vw!important;
+  width: 100%!important;
+  display: block;
 
   }
 }
@@ -403,7 +404,7 @@ iframe {
     <!-- HTML — nothing fancy needed https://youtu.be/FVBNc28qIyI-->
 <div class="video-wrapper center">
   <iframe
-    src="https://www.youtube.com/embed/FVBNc28qIyI?rel=0&modestbranding=1&controls=1&loop=1&playlist=FVBNc28qIyI"
+    src="https://www.youtube.com/embed/FVBNc28qIyI?rel=0&modestbranding=1&controls=1&loop=1&playsinline=1&playlist=FVBNc28qIyI"
     title="See It In Action"
     loading="lazy"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
