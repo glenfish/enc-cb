@@ -746,8 +746,8 @@
     /* shift slightly above the top edge */
     right: -9px;
     /* shift beyond the right edge */
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     transform: rotate(10deg);
     z-index: 10;
     /* ensure it overlaps */
