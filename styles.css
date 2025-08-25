@@ -351,6 +351,7 @@ footer {
 }
 
 .footer {
+  width: 102%;
   flex-shrink: 0 !important;
   margin-top: auto;
 }
