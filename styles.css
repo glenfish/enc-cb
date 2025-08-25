@@ -396,8 +396,8 @@ footer {
 }
 
 .bounding-box {
-  border: 0px solid rgb(226, 226, 226);
-  border-radius: 8px;
+  border: 2px solid rgb(241, 241, 241);
+  border-radius: 12px;
   padding: 20px;
   margin: 0 auto 0 auto;
   max-width: 720px;
@@ -1297,6 +1297,8 @@ audio {
   /* optional: shrink-wrap content */
   width: 100%;
   margin-top: 60px;
+  margin-bottom: 10px;
+
 }
 
 #problem-solved {

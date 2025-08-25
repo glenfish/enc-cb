@@ -450,7 +450,7 @@
     display: block;
     line-height: 1.5 !important;
     position: relative;
-    top: -35px;
+    top: -40px;
   }
 
   .underline {
@@ -716,7 +716,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    top: -45px;
+    top: -52px;
     /* shift slightly above the top edge */
     right: -9px;
     /* shift beyond the right edge */
