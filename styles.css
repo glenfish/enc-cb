@@ -1077,6 +1077,7 @@ audio {
   position: relative;
   top: 0px;
   max-height: 890px;
+  z-index: 10;
   /* overflow: hidden; */
 }
 
@@ -1087,7 +1088,7 @@ audio {
   transform: translateX(-50%);
   animation: bounce 2s infinite;
   color: #0275d8;
-  z-index: 99000;
+  z-index: 9;
   opacity: 1;
   transition: opacity 0.5s ease;
   zoom: 1.5;
