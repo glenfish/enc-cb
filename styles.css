@@ -261,7 +261,11 @@ body {
 
 h4.intro-header {
   font-size: 3rem !important;
+  font-weight: bold;
   padding-bottom: 0 !important;
+  position: relative;
+  top: -15px;
+  left: -6px;
 }
 
 /* Section Titles */
@@ -430,6 +434,7 @@ footer {
   line-height: 1.7;
   position: relative;
   top: -40px;
+  background-color: #f9f9f9;
 }
 
 .graybox {

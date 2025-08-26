@@ -247,6 +247,7 @@
 
   h4.intro-header {
     font-size: 1.825rem !important;
+    font-weight: bold;
     padding-bottom: 0 !important;
     /* text-align: center !important; */
     padding-top: 4px !important;
@@ -254,6 +255,7 @@
     color: rgb(71, 71, 71);
     position: relative;
     left: -8px;
+    top: -2px;
 
   }
 
@@ -919,7 +921,7 @@
   }
 
   .bounding-box-bordered {
-    border: 5px solid rgb(226, 226, 226);
+    border: 2px solid rgb(226, 226, 226);
     border-radius: 8px;
     padding: 0px 20px 5px 20px;
     margin: 5px auto 0 auto;
