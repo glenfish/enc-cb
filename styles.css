@@ -404,11 +404,11 @@ footer {
   margin: 0 auto 0 auto;
   max-width: 720px;
   line-height: 1.7;
-  background-color: rgb(246, 246, 246);
+  background-color: rgb(244, 244, 244);
 }
 
 .bounding-box-bordered {
-  border: 5px solid rgb(226, 226, 226);
+  border: 2px solid rgb(226, 226, 226);
   border-radius: 8px;
   padding: 20px;
   margin: 10px auto 0 auto;

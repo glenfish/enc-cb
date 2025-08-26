@@ -720,13 +720,20 @@
 @media (min-width:579px) and (max-width: 719.98px) {
   h1.headline {
     display: block !important;
-    font-size: 3.8rem !important;
-    margin: 14px auto 25px auto !important;
+    font-size: 3.5rem !important;
+    margin: 14px auto 5px auto !important;
     text-align: center !important;
   }
 }
 
-
+@media (min-width:0px) and (max-width: 365.98px) {
+  h1.headline {
+    display: block !important;
+    font-size: 1.8rem !important;
+    margin: 14px auto 45px auto !important;
+    text-align: center !important;
+  }
+}
 
 
 @media (min-width:0px) and (max-width: 579.98px) {
