@@ -221,6 +221,16 @@
 }
 
 @media (min-width:0px) and (max-width: 579.98px) {
+  .crypto-logo {
+    height: 38px;
+    width: 38px;
+    vertical-align: middle;
+
+    position: relative;
+    top: -2px;
+    left: -4px;
+  }
+
   #nic-fehlberg {
     background-image: url('./nic-fehlberg-icon.png');
     background-size: contain;
@@ -332,7 +342,8 @@
     font-size: 2.2rem !important;
     margin: 4px auto 35px auto !important;
     text-align: center !important;
-
+    position: relative;
+    left: -3px;
   }
 
   .graybox {
@@ -727,6 +738,45 @@
     text-align: center !important;
   }
 }
+
+@media (min-width:509px) and (max-width: 585.98px) {
+  h1.headline {
+    /* margin-top: 4px; */
+    /* margin-bottom: 35px !important; */
+    display: block !important;
+    font-size: 3.0rem !important;
+    margin: 4px auto 35px auto !important;
+    text-align: center !important;
+    position: relative;
+    left: -3px;
+  }
+
+  .crypto-logo {
+    height: 48px;
+    width: 48px;
+    vertical-align: middle;
+
+    position: relative;
+    top: -2px;
+    left: -4px;
+  }
+}
+
+@media (min-width:404px) and (max-width: 509.98px) {
+  h1.headline {
+    /* margin-top: 4px; */
+    /* margin-bottom: 35px !important; */
+    display: block !important;
+    font-size: 2.5rem !important;
+    margin: 4px auto 35px auto !important;
+    text-align: center !important;
+    position: relative;
+    left: -3px;
+  }
+
+}
+
+
 
 @media (min-width:0px) and (max-width: 365.98px) {
   h1.headline {

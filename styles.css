@@ -1190,9 +1190,12 @@ audio {
 
 h1.headline {
   display: block !important;
-  font-size: 4.5rem !important;
+  font-size: 4.3rem !important;
   margin: 14px auto 25px auto !important;
-  text-align: center !important;
+  text-align: left !important;
+  letter-spacing: -2px;
+  position: relative;
+  left: 5px;
 }
 
 .cryptokey {
@@ -1254,13 +1257,14 @@ h1.headline {
 }
 
 .crypto-logo {
-  height: 28px;
-  width: 28px;
+  height: 68px;
+  width: 68px;
   vertical-align: middle;
-  margin-left: 12px;
-  margin-right: 12px;
+  /* margin-left: 12px; */
+  margin-right: 0px;
   position: relative;
-  top: -2px;
+  top: -4px;
+  left: -4px;
 }
 
 .blurred {
