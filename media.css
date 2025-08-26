@@ -793,8 +793,8 @@
 
 @media (min-width:0px) and (max-width: 579.98px) {
   .extended-lineheight {
-    line-height: 30px;
-    padding-bottom: 10px !important;
+    line-height: 35px;
+    padding-bottom: 12px !important;
     padding-left: 14px;
   }
 
