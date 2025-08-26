@@ -1077,7 +1077,7 @@ audio {
   position: relative;
   top: 0px;
   max-height: 890px;
-  z-index: 10;
+  z-index: 10000;
   /* overflow: hidden; */
 }
 
