@@ -249,9 +249,9 @@
     font-size: 1.825rem !important;
     padding-bottom: 0 !important;
     /* text-align: center !important; */
-    padding-top: 0px !important;
+    padding-top: 4px !important;
     margin-top: 0px !important;
-    color: rgb(71, 71, 71) !important;
+    color: rgb(71, 71, 71);
     position: relative;
     left: -8px;
 
