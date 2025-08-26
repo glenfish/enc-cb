@@ -394,7 +394,21 @@ footer {
 }
 
 .smaller {
-  font-size: 0.85em;
+  font-size: 0.8em;
+  line-height: 1.6 !important;
+  display: block;
+}
+
+.medium {
+  font-size: 1.2em;
+  line-height: 1.4 !important;
+  display: block;
+}
+
+.medium-sml {
+  font-size: 1.1em;
+  line-height: 1.4 !important;
+  display: block;
 }
 
 .bounding-box {
