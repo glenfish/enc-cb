@@ -982,12 +982,12 @@
   .bounding-box-bordered {
     border: 2px solid rgb(226, 226, 226);
     border-radius: 8px;
-    padding: 0px 20px 5px 20px;
+    padding: 10px 20px 20px 20px;
     margin: 5px auto 0 auto;
     max-width: 720px;
     line-height: 1.7;
     position: relative;
-    top: -30px;
+    top: -40px;
   }
 
   .bgnd-lightbluegray {
