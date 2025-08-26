@@ -1318,6 +1318,7 @@ h1.headline {
   display: inline-block;
   /* optional: shrink-wrap content */
   width: 100%;
+  top: -10px;
   margin-top: 60px;
   margin-bottom: 10px;
 
