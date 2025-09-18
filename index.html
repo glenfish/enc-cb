@@ -596,6 +596,54 @@ iframe {
 <blockquote class="blockquote py-2">
   “If quantum computers ever break AES‑256, the internet collapses well before your encrypted files on USB sticks.”
 </blockquote>
+<!-- Info button -->
+<button
+  type="button"
+  class="btn btn-outline-secondary btn-sm d-inline-flex align-items-center gap-1"
+  data-bs-toggle="modal"
+  data-bs-target="#aesQuantumInfoModal"
+  aria-label="About AES-256 & quantum security"
+>
+  <!-- inline 'info' icon (Bootstrap Icons SVG) -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#b3b3cc" class="bi bi-info-circle" viewBox="0 0 16 16" aria-hidden="true">
+    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14"/>
+    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 .935-.252 1.064-.598l.088-.416c.06-.293.106-.37.4-.446l.451-.083.082-.381-1.012-.287.61-2.905c.194-.897-.105-1.319-.808-1.319zM8 4.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+  </svg>
+  <span class="more-info"> &nbsp;More Info on Quantum Threat</span>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="aesQuantumInfoModal" tabindex="-1" aria-labelledby="aesQuantumInfoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg modal-fullscreen-sm-down">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title m-0" id="aesQuantumInfoLabel">AES-256 & Quantum: reality check</h5>
+        <button type="button" class="btn btn-close-custom" data-bs-dismiss="modal" aria-label="Close">
+    &times;
+  </button>
+      </div>
+
+      <div class="modal-body">
+        <ul class="mb-3">
+          <li><strong>Grover’s algorithm</strong> halves the effective brute-force security of symmetric keys. AES-256 would behave like ~128-bit—still considered strong in practice today.</li>
+          <li><strong>Timelines</strong> for “cryptographically relevant” quantum (millions of stable, error-corrected qubits) are generally put <em>well beyond the near term</em>—often mid-2030s/2040s+ by cautious estimates.</li>
+          <li><strong>Where things stand</strong>: today’s devices have far too few high-fidelity qubits with high error rates; running Grover at meaningful scale remains impractical.</li>
+          <li><strong>Mitigations</strong>: stick with AES-256 for symmetric crypto and track NIST’s post-quantum standards for public-key schemes; migrate those first.</li>
+          <li><strong>Bottom line</strong>: no credible near-term threat to AES-256 is expected; keep an eye on hardware/error-correction breakthroughs and standardization updates.</li>
+        </ul>
+
+        <p class="small text-muted mb-0">
+          Source: summary of the linked Grok answer on X. 
+          <a href="https://x.com/i/grok/share/qiuofSCpRzNakkwPOec5nz0Sj" target="_blank" rel="noopener noreferrer">Read the original</a>.
+        </p>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
             
           </div>
