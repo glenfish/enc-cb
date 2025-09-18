@@ -1538,3 +1538,34 @@ ul.list-unstyled {
   position: relative;
   top: -30px;
 }
+
+#aesQuantumInfoModal {
+  background-color: rgb(233, 233, 233);
+}
+
+.more-info {
+  padding: 2px 4px 0 4px;
+}
+
+.btn-close-custom {
+  font-size: 2.5rem;
+  /* size of the X */
+  font-weight: bold;
+  line-height: 1;
+  color: #333;
+  /* default color */
+  opacity: 0.8;
+  border: none;
+  background: transparent;
+  padding: 0 rem;
+  cursor: pointer;
+  position: relative;
+  top: -10px;
+  color: #656e7c;
+}
+
+.btn-close-custom:hover {
+  opacity: 1;
+  color: #656e7c;
+  /* darker on hover */
+}
