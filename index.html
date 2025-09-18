@@ -276,6 +276,78 @@ iframe {
 </div>
     </section>
 
+ <!-- Introduction -->
+    <section class="p-3 mb-0  border  fade-in-block bgnd-lightbluegray" >
+      <div class="container  bulletproof mb-4">
+        <h2 class="section-title pb-2 pt-5  antonio">Disaster-Proof Your Assets</h2>
+        <div class="container-narrow text-left" style="text-align:center;">
+        <p>
+          <div class="strong quote pb-4 ">Built for real people, not computer nerds. A turn-key system ensures nothing is left to chance. With the knowledge you've made your wallets robust and secure, comes the peace of mind to hold them long term.</div>
+          
+          
+          Imagine a <span class="strong quote">bulletproof backup</span> of your crypto wallet seed phrases completely offline, encrypted, and accessible only to you. No risk of hacks, no lost access... no forgotten passwords.  It's offline crypto hardened cold storage.<br><br>The serious self-custody solution built for regular folks who hold crypto / digital assets such as Bitcoin, Ethereum, Solana, Litecoin, XRP, Dogecoin, and maybe even a whole raft of memecoins that might moon. They all deserve a solid backup.
+        </p>
+        </div>
+        <div id="nic-fehlberg"></div>
+        <p class="my-5  largequote highlight mx-1 italic p-4">
+          <span class="curlyquotes ">“</span> Now with <span class="strong ">ENCRYPT<span class="orange-text">FIRE</span></span> your secure crypto backups are quick and easy. This turnkey app runs in your web browser, disconnected from the Internet. It never talks to a server. Totally standalone and stores no data. We're all about self-custody, safe multi-location cold storage for regular people. Ready to go when you need to recover access any time <span class="curlyquotes">”</span><span class="text-left pl-4 smaller "><br> ~ Nic Fehlberg (creator/founder)</span>
+        </p>
+        
+      </div>
+    </section>
+
+ <section class="pb-5 mt-5 pt-5 px-3 mb-4 bg-white peace-of-mind-section fade-in-block">
+  <div class="container text-center">
+    
+<div class="image-caption-wrapper" style="position: relative; display: inline-block;">
+  <div class="caption-rotator speech" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); width: 100%;">
+    <span class="caption">12 words. 1 napkin.<br>Zero strategy 😋</span>
+    <span class="caption">Totally got this… right? 😅</span>
+    <span class="caption">My plan? Hide it in<br>the sock drawer bruh 😆</span>
+  </div>
+  <img src="cyberkid.png" alt="Cryptokid" class="img-fluid boyimg mb-3 mt-5" />
+  
+</div>
+
+
+  
+
+   
+
+    <!-- Paragraphs -->
+    <div class="text-left text-md-center mx-auto left" style="max-width: 700px;">
+      <p class="lead strong left">
+        Hiding your seed phrase is not a security plan
+      </p>
+      <div class="left mt-4">
+        
+      <p>
+        If you've ever had that quiet thought — "what if I lose access?" — you're not alone.  
+        Most people either avoid thinking about it… or they try to improvise with what’s lying around.
+      </p>
+      
+      
+       <p class="lead strong left my-4">
+        Peace of Mind, Built In
+      </p>
+    
+      <p class="pt-0">
+        Peace of mind doesn't come from the storage device — it comes from knowing you’ve planned for failure, recovery, and even the unexpected.
+      </p>
+    <p class="pt-3">
+  Because real security isn’t just about where you store your keys — it’s about how you prepare for what life might throw at you. Fires, floods, mistakes, lost passwords, even the unthinkable. Peace of mind means you’ve thought it through… and set things up so your future self — or your family — won’t be scrambling in a crisis.
+</p>
+<p class="pt-3">
+  It’s not paranoia — it’s just not leaving things to chance. When your backup’s solid, you can stop worrying and get on with life.
+</p>
+
+    </div>
+    </div>
+
+  </div>
+</section>
+
+
 <section id="why-it-matters" class="py-5 bgnd-lightbluegray">
   <div class="container">
     <div class="row justify-content-center">
@@ -323,6 +395,64 @@ iframe {
   </div>
 </section>
 
+
+
+
+
+    
+   
+    
+    
+    
+   
+
+ 
+
+   
+
+    
+
+
+    
+    
+
+ 
+  
+
+<!-- Reusable Modal -->
+  <div class="modal fade custom-video-modal" id="videoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-video-dialog">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-end border-0">
+          <button type="button" class="btn btn-warning btn-lg rounded-circle p-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio embed-responsive embed-responsive-16by9">
+            <div id="yt-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  document.querySelectorAll('.video-thumbnail').forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      const videoId = thumb.dataset.videoId;
+      const container = document.getElementById('yt-container');
+      container.innerHTML = `
+        <iframe width="100%" height="360"
+          src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>`;
+    });
+  });
+
+  document.getElementById('videoModal').addEventListener('hidden.bs.modal', () => {
+    document.getElementById('yt-container').innerHTML = '';
+  });
+</script>
 
 
 <section>
@@ -383,61 +513,6 @@ iframe {
 </div>
 
 </section>
-
-    
-   
-    
-    
-    
-   
-
- 
-
-   
-
-    
-
-
-    
-    
-
- 
-  
-
-<!-- Reusable Modal -->
-  <div class="modal fade custom-video-modal" id="videoModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered custom-video-dialog">
-      <div class="modal-content">
-        <div class="modal-header d-flex justify-content-end border-0">
-          <button type="button" class="btn btn-warning btn-lg rounded-circle p-3" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-0">
-          <div class="ratio embed-responsive embed-responsive-16by9">
-            <div id="yt-container"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<script>
-  document.querySelectorAll('.video-thumbnail').forEach(thumb => {
-    thumb.addEventListener('click', () => {
-      const videoId = thumb.dataset.videoId;
-      const container = document.getElementById('yt-container');
-      container.innerHTML = `
-        <iframe width="100%" height="360"
-          src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>`;
-    });
-  });
-
-  document.getElementById('videoModal').addEventListener('hidden.bs.modal', () => {
-    document.getElementById('yt-container').innerHTML = '';
-  });
-</script>
 
 
 
@@ -538,96 +613,7 @@ iframe {
 
 
 
- <!-- Introduction -->
-    <section class="p-3 mb-0  border  fade-in-block bgnd-lightbluegray" >
-      <div class="container  bulletproof mb-4">
-        <h2 class="section-title pb-2 pt-5  antonio">Disaster-Proof Your Assets</h2>
-        <div class="container-narrow text-left" style="text-align:center;">
-        <p>
-          <div class="strong quote pb-4 ">Built for real people, not computer nerds. A turn-key system ensures nothing is left to chance. With the knowledge you've made your wallets robust and secure, comes the peace of mind to hold them long term.</div>
-          
-          
-          Imagine a <span class="strong quote">bulletproof backup</span> of your crypto wallet seed phrases completely offline, encrypted, and accessible only to you. No risk of hacks, no lost access... no forgotten passwords.  It's offline crypto hardened cold storage.<br><br>The serious self-custody solution built for regular folks who hold crypto / digital assets such as Bitcoin, Ethereum, Solana, Litecoin, XRP, Dogecoin, and maybe even a whole raft of memecoins that might moon. They all deserve a solid backup.
-        </p>
-        </div>
-        <div id="nic-fehlberg"></div>
-        <p class="my-5  largequote highlight mx-1 italic p-4">
-          <span class="curlyquotes ">“</span> Now with <span class="strong ">ENCRYPT<span class="orange-text">FIRE</span></span> your secure crypto backups are quick and easy. This turnkey app runs in your web browser, disconnected from the Internet. It never talks to a server. Totally standalone and stores no data. We're all about self-custody, safe multi-location cold storage for regular people. Ready to go when you need to recover access any time <span class="curlyquotes">”</span><span class="text-left pl-4 smaller "><br> ~ Nic Fehlberg (creator/founder)</span>
-        </p>
-        
-      </div>
-    </section>
 
-<!-- why encryptfire section -->
-<section class=" p-md-5 why-encryptfire bgnd-bluegray">
-  <div class="container mt-md-5">
-    <div class="row justify-content-center">
-      <div class="col-lg-12 bg-white round-top-bottom">
-
-    <div class="px-4" style="margin:auto;text-align:center;">
-      <h2 class="section-title antonio  mt-5"> 
-        <span class="strong ">What is ENCRYPT<span class="orange-text">FIRE</span></span>
-      </h2>
-      <p class="pb-5 largequote">
-        It's a System & an Offline Web App
-      </p>
-    </div>
-    <div class=" p-4  ">
-        <h2 class=" antonio text-left">
-      <img src="the-system.svg" class="the-system"/> <span class="subsection-headline">The System</span>
-    </h2>
-        <p>
-          Sure, anyone can encrypt a backup. But EncryptFire was designed <em>specifically</em> to do it without the complexity—no tech skills required. Simple password-protected files protect your sharded data, while keeping your seed phrases secure and invisible to prying eyes.
-        </p>
-        <p>
-          EncryptFire uses a brilliantly <span class="strong">simple but powerful</span> method to encode your seed words. Someone could stare right at your files and still have <span class="strong">no idea</span> what they’re looking at. It’s called a <span class="strong">cipher map</span>—an old-school obfuscation technique that’s as hard to guess as your seed phrase itself. Each cipher map is unique to your backup.
-        </p>
-        <p>
-          And here’s the kicker: you can recreate the entire system <em>on paper</em>. No joke.
-        </p>
-        <p>
-          With just three sheets of paper, scissors, some sticky tape, and a pen, you can manually build the same type of hardened backup. No passwords, no app—just the same underlying logic. EncryptFire takes that method, upgrades it with encryption, portability, and decentralization, and makes it fast and easy. That simplicity at the core is what makes it so powerful.
-        </p>
-        </div>
-        
-        <hr class="my-5">
-
-        <div class=" p-3 ">
-          <h2 class=" antonio text-left">
-      <img src="the-app.svg" class="the-app"/> <span class="subsection-headline">The Web App</span>
-    </h2>
-
-          <ul class="list-unstyled mb-4">
-            <li><span class="strong">✔️ Triple-layer protection:</span> Cipher map for obfuscation, AES-256-CBC encryption with salted 32-character passwords, and sharded offline storage.</li>
-            <li><span class="strong">✔️ Truly offline:</span> The app stores nothing. Everything runs in live browser memory and vanishes the moment you close the tab.</li>
-            <li><span class="strong">✔️ Open by design:</span> No black-box nonsense. Standard, battle-tested JavaScript libraries handle the cryptography. The code is readable, auditable, and transparent.</li>
-            <li><span class="strong">✔️ Dead simple UI:</span> The wizard-style interface walks you through each step. Backup and restore with just a few clicks.</li>
-          </ul>
-
-          <p><span class="strong">Two backup options:</span></p>
-          <ul class="list-unstyled ms-3">
-            <li><span class="strong">• Standard / Simple mode:</span> Creates a password-protected PDF using 128-bit encryption. Doesn’t require the app to restore—great for non-technical users.</li>
-            <li><span class="strong">• Full / Pro mode:</span> Encrypts your PDF’s <em>data</em> at 256-bit strength. Requires the EncryptFire app to restore, but still just a matter of loading the file and entering your password.</li>
-          </ul>
-
-          <p class="mt-4">
-            Both methods harden your cold storage. Both support deadman switch strategies so you can securely pass on your crypto—on your terms. 
-            <span class="strong">That means your assets can outlive your devices, your memory, or even you—without relying on exchanges, lawyers, or third-party vaults.</span>
-          </p>
-
-          <p>
-            EncryptFire runs in any modern browser <em>offline</em>. We strongly recommend using a fresh browser (like Firefox, Brave, Opera, or Edge) that isn’t your default and has no extensions enabled. Start fresh, stay clean. (does not run on mobile devices)
-          </p>
-
-          <p>
-            You can use EncryptFire as many times as you like. Back up multiple wallets with one cipher map — or create a new one each time. Its your choice.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
 
 
 
@@ -774,139 +760,6 @@ iframe {
 
      
 
-     <!-- Features Section
-    <div class="pagecontainer mb-5">
-    <section class="levelup py-5 fade-in-block">
-      <div class="container mb-5">
-        <h2 class="section-title pb-5  antonio">🚨 <span style="padding-left:10px;position:relative; top:2px;">Level Up!</span></h2>
-        <div class="row">
-          <div class="col-md-6">
-            <h4>1️⃣ One Failure = Total Loss</h4>
-            <ul>
-              <li>
-                Not having a backup means one mistake, one accident, one breach
-                = total loss.
-              </li>
-              <li>
-                But keeping only one backup minimizes exposure risk—so how do
-                you secure multiple backups without increasing risk?
-              </li>
-              <li>
-                <span class="strong">ENCRYPT<span class="">FIRE</span></span>'s toolset allows you to harden your seed phrases,
-                private keys, and credentials so you can store them safely
-                across multiple offline, redundant locations.
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-6">
-            <h4>2️⃣ Ditch Password Managers</h4>
-            <ul>
-              <li>
-                Saving sensitive crypto keys and seed phrases in a password
-                manager puts your entire wealth at risk.
-              </li>
-              <li>
-                If your password manager is hacked, so is your entire portfolio.
-              </li>
-              <li>
-                <span class="strong">ENCRYPT<span class="">FIRE</span></span> lets you store your credentials securely
-                offline—completely disconnected from internet threats.
-                Your keys are encrypted and stored in a way that only you can access them.
-                No more worrying about online hacks or breaches.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="row mt-4">
-          <div class="col-md-6">
-            <h4>3️⃣ Offline, Hardened Cold Storage</h4>
-            <ul>
-              <li>
-                Major crypto exchanges like Coinbase & Gemini use elaborate
-                offline cold storage systems.
-              </li>
-              <li>
-                Think of <span class="strong">ENCRYPT<span class="">FIRE</span></span> as your own personal version—but without
-                trusting a third party.
-              </li>
-              <li>
-                You control the access, the encryption, and the backup
-                locations. <span class="strong">Your keys, your crypto!</span>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-6">
-            <h4>4️⃣ The Crypto Widow Problem</h4>
-            <ul>
-              <li>
-                In most relationships and families, only one person holds the
-                crypto assets and account logins.
-              </li>
-              <li>
-                If that person dies unexpectedly, the rest of the family is
-                locked out forever. We call this the "Crypto Widow" problem.
-                </li>
-                <li>
-                <span class="strong">ENCRYPT<span class="">FIRE</span></span> ensures your family can access your crypto assets if something happens to you.
-                </li>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    </div> -->
-   
-    <section class="pb-5 mt-5 pt-5 px-3 bg-white peace-of-mind-section fade-in-block">
-  <div class="container text-center">
-    
-<div class="image-caption-wrapper" style="position: relative; display: inline-block;">
-  <div class="caption-rotator speech" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); width: 100%;">
-    <span class="caption">12 words. 1 napkin.<br>Zero strategy 😋</span>
-    <span class="caption">Totally got this… right? 😅</span>
-    <span class="caption">My plan? Hide it in<br>the sock drawer 😆</span>
-  </div>
-  <img src="cyberkid.png" alt="Cryptokid" class="img-fluid boyimg mb-3 mt-5" />
-  
-</div>
-
-
-  
-
-   
-
-    <!-- Paragraphs -->
-    <div class="text-left text-md-center mx-auto left" style="max-width: 700px;">
-      <p class="lead strong left">
-        Hiding your seed phrase is not a security plan
-      </p>
-      <div class="left mt-4">
-        
-      <p>
-        If you've ever had that quiet thought — "what if I lose access?" — you're not alone.  
-        Most people either avoid thinking about it… or they try to improvise with what’s lying around.
-      </p>
-      
-      
-       <p class="lead strong left my-4">
-        Peace of Mind, Built In
-      </p>
-    
-      <p class="pt-0">
-        Peace of mind doesn't come from the storage device — it comes from knowing you’ve planned for failure, recovery, and even the unexpected.
-      </p>
-    <p class="pt-3">
-  Because real security isn’t just about where you store your keys — it’s about how you prepare for what life might throw at you. Fires, floods, mistakes, lost passwords, even the unthinkable. Peace of mind means you’ve thought it through… and set things up so your future self — or your family — won’t be scrambling in a crisis.
-</p>
-<p class="pt-3">
-  It’s not paranoia — it’s just not leaving things to chance. When your backup’s solid, you can stop worrying and get on with life.
-</p>
-
-    </div>
-    </div>
-
-  </div>
-</section>
    
  
 
@@ -1011,7 +864,7 @@ iframe {
   <div class="container py-5 px-3">
     <div class="row justify-content-center mb-5">
       <div class="col-lg-8 text-center">
-        <h2 id="faqs" class="section-title  mt-5 antonio">FAQ</h2>
+        <h2 id="faqs" class="section-title  mt-5 antonio">Questions Answered</h2>
       </div>
     </div>
     <div class="row justify-content-center">
@@ -1147,7 +1000,7 @@ iframe {
 
     </div>
     <!-- horizontal rule  -->
-<hr>
+
 <div class="pagecontainer">
 <div id="company"></div>
  <section class="fade-in-block">
