@@ -421,7 +421,7 @@ footer {
   border-radius: 12px;
   padding: 20px;
   margin: 0 auto 0 auto;
-  max-width: 720px;
+  /* max-width: 720px; */
   line-height: 1.7;
   background-color: rgb(244, 244, 244);
 }
@@ -1193,7 +1193,7 @@ h1.headline {
   display: block !important;
   font-size: 4.3rem !important;
   margin: 14px auto 25px auto !important;
-  text-align: left !important;
+  text-align: center !important;
   letter-spacing: -2px;
   position: relative;
   left: 5px;
@@ -1438,7 +1438,7 @@ ul.list-unstyled {
 .the-problem {
 
   /* background-color: rgb(254, 248, 236); */
-
+  max-width: 720px;
   padding: 15px;
   border-radius: 12px;
   border: 0px solid rgb(255, 244, 224);
