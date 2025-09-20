@@ -417,13 +417,13 @@ footer {
 }
 
 .bounding-box {
-  border: 2px solid rgb(241, 241, 241);
+  /* border: 2px solid rgb(241, 241, 241); */
   border-radius: 12px;
   padding: 20px;
   margin: 0 auto 0 auto;
   /* max-width: 720px; */
   line-height: 1.7;
-  background-color: rgb(244, 244, 244);
+  /* background-color: rgb(244, 244, 244); */
 }
 
 .bounding-box-bordered {
@@ -1364,8 +1364,8 @@ h1.headline {
   /* shift slightly above the top edge */
   right: 0px;
   /* shift beyond the right edge */
-  width: 140px;
-  height: 140px;
+  width: 150px;
+  height: 150px;
   /* transform: rotate(-4deg); */
   z-index: 10;
   /* ensure it overlaps */
