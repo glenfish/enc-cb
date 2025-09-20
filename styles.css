@@ -410,6 +410,12 @@ footer {
   display: block;
 }
 
+.intro-paragraph {
+  font-size: 125%;
+  line-height: 180% !important;
+
+}
+
 .medium-sml {
   font-size: 1.0em;
   line-height: 1.3 !important;
