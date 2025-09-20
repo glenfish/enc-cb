@@ -1575,3 +1575,7 @@ ul.list-unstyled {
   color: #656e7c;
   /* darker on hover */
 }
+
+#common-traps {
+  margin-top: 80px;
+}
